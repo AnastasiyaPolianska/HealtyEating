@@ -1,0 +1,12 @@
+Healthy_Eating.AddNewUser, Healthy Eating;md584f93fb47c60087209b83825b7e83b1c.AddNewUser
+Healthy_Eating.AddNewUser, Healthy Eating, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md584f93fb47c60087209b83825b7e83b1c.AddNewUser
+Healthy_Eating.AddNewUser;md584f93fb47c60087209b83825b7e83b1c.AddNewUser
+healthy_eating.AddNewUser;md584f93fb47c60087209b83825b7e83b1c.AddNewUser
+Healthy_Eating.MainActivity, Healthy Eating;md584f93fb47c60087209b83825b7e83b1c.MainActivity
+Healthy_Eating.MainActivity, Healthy Eating, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md584f93fb47c60087209b83825b7e83b1c.MainActivity
+Healthy_Eating.MainActivity;md584f93fb47c60087209b83825b7e83b1c.MainActivity
+healthy_eating.MainActivity;md584f93fb47c60087209b83825b7e83b1c.MainActivity
+Healthy_Eating.WeightList, Healthy Eating;md584f93fb47c60087209b83825b7e83b1c.WeightList
+Healthy_Eating.WeightList, Healthy Eating, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md584f93fb47c60087209b83825b7e83b1c.WeightList
+Healthy_Eating.WeightList;md584f93fb47c60087209b83825b7e83b1c.WeightList
+healthy_eating.WeightList;md584f93fb47c60087209b83825b7e83b1c.WeightList

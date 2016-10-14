@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:id="@+id/MyButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Add" />
+    <Button
+        android:text="@string/ChooseFromExist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ChooseButton" />
+    <Button
+        android:text="@string/WeightList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/WeightListButton" />
+    <Button
+        android:text="Set Parametres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/SetParametersButton" />
+</LinearLayout>
