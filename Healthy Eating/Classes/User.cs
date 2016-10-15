@@ -30,6 +30,7 @@ namespace Healthy_Eating.Classes
         [Ignore]
         public static int CurrentUser { get; set; }
 
+        /*Constructors*/
         public User() { Parameters = new List<ParametresOfUser>(); }
 
         public User(string sIncomeName, int nIncomeAge, ENSex IncomeSex)
@@ -40,6 +41,7 @@ namespace Healthy_Eating.Classes
             Parameters = new List<ParametresOfUser>();
         }
 
+        /*Functions*/
         public override string ToString()
         {
             return String.Format("Name: {0} Age: {1} Sex: {2}", sName, nAge, Sex);

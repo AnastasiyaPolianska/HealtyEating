@@ -14,10 +14,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/ChooseButton" />
     <Button
-        android:text="@string/WeightList"
+        android:text="@string/ParametersList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/WeightListButton" />
+        android:id="@+id/ParametersListButton" />
     <Button
         android:text="Set Parametres"
         android:layout_width="match_parent"

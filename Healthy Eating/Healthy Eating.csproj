@@ -73,7 +73,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActivityS\AddNewUser.cs" />
     <Compile Include="Classes\ParametresOfUser.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\WorkWithDatabase.cs" />

@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v21</xs:documentation>
-    <xs:documentation>14.10.2016 23:37:50</xs:documentation>
+    <xs:documentation>15.10.2016 15:37:22</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -3580,6 +3580,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -4179,6 +4180,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -4700,6 +4702,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -5993,6 +5996,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -10447,6 +10451,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -10500,6 +10505,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -11063,6 +11069,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -11116,6 +11123,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -11169,6 +11177,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -16121,6 +16130,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -16247,11 +16257,14 @@
             <xs:enumeration value="@id/DeleteUserText" />
             <xs:enumeration value="@id/HeightEdit" />
             <xs:enumeration value="@id/HeightList" />
+            <xs:enumeration value="@id/IdentifierOfAUser" />
             <xs:enumeration value="@id/linearLayout1" />
             <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/linearLayout3" />
+            <xs:enumeration value="@id/linearLayout4" />
             <xs:enumeration value="@id/ListOfUsers" />
             <xs:enumeration value="@id/MyButton" />
+            <xs:enumeration value="@id/ParametersListButton" />
             <xs:enumeration value="@id/SetParametersButton" />
             <xs:enumeration value="@id/textView1" />
             <xs:enumeration value="@id/textView2" />
@@ -16260,7 +16273,6 @@
             <xs:enumeration value="@id/UserSex" />
             <xs:enumeration value="@id/WeightEdit" />
             <xs:enumeration value="@id/WeightList" />
-            <xs:enumeration value="@id/WeightListButton" />
             <xs:enumeration value="@android:id/addToDictionary" />
             <xs:enumeration value="@android:id/background" />
             <xs:enumeration value="@android:id/button1" />
@@ -16579,6 +16591,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -17771,6 +17784,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -20309,6 +20323,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -20572,6 +20587,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -21031,6 +21047,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -22790,6 +22807,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -24873,6 +24891,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -25833,6 +25852,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -28891,6 +28911,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -30126,6 +30147,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -31295,6 +31317,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -32815,6 +32838,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -32868,6 +32892,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -35862,6 +35887,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -35915,6 +35941,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -38009,6 +38036,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -38162,6 +38190,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />
@@ -39071,6 +39100,7 @@
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/Male" />
             <xs:enumeration value="@string/OK" />
+            <xs:enumeration value="@string/ParametersList" />
             <xs:enumeration value="@string/Weight" />
             <xs:enumeration value="@string/WeightList" />
             <xs:enumeration value="@android:string/cancel" />

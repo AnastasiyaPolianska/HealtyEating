@@ -21,6 +21,7 @@ namespace Healthy_Eating.Classes
         public double dHeight { get; set; }
         public double dIndex { get; set; }
 
+        /*Constructors*/
         public ParametresOfUser() { }
 
         public ParametresOfUser(DateTime dtIncomeEntryDate, double dIncomeWeight, double dIncomeHeight)
@@ -29,9 +30,10 @@ namespace Healthy_Eating.Classes
             dWeight = dIncomeWeight;
             dHeight = dIncomeHeight;
 
-            dIndex = Math.Round(dWeight / Math.Pow(dHeight / 100.00, 2.00), 2);
+            dIndex = Math.Round(dWeight / Math.Pow(dHeight / 100.00, 2.00), 3);
         }
 
+        /*Functions*/
         public override string ToString()
         {
             return String.Format("Date: {0} Weight: {1} Height: {2} Index: {3}", dtEntryDate.ToString(), dWeight, dHeight, dIndex);

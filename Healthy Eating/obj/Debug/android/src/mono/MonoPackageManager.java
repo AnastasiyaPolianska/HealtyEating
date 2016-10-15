@@ -99,7 +99,6 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "Healthy Eating.dll" comes first in this list. */
 		"Healthy Eating.dll",
-		"Java.Interop.dll",
 		"Newtonsoft.Json.dll",
 		"SQLite-net.dll",
 		"SQLite.Net.dll",
@@ -116,7 +115,6 @@ class MonoPackageManager_Resources {
 		"System.Runtime.InteropServices.dll",
 		"System.Runtime.Extensions.dll",
 		"System.Reflection.Extensions.dll",
-		"System.ServiceModel.Internals.dll",
 		"System.Linq.Expressions.dll",
 		"System.Threading.Tasks.dll",
 		"System.Resources.ResourceManager.dll",

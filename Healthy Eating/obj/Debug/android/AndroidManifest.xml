@@ -5,8 +5,7 @@
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <application android:label="Healthy_Eating" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
-    <activity android:label="AddNewUser" android:name="md584f93fb47c60087209b83825b7e83b1c.AddNewUser" />
+  <application android:label="Healthy_Eating" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
     <activity android:icon="@drawable/icon" android:label="Main Menu" android:name="md584f93fb47c60087209b83825b7e83b1c.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

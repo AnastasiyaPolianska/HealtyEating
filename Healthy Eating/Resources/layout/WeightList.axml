@@ -4,13 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px"
-    android:weightSum="10">
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4">
+        <TextView
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dp"
+            android:id="@+id/IdentifierOfAUser" />
+    </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout3">
+        android:id="@+id/linearLayout3"
+        android:layout_marginTop="20.0dp">
         <TextView
             android:text="@string/Date"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -43,48 +57,46 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="581.5dp"
-        android:id="@+id/linearLayout2"
-        android:weightSum="10">
+        android:id="@+id/linearLayout2">
         <LinearLayout
             android:orientation="horizontal"
             android:id="@+id/linearLayout1"
             android:minWidth="25px"
             android:minHeight="25px"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent">
             <ListView
                 android:minWidth="25px"
                 android:minHeight="25px"
-                android:layout_width="match_parent"
+                android:layout_width="100.0dp"
                 android:layout_height="350.0dp"
                 android:id="@+id/DateList"
-                android:background="@android:color/holo_purple"
-                android:layout_weight="1" />
+                android:background="@android:color/holo_purple" />
             <ListView
                 android:minWidth="25px"
                 android:minHeight="25px"
-                android:layout_width="match_parent"
+                android:layout_width="80.0dp"
                 android:layout_height="350.0dp"
                 android:id="@+id/WeightList"
                 android:layout_marginBottom="0.0dp"
-                android:background="@android:color/darker_gray"
-                android:layout_weight="1" />
+                android:background="@android:color/darker_gray" />
             <ListView
                 android:minWidth="25px"
                 android:minHeight="25px"
-                android:layout_width="match_parent"
+                android:layout_width="80.0dp"
                 android:layout_height="350.0dp"
                 android:id="@+id/HeightList"
-                android:background="@android:color/holo_purple"
-                android:layout_weight="1" />
-            <ListView
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:layout_width="wrap_content"
-                android:layout_height="351.0dp"
-                android:id="@+id/BMIList"
                 android:layout_weight="1"
-                android:background="@android:color/darker_gray" />
+                android:background="@android:color/holo_purple"
+                android:layout_marginBottom="17.0dp" />
         </LinearLayout>
+        <ListView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="100.0dp"
+            android:layout_height="350.0dp"
+            android:id="@+id/BMIList"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray" />
     </LinearLayout>
 </LinearLayout>

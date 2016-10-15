@@ -10,8 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/DeleteUserText"
-        android:text="@string/DeleteUser"
         android:layout_gravity="center"
-        android:textSize="25dp"
+        android:textSize="18dp"
+        android:text="text"
         android:textStyle="normal" />
 </LinearLayout>

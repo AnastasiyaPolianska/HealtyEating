@@ -8,11 +8,12 @@
     <string name="Female">Female</string>
     <string name="ChooseFromExist">Choose from existing</string>
     <string name="WeightList">Weight list</string>
-    <string name="DeleteUser">Delete user?</string>
+    <string name="DeleteUser">Are you sure to delete this user:</string>
     <string name="OK">Ok</string>
     <string name="Date">Date</string>
     <string name="Weight">Weight</string>  
     <string name="Height">Height</string>
     <string name="BMI">BMI</string>
+    <string name="ParametersList">List Of Parameters</string>
     
 </resources>
