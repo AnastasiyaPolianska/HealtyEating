@@ -1,0 +1,16 @@
+Healthy_Eating.MainActivity, Healthy Eating;md584f93fb47c60087209b83825b7e83b1c.MainActivity
+Healthy_Eating.MainActivity, Healthy Eating, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md584f93fb47c60087209b83825b7e83b1c.MainActivity
+Healthy_Eating.MainActivity;md584f93fb47c60087209b83825b7e83b1c.MainActivity
+healthy_eating.MainActivity;md584f93fb47c60087209b83825b7e83b1c.MainActivity
+Healthy_Eating.WeightList, Healthy Eating;md584f93fb47c60087209b83825b7e83b1c.WeightList
+Healthy_Eating.WeightList, Healthy Eating, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md584f93fb47c60087209b83825b7e83b1c.WeightList
+Healthy_Eating.WeightList;md584f93fb47c60087209b83825b7e83b1c.WeightList
+healthy_eating.WeightList;md584f93fb47c60087209b83825b7e83b1c.WeightList
+AChartEngine.Tools.IPanListenerImplementor, AChartEngine.Bindings.XamarinAndroid;mono.org.achartengine.tools.PanListenerImplementor
+AChartEngine.Tools.IPanListenerImplementor, AChartEngine.Bindings.XamarinAndroid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.org.achartengine.tools.PanListenerImplementor
+AChartEngine.Tools.IPanListenerImplementor;mono.org.achartengine.tools.PanListenerImplementor
+mono.org.achartengine.tools.PanListenerImplementor;mono.org.achartengine.tools.PanListenerImplementor
+AChartEngine.Tools.IZoomListenerImplementor, AChartEngine.Bindings.XamarinAndroid;mono.org.achartengine.tools.ZoomListenerImplementor
+AChartEngine.Tools.IZoomListenerImplementor, AChartEngine.Bindings.XamarinAndroid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.org.achartengine.tools.ZoomListenerImplementor
+AChartEngine.Tools.IZoomListenerImplementor;mono.org.achartengine.tools.ZoomListenerImplementor
+mono.org.achartengine.tools.ZoomListenerImplementor;mono.org.achartengine.tools.ZoomListenerImplementor
