@@ -3,7 +3,7 @@
   <xs:import schemaLocation="schemas.android.com.apk.res.android.xsd" namespace="http://schemas.android.com/apk/res/android" />
   <xs:annotation>
     <xs:documentation>v21</xs:documentation>
-    <xs:documentation>21.10.2016 12:33:16</xs:documentation>
+    <xs:documentation>14.11.2016 19:33:15</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -80,6 +80,7 @@
       <xs:element ref="AdapterViewFlipper" />
       <xs:element ref="ViewFlipper" />
       <xs:element ref="fragment" />
+      <xs:element ref="org.achartengine.GraphicalView" />
       <xs:element ref="com.github.mikephil.charting.components.MarkerView" />
       <xs:element ref="com.github.mikephil.charting.charts.ScatterChart" />
       <xs:element ref="com.github.mikephil.charting.charts.RadarChart" />
@@ -93,7 +94,6 @@
       <xs:element ref="com.github.mikephil.charting.charts.BubbleChart" />
       <xs:element ref="com.github.mikephil.charting.charts.BarLineChartBase" />
       <xs:element ref="com.github.mikephil.charting.charts.BarChart" />
-      <xs:element ref="org.achartengine.GraphicalView" />
     </xs:choice>
   </xs:group>
   <xs:element name="TimePicker" type="TimePicker">
@@ -1361,6 +1361,16 @@
     <xs:attribute ref="android:layout_marginEnd" />
     <xs:attribute ref="android:style" />
   </xs:complexType>
+  <xs:element name="org.achartengine.GraphicalView" type="org.achartengine.GraphicalView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: AChartEngine.GraphicalView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="org.achartengine.GraphicalView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="View" />
+    </xs:complexContent>
+  </xs:complexType>
   <xs:element name="com.github.mikephil.charting.components.MarkerView" type="com.github.mikephil.charting.components.MarkerView">
     <xs:annotation>
       <xs:documentation>Runtime Type: MikePhil.Charting.Components.MarkerView</xs:documentation>
@@ -1489,16 +1499,6 @@
   <xs:complexType name="com.github.mikephil.charting.charts.BarChart">
     <xs:complexContent mixed="false">
       <xs:extension base="ViewGroup" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="org.achartengine.GraphicalView" type="org.achartengine.GraphicalView">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: AChartEngine.GraphicalView</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="org.achartengine.GraphicalView">
-    <xs:complexContent mixed="false">
-      <xs:extension base="View" />
     </xs:complexContent>
   </xs:complexType>
 </xs:schema>

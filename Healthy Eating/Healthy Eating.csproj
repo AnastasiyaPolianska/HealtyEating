@@ -46,12 +46,16 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="MPAndroidChart, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MPAndroidChart.3.0.0-beta11\lib\MPAndroidChart.dll</HintPath>
+      <HintPath>..\packages\MPAndroidChart.3.0.0\lib\MPAndroidChart.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.CurrentActivity, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Plugin.CurrentActivity.1.0.1\lib\MonoAndroid10\Plugin.CurrentActivity.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="SQLite-net, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
@@ -80,14 +84,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\CheckingData.cs" />
+    <Compile Include="ActivityS\products_Add.cs" />
+    <Compile Include="ActivityS\page_MyMenu.cs" />
+    <Compile Include="ActivityS\tab_products_List.cs" />
+    <Compile Include="ActivityS\tab_products_GraphHeight.cs" />
+    <Compile Include="ActivityS\tab_products_GraphWeight.cs" />
+    <Compile Include="ActivityS\products_Types.cs" />
+    <Compile Include="Classes\helpclass_GraphFormattercs.cs" />
+    <Compile Include="Classes\helpclass_MenuCcalsAdapter.cs" />
+    <Compile Include="Classes\helpclass_MenuAdapter.cs" />
+    <Compile Include="Classes\helpclass_ListAdapter.cs" />
+    <Compile Include="Classes\tablerow_MenuCcals.cs" />
+    <Compile Include="Classes\tablerow_Menu.cs" />
+    <Compile Include="Classes\helpclass_DataValidation.cs" />
+    <Compile Include="Classes\tablerow_Parameters.cs" />
     <Compile Include="Classes\ParametresOfUser.cs" />
+    <Compile Include="Classes\Product.cs" />
+    <Compile Include="Classes\ProductLists.cs" />
     <Compile Include="Classes\User.cs" />
-    <Compile Include="Classes\WorkWithDatabase.cs" />
-    <Compile Include="ActivityS\MainActivity.cs" />
+    <Compile Include="Classes\database_Products.cs" />
+    <Compile Include="Classes\database_User.cs" />
+    <Compile Include="ActivityS\StartPage.cs" />
+    <Compile Include="MainApplication.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ActivityS\WeightList.cs" />
+    <Compile Include="ActivityS\page_Parameters.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -95,27 +116,63 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\WeightList.axml">
+    <AndroidResource Include="Resources\layout\tab_products_List.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\AddNewUserForm.axml">
+    <AndroidResource Include="Resources\layout\user_Add.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\ChooseUserFrom.axml">
+    <AndroidResource Include="Resources\layout\user_Choose.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\DeleteUserForm.axml">
+    <AndroidResource Include="Resources\layout\user_Delete.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\SetParametresForm.axml">
+    <AndroidResource Include="Resources\layout\parametres_Set.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\ParametersChangesForm.axml">
+    <AndroidResource Include="Resources\layout\parameters_Changes.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\helpform_Row.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\product_MyMenu.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\product_Add.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\product_Types.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\product_Quantity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\helpform_MenuRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\product_ChooseDate.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\helpform_MenuRowCcals.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\helpform_ParametersConnector.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\product_Info.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\tab_products_GraphWeight.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\tab_products_GraphHeight.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\layout\StartPage.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml">
@@ -138,6 +195,7 @@
       <Version>1.0.11</Version>
     </XamarinComponentReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.

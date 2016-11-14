@@ -6,8 +6,6 @@ c:\users\nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eat
 c:\users\nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\Healthy Eating.dll
 c:\users\nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\Healthy Eating.pdb
 c:\users\nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\android\bin\Healthy_Eating.Healthy_Eating.apk
-c:\users\nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\weightlist.xml
-c:\users\nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\main.xml
 c:\users\nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\values\strings.xml
 c:\users\nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\drawable\icon.png
 c:\users\nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\R.cs.flag
@@ -15,9 +13,6 @@ c:\users\nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eat
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\SQLite-net.dll
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\SQLitePCL.raw.dll
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\SQLite-net.dll.mdb
-C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\addnewuserform.xml
-C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\chooseuserfrom.xml
-C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\deleteuserform.xml
 C:\Users\Nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\Healthy Eating.dllHealthy Eating.dll.mdb
 C:\Users\Nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\Mono.Android.dll.mdb
 C:\Users\Nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\mscorlib.dll.mdb
@@ -55,12 +50,31 @@ C:\Users\Nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eat
 C:\Users\Nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\SQLiteNetExtensions.dll.mdb
 C:\Users\Nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\android\assets\SQLiteNetExtensions.dll.mdb
-C:\Users\Nastya\documents\visual studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\setparametresform.xml
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\AChartEngine.Bindings.XamarinAndroid.dll
-C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\parameterschangesform.xml
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\MPAndroidChart.dll
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\MPAndroidChart.pdb
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\MPAndroidChart.dll.mdb
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\android\assets\MPAndroidChart.dll.mdb
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\Plugin.CurrentActivity.dll
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\Plugin.CurrentActivity.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\user_add.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\user_choose.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\user_delete.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\parametres_set.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\parameters_changes.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\helpform_row.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\product_mymenu.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\product_add.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\product_types.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\product_quantity.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\helpform_menurow.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\product_choosedate.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\helpform_menurowccals.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\helpform_parametersconnector.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\product_info.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\startpage.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\tab_products_list.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\tab_products_graphweight.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\tab_products_graphheight.xml
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\Healthy Eating.dll.mdb
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\Healthy Eating.dll.mdb

@@ -62,77 +62,161 @@ namespace Healthy_Eating
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050017
-			public const int BMIList = 2131034135;
-			
-			// aapt resource value: 0x7f050006
-			public const int ChooseButton = 2131034118;
-			
-			// aapt resource value: 0x7f050014
-			public const int DateList = 2131034132;
-			
-			// aapt resource value: 0x7f050004
-			public const int DeleteUserText = 2131034116;
-			
-			// aapt resource value: 0x7f05000c
-			public const int HeightEdit = 2131034124;
-			
-			// aapt resource value: 0x7f050016
-			public const int HeightList = 2131034134;
+			// aapt resource value: 0x7f050025
+			public const int AmountText = 2131034149;
 			
 			// aapt resource value: 0x7f05000e
-			public const int IdentifierOfAUser = 2131034126;
+			public const int BMIText = 2131034126;
 			
-			// aapt resource value: 0x7f050003
-			public const int ListOfUsers = 2131034115;
+			// aapt resource value: 0x7f050006
+			public const int CarbohydratesText = 2131034118;
 			
-			// aapt resource value: 0x7f050005
-			public const int MyButton = 2131034117;
-			
-			// aapt resource value: 0x7f050007
-			public const int ParametersListButton = 2131034119;
-			
-			// aapt resource value: 0x7f050008
-			public const int SetParametersButton = 2131034120;
+			// aapt resource value: 0x7f050018
+			public const int CarbsText = 2131034136;
 			
 			// aapt resource value: 0x7f050009
-			public const int TextForIndex = 2131034121;
+			public const int CcalsText = 2131034121;
+			
+			// aapt resource value: 0x7f050028
+			public const int ChooseButton = 2131034152;
+			
+			// aapt resource value: 0x7f05001b
+			public const int ChooseDateButton = 2131034139;
+			
+			// aapt resource value: 0x7f05001e
+			public const int Column1 = 2131034142;
+			
+			// aapt resource value: 0x7f05001f
+			public const int Column2 = 2131034143;
+			
+			// aapt resource value: 0x7f050020
+			public const int Column3 = 2131034144;
 			
 			// aapt resource value: 0x7f05000a
-			public const int TextForParameters = 2131034122;
+			public const int Connector = 2131034122;
 			
-			// aapt resource value: 0x7f050001
-			public const int UserAge = 2131034113;
+			// aapt resource value: 0x7f05001a
+			public const int CurrentDateText = 2131034138;
 			
-			// aapt resource value: 0x7f050000
-			public const int UserName = 2131034112;
-			
-			// aapt resource value: 0x7f050002
-			public const int UserSex = 2131034114;
+			// aapt resource value: 0x7f050014
+			public const int DateChooser = 2131034132;
 			
 			// aapt resource value: 0x7f05000b
-			public const int WeightEdit = 2131034123;
+			public const int DateText = 2131034123;
 			
-			// aapt resource value: 0x7f050015
-			public const int WeightList = 2131034133;
+			// aapt resource value: 0x7f050033
+			public const int DeleteUserText = 2131034163;
 			
-			// aapt resource value: 0x7f050013
-			public const int linearLayout1 = 2131034131;
+			// aapt resource value: 0x7f050005
+			public const int FatsText = 2131034117;
 			
-			// aapt resource value: 0x7f05000f
-			public const int linearLayout3 = 2131034127;
-			
-			// aapt resource value: 0x7f05000d
-			public const int linearLayout4 = 2131034125;
+			// aapt resource value: 0x7f05002b
+			public const int Graph = 2131034155;
 			
 			// aapt resource value: 0x7f050012
-			public const int scrollView1 = 2131034130;
+			public const int HeightEdit = 2131034130;
+			
+			// aapt resource value: 0x7f05000d
+			public const int HeightText = 2131034125;
+			
+			// aapt resource value: 0x7f050019
+			public const int IdentifierOfAUser = 2131034137;
+			
+			// aapt resource value: 0x7f050013
+			public const int ListForChoosingProducts = 2131034131;
+			
+			// aapt resource value: 0x7f05002e
+			public const int ListForParameters = 2131034158;
+			
+			// aapt resource value: 0x7f050032
+			public const int ListOfUsers = 2131034162;
+			
+			// aapt resource value: 0x7f05002a
+			public const int MenuButton = 2131034154;
+			
+			// aapt resource value: 0x7f050021
+			public const int MenuList = 2131034145;
+			
+			// aapt resource value: 0x7f050023
+			public const int Mode = 2131034147;
+			
+			// aapt resource value: 0x7f050027
+			public const int MyButton = 2131034151;
+			
+			// aapt resource value: 0x7f050002
+			public const int NameText = 2131034114;
+			
+			// aapt resource value: 0x7f050029
+			public const int ParametersListButton = 2131034153;
+			
+			// aapt resource value: 0x7f050004
+			public const int ProteinText = 2131034116;
+			
+			// aapt resource value: 0x7f050017
+			public const int ProteinsText = 2131034135;
+			
+			// aapt resource value: 0x7f050007
+			public const int QuantityText = 2131034119;
+			
+			// aapt resource value: 0x7f05002c
+			public const int SetParametersButton = 2131034156;
+			
+			// aapt resource value: 0x7f050024
+			public const int SetProductsButton = 2131034148;
+			
+			// aapt resource value: 0x7f05000f
+			public const int TextForIndex = 2131034127;
 			
 			// aapt resource value: 0x7f050010
-			public const int textView1 = 2131034128;
+			public const int TextForParameters = 2131034128;
+			
+			// aapt resource value: 0x7f050026
+			public const int TypesOfProductsList = 2131034150;
+			
+			// aapt resource value: 0x7f050030
+			public const int UserAge = 2131034160;
+			
+			// aapt resource value: 0x7f05002f
+			public const int UserName = 2131034159;
+			
+			// aapt resource value: 0x7f050031
+			public const int UserSex = 2131034161;
+			
+			// aapt resource value: 0x7f050008
+			public const int WaterText = 2131034120;
 			
 			// aapt resource value: 0x7f050011
-			public const int textView2 = 2131034129;
+			public const int WeightEdit = 2131034129;
+			
+			// aapt resource value: 0x7f05000c
+			public const int WeightText = 2131034124;
+			
+			// aapt resource value: 0x7f050001
+			public const int linearLayout1 = 2131034113;
+			
+			// aapt resource value: 0x7f050015
+			public const int linearLayout2 = 2131034133;
+			
+			// aapt resource value: 0x7f05001c
+			public const int linearLayout3 = 2131034140;
+			
+			// aapt resource value: 0x7f050022
+			public const int linearLayout4 = 2131034146;
+			
+			// aapt resource value: 0x7f050000
+			public const int relativeLayout1 = 2131034112;
+			
+			// aapt resource value: 0x7f05002d
+			public const int scrollView1 = 2131034157;
+			
+			// aapt resource value: 0x7f05001d
+			public const int textView1 = 2131034141;
+			
+			// aapt resource value: 0x7f050016
+			public const int textView2 = 2131034134;
+			
+			// aapt resource value: 0x7f050003
+			public const int view1 = 2131034115;
 			
 			static Id()
 			{
@@ -148,25 +232,61 @@ namespace Healthy_Eating
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int AddNewUserForm = 2130903040;
+			public const int helpform_MenuRow = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int ChooseUserFrom = 2130903041;
+			public const int helpform_MenuRowCcals = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int DeleteUserForm = 2130903042;
+			public const int helpform_ParametersConnector = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int Main = 2130903043;
+			public const int helpform_Row = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int ParametersChangesForm = 2130903044;
+			public const int parameters_Changes = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int SetParametresForm = 2130903045;
+			public const int parametres_Set = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int WeightList = 2130903046;
+			public const int product_Add = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int product_ChooseDate = 2130903047;
+			
+			// aapt resource value: 0x7f030008
+			public const int product_Info = 2130903048;
+			
+			// aapt resource value: 0x7f030009
+			public const int product_MyMenu = 2130903049;
+			
+			// aapt resource value: 0x7f03000a
+			public const int product_Quantity = 2130903050;
+			
+			// aapt resource value: 0x7f03000b
+			public const int product_Types = 2130903051;
+			
+			// aapt resource value: 0x7f03000c
+			public const int StartPage = 2130903052;
+			
+			// aapt resource value: 0x7f03000d
+			public const int tab_products_GraphHeight = 2130903053;
+			
+			// aapt resource value: 0x7f03000e
+			public const int tab_products_GraphWeight = 2130903054;
+			
+			// aapt resource value: 0x7f03000f
+			public const int tab_products_List = 2130903055;
+			
+			// aapt resource value: 0x7f030010
+			public const int user_Add = 2130903056;
+			
+			// aapt resource value: 0x7f030011
+			public const int user_Choose = 2130903057;
+			
+			// aapt resource value: 0x7f030012
+			public const int user_Delete = 2130903058;
 			
 			static Layout()
 			{
@@ -181,62 +301,893 @@ namespace Healthy_Eating
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040004
-			public const int Add = 2130968580;
+			// aapt resource value: 0x7f040009
+			public const int Action_Add = 2130968585;
 			
 			// aapt resource value: 0x7f04000b
-			public const int AddEntry = 2130968587;
+			public const int Action_AddEntry = 2130968587;
 			
-			// aapt resource value: 0x7f040010
-			public const int AlreadyInSystem = 2130968592;
+			// aapt resource value: 0x7f04000c
+			public const int Action_ChooseDate = 2130968588;
+			
+			// aapt resource value: 0x7f04000a
+			public const int Action_ChooseFromExist = 2130968586;
 			
 			// aapt resource value: 0x7f040001
 			public const int ApplicationName = 2130968577;
 			
-			// aapt resource value: 0x7f04000f
-			public const int BMI = 2130968591;
+			// aapt resource value: 0x7f040004
+			public const int Cancel = 2130968580;
 			
-			// aapt resource value: 0x7f040011
-			public const int BMIout = 2130968593;
+			// aapt resource value: 0x7f040018
+			public const int ErrorMessage_AlreadyInSystem = 2130968600;
 			
-			// aapt resource value: 0x7f040003
-			public const int Cancel = 2130968579;
-			
-			// aapt resource value: 0x7f040007
-			public const int ChooseFromExist = 2130968583;
-			
-			// aapt resource value: 0x7f04000c
-			public const int Date = 2130968588;
-			
-			// aapt resource value: 0x7f040008
-			public const int DeleteUser = 2130968584;
-			
-			// aapt resource value: 0x7f040006
-			public const int Female = 2130968582;
-			
-			// aapt resource value: 0x7f04000e
-			public const int Height = 2130968590;
+			// aapt resource value: 0x7f040019
+			public const int ErrorMessage_Unchoosed = 2130968601;
 			
 			// aapt resource value: 0x7f040000
 			public const int Hello = 2130968576;
 			
-			// aapt resource value: 0x7f040005
-			public const int Male = 2130968581;
+			// aapt resource value: 0x7f04001b
+			public const int MainMenuitem_Menu = 2130968603;
 			
-			// aapt resource value: 0x7f040002
-			public const int OK = 2130968578;
-			
-			// aapt resource value: 0x7f040009
-			public const int ParametersList = 2130968585;
-			
-			// aapt resource value: 0x7f04000a
-			public const int ParametersOfUser = 2130968586;
-			
-			// aapt resource value: 0x7f040012
-			public const int Unchoosed = 2130968594;
+			// aapt resource value: 0x7f04001a
+			public const int MainMenuitem_ParametersList = 2130968602;
 			
 			// aapt resource value: 0x7f04000d
-			public const int Weight = 2130968589;
+			public const int Message_BMIout = 2130968589;
+			
+			// aapt resource value: 0x7f04000e
+			public const int Message_DeleteUser = 2130968590;
+			
+			// aapt resource value: 0x7f040017
+			public const int Message_EnterCorrect = 2130968599;
+			
+			// aapt resource value: 0x7f040012
+			public const int Message_HealthyWeight = 2130968594;
+			
+			// aapt resource value: 0x7f040014
+			public const int Message_ModeratelyOverweight = 2130968596;
+			
+			// aapt resource value: 0x7f040013
+			public const int Message_Overweight = 2130968595;
+			
+			// aapt resource value: 0x7f040015
+			public const int Message_SeverelyOverweight = 2130968597;
+			
+			// aapt resource value: 0x7f040010
+			public const int Message_SeverelyUnderweight = 2130968592;
+			
+			// aapt resource value: 0x7f040011
+			public const int Message_Underweight = 2130968593;
+			
+			// aapt resource value: 0x7f040016
+			public const int Message_VerySeverelyOverweight = 2130968598;
+			
+			// aapt resource value: 0x7f04000f
+			public const int Message_VerySeverelyUnderweight = 2130968591;
+			
+			// aapt resource value: 0x7f040003
+			public const int OK = 2130968579;
+			
+			// aapt resource value: 0x7f040002
+			public const int PageName_MyMenu = 2130968578;
+			
+			// aapt resource value: 0x7f04001f
+			public const int Parameterscolumn_BMI = 2130968607;
+			
+			// aapt resource value: 0x7f04001c
+			public const int Parameterscolumn_Date = 2130968604;
+			
+			// aapt resource value: 0x7f04001e
+			public const int Parameterscolumn_Height = 2130968606;
+			
+			// aapt resource value: 0x7f04001d
+			public const int Parameterscolumn_Weight = 2130968605;
+			
+			// aapt resource value: 0x7f040026
+			public const int Productcolumn_Carbs = 2130968614;
+			
+			// aapt resource value: 0x7f040029
+			public const int Productcolumn_Ccals = 2130968617;
+			
+			// aapt resource value: 0x7f040025
+			public const int Productcolumn_Fats = 2130968613;
+			
+			// aapt resource value: 0x7f040023
+			public const int Productcolumn_Name = 2130968611;
+			
+			// aapt resource value: 0x7f040024
+			public const int Productcolumn_Proteins = 2130968612;
+			
+			// aapt resource value: 0x7f040027
+			public const int Productcolumn_Quantity = 2130968615;
+			
+			// aapt resource value: 0x7f040028
+			public const int Productcolumn_Water = 2130968616;
+			
+			// aapt resource value: 0x7f040006
+			public const int UserCharacteristic_Female = 2130968582;
+			
+			// aapt resource value: 0x7f040005
+			public const int UserCharacteristic_Male = 2130968581;
+			
+			// aapt resource value: 0x7f040008
+			public const int UserCharacteristic_MenuOfUser = 2130968584;
+			
+			// aapt resource value: 0x7f040007
+			public const int UserCharacteristic_ParametersOfUser = 2130968583;
+			
+			// aapt resource value: 0x7f040125
+			public const int other_Age = 2130968869;
+			
+			// aapt resource value: 0x7f040123
+			public const int other_Amount = 2130968867;
+			
+			// aapt resource value: 0x7f040127
+			public const int other_Height = 2130968871;
+			
+			// aapt resource value: 0x7f040124
+			public const int other_Name = 2130968868;
+			
+			// aapt resource value: 0x7f040126
+			public const int other_Weight = 2130968870;
+			
+			// aapt resource value: 0x7f04010d
+			public const int product_Almonds = 2130968845;
+			
+			// aapt resource value: 0x7f04008f
+			public const int product_Apple = 2130968719;
+			
+			// aapt resource value: 0x7f04007d
+			public const int product_Apricot = 2130968701;
+			
+			// aapt resource value: 0x7f040053
+			public const int product_Backing = 2130968659;
+			
+			// aapt resource value: 0x7f040054
+			public const int product_Bagels = 2130968660;
+			
+			// aapt resource value: 0x7f040081
+			public const int product_Banana = 2130968705;
+			
+			// aapt resource value: 0x7f04005e
+			public const int product_Barley = 2130968670;
+			
+			// aapt resource value: 0x7f0400a8
+			public const int product_Beans = 2130968744;
+			
+			// aapt resource value: 0x7f0400b3
+			public const int product_Beef = 2130968755;
+			
+			// aapt resource value: 0x7f0400bf
+			public const int product_Beefheart = 2130968767;
+			
+			// aapt resource value: 0x7f0400bd
+			public const int product_Beefkidney = 2130968765;
+			
+			// aapt resource value: 0x7f0400bc
+			public const int product_Beefliver = 2130968764;
+			
+			// aapt resource value: 0x7f0400bb
+			public const int product_Beefmarrow = 2130968763;
+			
+			// aapt resource value: 0x7f0400c0
+			public const int product_Beeftongue = 2130968768;
+			
+			// aapt resource value: 0x7f0400be
+			public const int product_Beefudder = 2130968766;
+			
+			// aapt resource value: 0x7f040075
+			public const int product_Beet = 2130968693;
+			
+			// aapt resource value: 0x7f04009e
+			public const int product_BlackCurrant = 2130968734;
+			
+			// aapt resource value: 0x7f040097
+			public const int product_Blackberry = 2130968727;
+			
+			// aapt resource value: 0x7f040096
+			public const int product_Blueberries = 2130968726;
+			
+			// aapt resource value: 0x7f0400e4
+			public const int product_Bream = 2130968804;
+			
+			// aapt resource value: 0x7f040108
+			public const int product_BreamCaviar = 2130968840;
+			
+			// aapt resource value: 0x7f040058
+			public const int product_Buckwheat = 2130968664;
+			
+			// aapt resource value: 0x7f0400de
+			public const int product_Bulls = 2130968798;
+			
+			// aapt resource value: 0x7f0400e9
+			public const int product_Burbot = 2130968809;
+			
+			// aapt resource value: 0x7f04004f
+			public const int product_Butter = 2130968655;
+			
+			// aapt resource value: 0x7f040065
+			public const int product_Cabbage = 2130968677;
+			
+			// aapt resource value: 0x7f040122
+			public const int product_Cake = 2130968866;
+			
+			// aapt resource value: 0x7f040120
+			public const int product_CakeApple = 2130968864;
+			
+			// aapt resource value: 0x7f04011f
+			public const int product_CakeCream = 2130968863;
+			
+			// aapt resource value: 0x7f040117
+			public const int product_CandyChocolatePoured = 2130968855;
+			
+			// aapt resource value: 0x7f0400e7
+			public const int product_Capelin = 2130968807;
+			
+			// aapt resource value: 0x7f040116
+			public const int product_Caramel = 2130968854;
+			
+			// aapt resource value: 0x7f0400e2
+			public const int product_Carp = 2130968802;
+			
+			// aapt resource value: 0x7f04006b
+			public const int product_Carrot = 2130968683;
+			
+			// aapt resource value: 0x7f040066
+			public const int product_Cauliflower = 2130968678;
+			
+			// aapt resource value: 0x7f040048
+			public const int product_Cheese = 2130968648;
+			
+			// aapt resource value: 0x7f040082
+			public const int product_Cherry = 2130968706;
+			
+			// aapt resource value: 0x7f0400c7
+			public const int product_Chicken = 2130968775;
+			
+			// aapt resource value: 0x7f0400d9
+			public const int product_ChickenEgg = 2130968793;
+			
+			// aapt resource value: 0x7f040040
+			public const int product_Condensedmilk = 2130968640;
+			
+			// aapt resource value: 0x7f040041
+			public const int product_Condensedmilkwithsugar = 2130968641;
+			
+			// aapt resource value: 0x7f0400c9
+			public const int product_CookedSausageDiabetic = 2130968777;
+			
+			// aapt resource value: 0x7f0400ca
+			public const int product_CookedSausageDietary = 2130968778;
+			
+			// aapt resource value: 0x7f0400cb
+			public const int product_CookedSausageDoctorska = 2130968779;
+			
+			// aapt resource value: 0x7f0400cc
+			public const int product_CookedSausageLubitelska = 2130968780;
+			
+			// aapt resource value: 0x7f0400cd
+			public const int product_CookedSausageMolochna = 2130968781;
+			
+			// aapt resource value: 0x7f0400ce
+			public const int product_CookedSausageVeal = 2130968782;
+			
+			// aapt resource value: 0x7f040060
+			public const int product_Corngrits = 2130968672;
+			
+			// aapt resource value: 0x7f040064
+			public const int product_Courgette = 2130968676;
+			
+			// aapt resource value: 0x7f040104
+			public const int product_Crab = 2130968836;
+			
+			// aapt resource value: 0x7f040094
+			public const int product_Cranberry = 2130968724;
+			
+			// aapt resource value: 0x7f040044
+			public const int product_Cream10 = 2130968644;
+			
+			// aapt resource value: 0x7f040045
+			public const int product_Cream20 = 2130968645;
+			
+			// aapt resource value: 0x7f04006c
+			public const int product_Cucumber = 2130968684;
+			
+			// aapt resource value: 0x7f04011b
+			public const int product_DarkChocolate = 2130968859;
+			
+			// aapt resource value: 0x7f04008b
+			public const int product_Dates = 2130968715;
+			
+			// aapt resource value: 0x7f0400a7
+			public const int product_DriedApples = 2130968743;
+			
+			// aapt resource value: 0x7f0400a0
+			public const int product_DriedApricots = 2130968736;
+			
+			// aapt resource value: 0x7f0400a3
+			public const int product_DriedCherry = 2130968739;
+			
+			// aapt resource value: 0x7f0400a1
+			public const int product_DriedFigs = 2130968737;
+			
+			// aapt resource value: 0x7f0400a5
+			public const int product_DriedPeaches = 2130968741;
+			
+			// aapt resource value: 0x7f0400a4
+			public const int product_DriedPear = 2130968740;
+			
+			// aapt resource value: 0x7f0400a6
+			public const int product_DriedPrunes = 2130968742;
+			
+			// aapt resource value: 0x7f0400a2
+			public const int product_DriedRaisins = 2130968738;
+			
+			// aapt resource value: 0x7f0400b0
+			public const int product_Driedbirchbolete = 2130968752;
+			
+			// aapt resource value: 0x7f0400ae
+			public const int product_Driedcep = 2130968750;
+			
+			// aapt resource value: 0x7f0400db
+			public const int product_DryEggWhite = 2130968795;
+			
+			// aapt resource value: 0x7f0400dc
+			public const int product_DryEggYolk = 2130968796;
+			
+			// aapt resource value: 0x7f0400c8
+			public const int product_Duck = 2130968776;
+			
+			// aapt resource value: 0x7f0400fe
+			public const int product_Eel = 2130968830;
+			
+			// aapt resource value: 0x7f0400fd
+			public const int product_EelMarine = 2130968829;
+			
+			// aapt resource value: 0x7f0400da
+			public const int product_EggPowder = 2130968794;
+			
+			// aapt resource value: 0x7f040061
+			public const int product_Eggplant = 2130968673;
+			
+			// aapt resource value: 0x7f040101
+			public const int product_Elm = 2130968833;
+			
+			// aapt resource value: 0x7f040085
+			public const int product_Fig = 2130968709;
+			
+			// aapt resource value: 0x7f0400f0
+			public const int product_FishSaber = 2130968816;
+			
+			// aapt resource value: 0x7f0400e0
+			public const int product_Flounder = 2130968800;
+			
+			// aapt resource value: 0x7f0400af
+			public const int product_Freshbirchbolete = 2130968751;
+			
+			// aapt resource value: 0x7f0400ad
+			public const int product_Freshcep = 2130968749;
+			
+			// aapt resource value: 0x7f040112
+			public const int product_FruitDrops = 2130968850;
+			
+			// aapt resource value: 0x7f04007a
+			public const int product_Garlic = 2130968698;
+			
+			// aapt resource value: 0x7f0400c5
+			public const int product_Geese = 2130968773;
+			
+			// aapt resource value: 0x7f040121
+			public const int product_Gingerbread = 2130968865;
+			
+			// aapt resource value: 0x7f040099
+			public const int product_Gooseberry = 2130968729;
+			
+			// aapt resource value: 0x7f040091
+			public const int product_Grapefruit = 2130968721;
+			
+			// aapt resource value: 0x7f040095
+			public const int product_Grapes = 2130968725;
+			
+			// aapt resource value: 0x7f040077
+			public const int product_Greenbeans = 2130968695;
+			
+			// aapt resource value: 0x7f040068
+			public const int product_Greenonion = 2130968680;
+			
+			// aapt resource value: 0x7f040063
+			public const int product_Greenpeas = 2130968675;
+			
+			// aapt resource value: 0x7f04006d
+			public const int product_Greenpepper = 2130968685;
+			
+			// aapt resource value: 0x7f0400ff
+			public const int product_Hake = 2130968831;
+			
+			// aapt resource value: 0x7f0400ee
+			public const int product_Halibut = 2130968814;
+			
+			// aapt resource value: 0x7f04011a
+			public const int product_Halva = 2130968858;
+			
+			// aapt resource value: 0x7f0400d8
+			public const int product_Ham = 2130968792;
+			
+			// aapt resource value: 0x7f0400ab
+			public const int product_Haricotbeans = 2130968747;
+			
+			// aapt resource value: 0x7f04010c
+			public const int product_Hazelnut = 2130968844;
+			
+			// aapt resource value: 0x7f0400f5
+			public const int product_Herring = 2130968821;
+			
+			// aapt resource value: 0x7f04004a
+			public const int product_Homemadecheese = 2130968650;
+			
+			// aapt resource value: 0x7f040111
+			public const int product_Honey = 2130968849;
+			
+			// aapt resource value: 0x7f0400b4
+			public const int product_Horse = 2130968756;
+			
+			// aapt resource value: 0x7f040078
+			public const int product_Horseradish = 2130968696;
+			
+			// aapt resource value: 0x7f040114
+			public const int product_Iris = 2130968852;
+			
+			// aapt resource value: 0x7f040103
+			public const int product_Kalmar = 2130968835;
+			
+			// aapt resource value: 0x7f0400e1
+			public const int product_Karas = 2130968801;
+			
+			// aapt resource value: 0x7f040107
+			public const int product_KetyGranularCaviar = 2130968839;
+			
+			// aapt resource value: 0x7f04007c
+			public const int product_Kvass = 2130968700;
+			
+			// aapt resource value: 0x7f040086
+			public const int product_Kyzyl = 2130968710;
+			
+			// aapt resource value: 0x7f0400ba
+			public const int product_Lambheart = 2130968762;
+			
+			// aapt resource value: 0x7f0400b8
+			public const int product_Lambkidneys = 2130968760;
+			
+			// aapt resource value: 0x7f0400b9
+			public const int product_Lambliver = 2130968761;
+			
+			// aapt resource value: 0x7f0400e5
+			public const int product_Lamprey = 2130968805;
+			
+			// aapt resource value: 0x7f0400b6
+			public const int product_Leanpork = 2130968758;
+			
+			// aapt resource value: 0x7f040069
+			public const int product_Leek = 2130968681;
+			
+			// aapt resource value: 0x7f040092
+			public const int product_Lemon = 2130968722;
+			
+			// aapt resource value: 0x7f0400ac
+			public const int product_Lentils = 2130968748;
+			
+			// aapt resource value: 0x7f04003d
+			public const int product_Lowfatkefir = 2130968637;
+			
+			// aapt resource value: 0x7f0400f7
+			public const int product_Mackerel = 2130968823;
+			
+			// aapt resource value: 0x7f040093
+			public const int product_Mandarin = 2130968723;
+			
+			// aapt resource value: 0x7f04004d
+			public const int product_Margarine = 2130968653;
+			
+			// aapt resource value: 0x7f040115
+			public const int product_Marmalade = 2130968853;
+			
+			// aapt resource value: 0x7f040113
+			public const int product_Marshmallow = 2130968851;
+			
+			// aapt resource value: 0x7f04004e
+			public const int product_Mayonnaise = 2130968654;
+			
+			// aapt resource value: 0x7f040050
+			public const int product_Meltedbutter = 2130968656;
+			
+			// aapt resource value: 0x7f04004b
+			public const int product_Meltedfat = 2130968651;
+			
+			// aapt resource value: 0x7f04008d
+			public const int product_Merry = 2130968717;
+			
+			// aapt resource value: 0x7f04003e
+			public const int product_Milk = 2130968638;
+			
+			// aapt resource value: 0x7f04011c
+			public const int product_MilkChocolate = 2130968860;
+			
+			// aapt resource value: 0x7f04003f
+			public const int product_Milkpowder = 2130968639;
+			
+			// aapt resource value: 0x7f04005c
+			public const int product_Millet = 2130968668;
+			
+			// aapt resource value: 0x7f0400e6
+			public const int product_Mintay = 2130968806;
+			
+			// aapt resource value: 0x7f04008e
+			public const int product_Mulberry = 2130968718;
+			
+			// aapt resource value: 0x7f0400b2
+			public const int product_Mutton = 2130968754;
+			
+			// aapt resource value: 0x7f04003c
+			public const int product_Naturalyoghurt = 2130968636;
+			
+			// aapt resource value: 0x7f0400e8
+			public const int product_Navaga = 2130968808;
+			
+			// aapt resource value: 0x7f0400ea
+			public const int product_NototeniyaMarble = 2130968810;
+			
+			// aapt resource value: 0x7f04005f
+			public const int product_Oatflakes = 2130968671;
+			
+			// aapt resource value: 0x7f04005a
+			public const int product_Oatmeal = 2130968666;
+			
+			// aapt resource value: 0x7f04006a
+			public const int product_Onion = 2130968682;
+			
+			// aapt resource value: 0x7f040090
+			public const int product_Orange = 2130968720;
+			
+			// aapt resource value: 0x7f04006f
+			public const int product_Parsleygreen = 2130968687;
+			
+			// aapt resource value: 0x7f040070
+			public const int product_Parsleyroot = 2130968688;
+			
+			// aapt resource value: 0x7f040118
+			public const int product_Pastille = 2130968856;
+			
+			// aapt resource value: 0x7f040087
+			public const int product_Peach = 2130968711;
+			
+			// aapt resource value: 0x7f04010f
+			public const int product_Peanuts = 2130968847;
+			
+			// aapt resource value: 0x7f040084
+			public const int product_Pear = 2130968708;
+			
+			// aapt resource value: 0x7f04005b
+			public const int product_Pearlbarley = 2130968667;
+			
+			// aapt resource value: 0x7f0400a9
+			public const int product_Peas = 2130968745;
+			
+			// aapt resource value: 0x7f04008c
+			public const int product_Persimmon = 2130968716;
+			
+			// aapt resource value: 0x7f040100
+			public const int product_Pike = 2130968832;
+			
+			// aapt resource value: 0x7f040080
+			public const int product_Pineapple = 2130968704;
+			
+			// aapt resource value: 0x7f0400df
+			public const int product_PinkSalmon = 2130968799;
+			
+			// aapt resource value: 0x7f04007f
+			public const int product_Plum = 2130968703;
+			
+			// aapt resource value: 0x7f04008a
+			public const int product_PlumGarden = 2130968714;
+			
+			// aapt resource value: 0x7f040109
+			public const int product_PollockRoe = 2130968841;
+			
+			// aapt resource value: 0x7f040083
+			public const int product_Pomegranate = 2130968707;
+			
+			// aapt resource value: 0x7f0400cf
+			public const int product_PorkSausages = 2130968783;
+			
+			// aapt resource value: 0x7f04004c
+			public const int product_Porkfat = 2130968652;
+			
+			// aapt resource value: 0x7f0400c3
+			public const int product_Porkheart = 2130968771;
+			
+			// aapt resource value: 0x7f0400c1
+			public const int product_Porkkidneys = 2130968769;
+			
+			// aapt resource value: 0x7f0400c2
+			public const int product_Porkliver = 2130968770;
+			
+			// aapt resource value: 0x7f0400c4
+			public const int product_Porktongue = 2130968772;
+			
+			// aapt resource value: 0x7f040067
+			public const int product_Potato = 2130968679;
+			
+			// aapt resource value: 0x7f040049
+			public const int product_Processedcheese = 2130968649;
+			
+			// aapt resource value: 0x7f0400dd
+			public const int product_QuailEggs = 2130968797;
+			
+			// aapt resource value: 0x7f04007e
+			public const int product_Quince = 2130968702;
+			
+			// aapt resource value: 0x7f0400b5
+			public const int product_Rabbit = 2130968757;
+			
+			// aapt resource value: 0x7f040072
+			public const int product_Radish = 2130968690;
+			
+			// aapt resource value: 0x7f040079
+			public const int product_Ramson = 2130968697;
+			
+			// aapt resource value: 0x7f04009a
+			public const int product_Raspberry = 2130968730;
+			
+			// aapt resource value: 0x7f04009d
+			public const int product_RedCurrant = 2130968733;
+			
+			// aapt resource value: 0x7f04006e
+			public const int product_Redpepper = 2130968686;
+			
+			// aapt resource value: 0x7f040071
+			public const int product_Rhubarb = 2130968689;
+			
+			// aapt resource value: 0x7f04005d
+			public const int product_Rice = 2130968669;
+			
+			// aapt resource value: 0x7f0400ec
+			public const int product_RiverPerch = 2130968812;
+			
+			// aapt resource value: 0x7f04009f
+			public const int product_Rosehip = 2130968735;
+			
+			// aapt resource value: 0x7f040089
+			public const int product_RowanAronia = 2130968713;
+			
+			// aapt resource value: 0x7f040088
+			public const int product_RowanGarden = 2130968712;
+			
+			// aapt resource value: 0x7f040055
+			public const int product_Rusk = 2130968661;
+			
+			// aapt resource value: 0x7f0400b1
+			public const int product_Russule = 2130968753;
+			
+			// aapt resource value: 0x7f040062
+			public const int product_Rutabaga = 2130968674;
+			
+			// aapt resource value: 0x7f040043
+			public const int product_Ryazhanka = 2130968643;
+			
+			// aapt resource value: 0x7f040051
+			public const int product_Ryebread = 2130968657;
+			
+			// aapt resource value: 0x7f040057
+			public const int product_Ryeflour = 2130968663;
+			
+			// aapt resource value: 0x7f0400f2
+			public const int product_SairaLarge = 2130968818;
+			
+			// aapt resource value: 0x7f0400f3
+			public const int product_SairaSmall = 2130968819;
+			
+			// aapt resource value: 0x7f040074
+			public const int product_Salad = 2130968692;
+			
+			// aapt resource value: 0x7f0400f4
+			public const int product_Salak = 2130968820;
+			
+			// aapt resource value: 0x7f0400e3
+			public const int product_Salmon = 2130968803;
+			
+			// aapt resource value: 0x7f0400d5
+			public const int product_SausageStuffing = 2130968789;
+			
+			// aapt resource value: 0x7f0400d0
+			public const int product_SausagesMolochni = 2130968784;
+			
+			// aapt resource value: 0x7f0400d1
+			public const int product_SausagesRussian = 2130968785;
+			
+			// aapt resource value: 0x7f0400f9
+			public const int product_Scad = 2130968825;
+			
+			// aapt resource value: 0x7f0400eb
+			public const int product_SeaPerch = 2130968811;
+			
+			// aapt resource value: 0x7f04009b
+			public const int product_Seabuckthorn = 2130968731;
+			
+			// aapt resource value: 0x7f040106
+			public const int product_Seaweed = 2130968838;
+			
+			// aapt resource value: 0x7f040059
+			public const int product_Semolina = 2130968665;
+			
+			// aapt resource value: 0x7f040105
+			public const int product_Shrimp = 2130968837;
+			
+			// aapt resource value: 0x7f040102
+			public const int product_ShrimpFarEast = 2130968834;
+			
+			// aapt resource value: 0x7f0400fb
+			public const int product_Sliver = 2130968827;
+			
+			// aapt resource value: 0x7f0400d7
+			public const int product_SmokedBrisket = 2130968791;
+			
+			// aapt resource value: 0x7f0400f8
+			public const int product_Som = 2130968824;
+			
+			// aapt resource value: 0x7f040046
+			public const int product_Sourcream10 = 2130968646;
+			
+			// aapt resource value: 0x7f040047
+			public const int product_Sourcream20 = 2130968647;
+			
+			// aapt resource value: 0x7f040042
+			public const int product_Sourmilk = 2130968642;
+			
+			// aapt resource value: 0x7f0400aa
+			public const int product_Soybeans = 2130968746;
+			
+			// aapt resource value: 0x7f04007b
+			public const int product_Spinach = 2130968699;
+			
+			// aapt resource value: 0x7f0400fa
+			public const int product_Sterlet = 2130968826;
+			
+			// aapt resource value: 0x7f0400d2
+			public const int product_StewedBeef = 2130968786;
+			
+			// aapt resource value: 0x7f0400d6
+			public const int product_StewedPork = 2130968790;
+			
+			// aapt resource value: 0x7f040098
+			public const int product_Strawberry = 2130968728;
+			
+			// aapt resource value: 0x7f0400ed
+			public const int product_Sturgeon = 2130968813;
+			
+			// aapt resource value: 0x7f04010b
+			public const int product_SturgeonCaviar = 2130968843;
+			
+			// aapt resource value: 0x7f04010a
+			public const int product_SturgeonGranularCaviar = 2130968842;
+			
+			// aapt resource value: 0x7f040119
+			public const int product_Sugar = 2130968857;
+			
+			// aapt resource value: 0x7f040110
+			public const int product_Sunflower = 2130968848;
+			
+			// aapt resource value: 0x7f040076
+			public const int product_Tomato = 2130968694;
+			
+			// aapt resource value: 0x7f0400d3
+			public const int product_TouristBreakfastBeef = 2130968787;
+			
+			// aapt resource value: 0x7f0400d4
+			public const int product_TouristBreakfastPork = 2130968788;
+			
+			// aapt resource value: 0x7f0400fc
+			public const int product_Tuna = 2130968828;
+			
+			// aapt resource value: 0x7f0400c6
+			public const int product_Turkey = 2130968774;
+			
+			// aapt resource value: 0x7f040073
+			public const int product_Turnip = 2130968691;
+			
+			// aapt resource value: 0x7f0400b7
+			public const int product_Veal = 2130968759;
+			
+			// aapt resource value: 0x7f0400f1
+			public const int product_VimbaCaspian = 2130968817;
+			
+			// aapt resource value: 0x7f04011e
+			public const int product_WafflesFattyToppings = 2130968862;
+			
+			// aapt resource value: 0x7f04011d
+			public const int product_WafflesFruitToppings = 2130968861;
+			
+			// aapt resource value: 0x7f04010e
+			public const int product_Walnut = 2130968846;
+			
+			// aapt resource value: 0x7f040056
+			public const int product_Wheatflour = 2130968662;
+			
+			// aapt resource value: 0x7f04009c
+			public const int product_WhiteCurrant = 2130968732;
+			
+			// aapt resource value: 0x7f040052
+			public const int product_Whitebread = 2130968658;
+			
+			// aapt resource value: 0x7f04003b
+			public const int product_Whitecheese = 2130968635;
+			
+			// aapt resource value: 0x7f0400f6
+			public const int product_Whitefish = 2130968822;
+			
+			// aapt resource value: 0x7f0400ef
+			public const int product_Whiting = 2130968815;
+			
+			// aapt resource value: 0x7f040031
+			public const int producttype_Beans = 2130968625;
+			
+			// aapt resource value: 0x7f04002c
+			public const int producttype_Breadandbakeryproducts = 2130968620;
+			
+			// aapt resource value: 0x7f040038
+			public const int producttype_Caviar = 2130968632;
+			
+			// aapt resource value: 0x7f04002d
+			public const int producttype_Cereals = 2130968621;
+			
+			// aapt resource value: 0x7f04002a
+			public const int producttype_Dairyproducts = 2130968618;
+			
+			// aapt resource value: 0x7f040030
+			public const int producttype_Driedfruits = 2130968624;
+			
+			// aapt resource value: 0x7f040036
+			public const int producttype_Eggs = 2130968630;
+			
+			// aapt resource value: 0x7f04002b
+			public const int producttype_Fatsmargarinebutter = 2130968619;
+			
+			// aapt resource value: 0x7f040037
+			public const int producttype_Fishandseafood = 2130968631;
+			
+			// aapt resource value: 0x7f04002f
+			public const int producttype_Fruitsandberries = 2130968623;
+			
+			// aapt resource value: 0x7f040035
+			public const int producttype_Meatandcannedmeat = 2130968629;
+			
+			// aapt resource value: 0x7f040033
+			public const int producttype_Meatandpoultry = 2130968627;
+			
+			// aapt resource value: 0x7f040032
+			public const int producttype_Mushrooms = 2130968626;
+			
+			// aapt resource value: 0x7f040039
+			public const int producttype_Nuts = 2130968633;
+			
+			// aapt resource value: 0x7f040034
+			public const int producttype_Sausageandsausageproducts = 2130968628;
+			
+			// aapt resource value: 0x7f04003a
+			public const int producttype_Sweets = 2130968634;
+			
+			// aapt resource value: 0x7f04002e
+			public const int producttype_Vegetables = 2130968622;
+			
+			// aapt resource value: 0x7f040021
+			public const int tab_GraphHeight = 2130968609;
+			
+			// aapt resource value: 0x7f040020
+			public const int tab_GraphWeight = 2130968608;
+			
+			// aapt resource value: 0x7f040022
+			public const int tab_List = 2130968610;
 			
 			static String()
 			{

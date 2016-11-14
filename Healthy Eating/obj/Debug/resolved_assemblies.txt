@@ -2,6 +2,7 @@ C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eat
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\android\assets\AChartEngine.Bindings.XamarinAndroid.dll
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\android\assets\MPAndroidChart.dll
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\android\assets\Newtonsoft.Json.dll
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\android\assets\Plugin.CurrentActivity.dll
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\android\assets\SQLite-net.dll
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\android\assets\SQLite.Net.dll
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\android\assets\SQLite.Net.Platform.XamarinAndroid.dll

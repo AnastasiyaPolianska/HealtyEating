@@ -17,21 +17,28 @@ namespace Healthy_Eating.Classes
 
   public  class User
     {
-
         [PrimaryKey]
         public string Name { get; set; }
         public int Age { get; set; }
         public ENSex Sex { get; set; }
 
-        [TextBlob("sParameters")]
+        [TextBlob("ParametersString")]
         public  List<ParametresOfUser> Parameters { get; set; }
         public string ParametersString { get; set; }
+
+        [TextBlob("MenuString")]
+        public List<Product> Products { get; set; }
+        public string MenuString { get; set; }
 
         [Ignore]
         public static int CurrentUser { get; set; }
 
         /*Constructors*/
-        public User() { Parameters = new List<ParametresOfUser>(); }
+        public User()
+        {
+            Parameters = new List<ParametresOfUser>();
+            Products = new List<Product>();
+        }
 
         public User(string incomeName, int incomeAge, ENSex incomeSex)
         {
@@ -39,6 +46,7 @@ namespace Healthy_Eating.Classes
             Age = incomeAge;
             Sex = incomeSex;
             Parameters = new List<ParametresOfUser>();
+            Products = new List<Product>();
         }
 
         /*Functions*/

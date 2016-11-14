@@ -5,14 +5,17 @@
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <application android:label="Healthy_Eating" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
+  <application android:label="Healthy_Eating" android:name="md584f93fb47c60087209b83825b7e83b1c.MainApplication" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
     <activity android:icon="@drawable/icon" android:label="Main Menu" android:name="md584f93fb47c60087209b83825b7e83b1c.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:label="Weight List" android:name="md584f93fb47c60087209b83825b7e83b1c.WeightList" />
+    <activity android:label="My parameters" android:name="md584f93fb47c60087209b83825b7e83b1c.ListOfParameters" />
+    <activity android:label="Choose product: " android:name="md59d3375eca6d7649321b21808f75fa4d5.products_Add" />
+    <activity android:label="My Menu" android:name="md59d3375eca6d7649321b21808f75fa4d5.page_MyMenu" />
+    <activity android:label="Choose type of product: " android:name="md59d3375eca6d7649321b21808f75fa4d5.products_Types" />
     <activity android:label="GraphicalActivity" android:name="org.achartengine.GraphicalActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="Healthy_Eating.Healthy_Eating.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->

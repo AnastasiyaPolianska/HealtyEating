@@ -102,6 +102,7 @@ class MonoPackageManager_Resources {
 		"AChartEngine.Bindings.XamarinAndroid.dll",
 		"MPAndroidChart.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.CurrentActivity.dll",
 		"SQLite-net.dll",
 		"SQLite.Net.dll",
 		"SQLite.Net.Platform.XamarinAndroid.dll",
