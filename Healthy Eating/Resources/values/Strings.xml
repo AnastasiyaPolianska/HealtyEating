@@ -2,22 +2,24 @@
 <resources>
     <string name="ApplicationName">Healthy Eating</string>
     
-    <string name="PageName_MyMenu">My Menu</string>  
-  
+    <string name="PageName_MyMenu">My Menu</string>   
   
     <string name="OK">Ok</string>
     <string name="Cancel">Cancel</string>
-       
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+  
     <string name="UserCharacteristic_Male">Male</string>
     <string name="UserCharacteristic_Female">Female</string>
     <string name="UserCharacteristic_ParametersOfUser">Parameters of user: </string>
     <string name="UserCharacteristic_MenuOfUser">Menu of user: </string>
     
     <string name="Action_Add">Add new user</string>
-    <string name="Action_ChooseFromExist">Choose from existing</string>
+    <string name="MainMenuitem_Users">Users</string>
     <string name="Action_AddEntry">Add new entry</string>
     <string name="Action_ChooseDate">Choose date</string>
-  
+    <string name="Action_SetParameters">Set Parameters</string>
+       
     <string name="Message_BMIout">Your BMI is</string>
     <string name="Message_DeleteUser">Do you want to delete this user: </string>
     <string name="Message_VerySeverelyUnderweight">. ATTENTION: you are very severely underweight!</string>
@@ -28,14 +30,64 @@
     <string name="Message_ModeratelyOverweight">. ATTENTION: you are moderately overweight!</string>
     <string name="Message_SeverelyOverweight">. ATTENTION: you are severely overweight!</string>
     <string name="Message_VerySeverelyOverweight">. ATTENTION: you are very severely overweight!</string>
-    <string name="Message_EnterCorrect">Enter correct</string>
+    <string name="Message_Lost">You have lost</string>
+    <string name="Message_Gained">You have gained </string>
+    <string name="Message_YouAre"> You are </string>
+    <string name="Message_EnterWeight">Enter your weight </string>
+    <string name="Message_EnterHeight">Enter your height </string>
+    <string name="Message_AmountGrams">Amount (grams) </string>
+    <string name="Message_EnterName">Enter your name </string>
+    <string name="Message_EnterAge">Enter your age </string>
+    <string name="Message_YouHave">You have</string>
+    <string name="Message_ppmOfAlcohol">ppm of alcohol in your blood.</string>
+    <string name="Message_WarningAlcohol">You MUST NOT drive now. It is against the law of</string>
+    <string name="Message_WarningAlcoholTime">Your blood will be purified in</string>
+    <string name="Message_WarningAlcoholDeath">BE CAREFUL! YOU ARE CLOSE TO DYING!</string>
+    <string name="Message_NumberOfCigarettes">Number of cigarettes </string>
+    <string name="Message_NicotineAmount">Nicotine amount </string>
+    <string name="Message_EnterNicotineAmount">Enter nicotine \namount in one \ncigarette</string>
+    <string name="Message_Height">Height (cm) </string>  
+    <string name="Message_Weight">Weight (kg) </string>
+    <string name="Message_Name">Your name </string>
+    <string name="Message_Country">Your country </string>
+    <string name="Message_BirthdayDate">Your date of birth </string>
+    <string name="Message_Sex">Your sex </string>
+    <string name="Message_DrivingLicence">Driving licence? </string>
+    <string name="Message_ChildDeseases">Child diseases? </string>
+    <string name="Message_ChronicDeseases">Chronic diseases? </string>
+    <string name="Message_Products">Products </string>
+    <string name="Message_Alcohol">Alcohol</string>      
+    <string name="Message_AddProductName">Product name: </string>  
+    <string name="Message_AddProteins">Proteins (for 100g): </string>
+    <string name="Message_AddFats">Fats (for 100g): </string> 
+    <string name="Message_AddCarbs">Carbs (for 100g): </string>
+    <string name="Message_AddWater">Water (for 100g): </string>
+    <string name="Message_AddCcals">Ccals (for 100g): </string>  
+    <string name="Message_EnterProductName">Enter name</string>  
+    <string name="Message_EnterProteins">Enter proteins</string>
+    <string name="Message_EnterFats">Enter fats</string> 
+    <string name="Message_EnterCarbs">Enter carbs</string>
+    <string name="Message_EnterWater">Enter water</string>
+    <string name="Message_EnterCcals">Enter ccals</string>
+    <string name="Message_ChooseType">Choose type: </string>
+    <string name="Message_PrivareOrGeneral">Private/General</string>
+    <string name="Message_AddDrinkName">Drink name: </string>
+    <string name="Message_AddPercentage">Alcohol %: </string>
+    <string name="Message_EnterPercentage">Enter alcohol %</string>
+    <string name="Message_UserInfo">User info</string>
+    <string name="Message_Delete">Delete user</string>
+    <string name="Message_Apply">Apply changes</string>
 
+    <string name="ErrorMessage_EnterCorrect">Enter correct</string>
     <string name="ErrorMessage_AlreadyInSystem">Name already exists</string> 
     <string name="ErrorMessage_Unchoosed">The user is not choosed.</string>
   
     <string name="MainMenuitem_ParametersList">List Of Parameters</string>   
     <string name="MainMenuitem_Menu">My Menu</string>
-    
+    <string name="MainMenuitem_Alcohol">Alcohol Consumption</string>
+    <string name="MainMenuitem_Cigarettes">Cigarettes Consumption</string>
+    <string name="MainMenuitem_AddUserItems">Add User Items</string>
+
     <string name="Parameterscolumn_Date">Date</string>
     <string name="Parameterscolumn_Weight">Weight</string>  
     <string name="Parameterscolumn_Height">Height</string>
@@ -43,15 +95,83 @@
      
     <string name="tab_GraphWeight">Weight plot</string>
     <string name="tab_GraphHeight">Height plot</string>
-    <string name="tab_List">List of parameters</string>
-    
-    <string name="Productcolumn_Name">Product (for 100g)</string> 
-    <string name="Productcolumn_Proteins">Proteins</string>
-    <string name="Productcolumn_Fats">Fats</string>
-    <string name="Productcolumn_Carbs">Carbs</string>
-    <string name="Productcolumn_Quantity">Quantity</string>
-    <string name="Productcolumn_Water">Water</string>
-    <string name="Productcolumn_Ccals">Ccals</string>
+    <string name="tab_ListParameters">List of parameters</string>
+    <string name="tab_ProtsFatsCarbs">Proteins, Fats and Carbohydrates</string>
+    <string name="tab_WaterCcals">Water and Ccals</string>
+    <string name="tab_ListAlcohol">List of alcohol drinks</string>
+    <string name="tab_CalendarAlcohol">Alcohol calendar</string>
+    <string name="tab_ListCigarettes">List of cigarettes</string>
+    <string name="tab_CalendarCigarettes">Cigarettes calendar</string>
+
+    <string name="Column_Name">Name: </string>
+    <string name="Column_Age">Age: </string>
+    <string name="Column_Country">Country: </string>
+    <string name="Column_Sex">Sex: </string>
+    <string name="Column_Product">Product (for 100g)</string>
+    <string name="Column_Product">Product (for 100g)</string>
+    <string name="Column_Drink">Drink (for 100g)</string>
+    <string name="Column_BaseProduct">Product</string>
+    <string name="Column_BaseDrink">Drink</string>   
+    <string name="Column_Proteins">Proteins</string>
+    <string name="Column_Fats">Fats</string>
+    <string name="Column_Carbs">Carbs</string>
+    <string name="Column_Quantity">Quantity</string>
+    <string name="Column_Water">Water</string>
+    <string name="Column_Ccals">Ccals</string>
+    <string name="Column_Percentage">Alcohol</string>
+    <string name="Column_Sum">Sum</string>
+    <string name="Column_Nicotine">Nicotine (mg)</string>
+    <string name="Column_ChildDiseases">Child diseases</string>
+    <string name="Column_ChronicDiseases">Chronic diseases</string>
+    <string name="Column_DrivingLicences">Driving licences</string>
+
+    <string name="Category_A1">A1</string>
+    <string name="Category_A">A</string>
+    <string name="Category_B1">B1</string>
+    <string name="Category_B">B</string>
+    <string name="Category_C1">C1</string>
+    <string name="Category_C">C</string>
+    <string name="Category_D1">D1</string>
+    <string name="Category_D">D</string>
+    <string name="Category_BE">BE</string>
+    <string name="Category_CE">CE</string>
+    <string name="Category_C1E">C1E</string>
+    <string name="Category_D1E">D1E</string>
+    <string name="Category_DE">DE</string>
+    <string name="Category_T">T</string>
+  
+    <string name="Disease_Measles">Measles</string>
+    <string name="Disease_ChickenPox">Chicken pox</string>
+    <string name="Disease_WhoopingCough">Whooping cough</string>
+    <string name="Disease_Diphtheria">Diphtheria</string>
+    <string name="Disease_ScarletFever">Scarlet fever</string>
+    <string name="Disease_Mumps">Mumps</string>
+    <string name="Disease_Polio">Polio</string>
+    <string name="Disease_PneumococcalDisease">Pneumococcal disease</string>
+    <string name="Disease_HaemophilusInfluenzae">Haemophilus influenzae</string>
+  
+    <string name="Disease_Atherosclerosis">Atherosclerosis</string>
+    <string name="Disease_CardiacIschemia">Cardiac ischemia</string>
+    <string name="Disease_ChronicMyocarditis">Chronic myocarditis</string>
+    <string name="Disease_Cardiomyopathy">Cardiomyopathy</string>
+    <string name="Disease_Herpes">Herpes</string>
+    <string name="Disease_Cytomegalovirus">Cytomegalovirus</string>
+    <string name="Disease_HPV">HPV</string>
+    <string name="Disease_COPD">COPD</string>
+    <string name="Disease_ChronicLungAbscess">Chronic lung abscess</string>  
+    <string name="Disease_ChronicalBronchitis">Chronical bronchitis</string>
+    <string name="Disease_BronchialAsthma">Bronchial asthma</string>
+    <string name="Disease_Pyelonephritis">Pyelonephritis</string>
+    <string name="Disease_ChronicCystitis">Chronic cystitis</string>
+    <string name="Disease_StonesInTheKidneys">Stones in the kidneys</string>
+    <string name="Disease_ChronicGastritis">Chronic gastritis</string>
+    <string name="Disease_ChronicPancreatitis">Chronic pancreatitis</string>
+    <string name="Disease_ChronicColitis">Chronic colitis</string>
+    <string name="Disease_Urethritis">Urethritis</string>
+    <string name="Disease_Prostatitis">Prostatitis</string>
+    <string name="Disease_Orchitis">Orchitis</string>
+    <string name="Disease_Epididymitis">Epididymitis</string>
+    <string name="Disease_Adnexitis">Adnexitis</string>
     
     <string name="producttype_Dairyproducts">Dairy products</string>
     <string name="producttype_Fatsmargarinebutter">Fats, margarine, butter</string>
@@ -70,6 +190,8 @@
     <string name="producttype_Caviar">Caviar</string>
     <string name="producttype_Nuts">Nuts</string>
     <string name="producttype_Sweets">Sweets</string>
+    <string name="producttype_Drinks">Drinks</string>
+    <string name="producttype_UserProducts">User products</string>
   
     <string name="product_Whitecheese">White cheese</string>
     <string name="product_Naturalyoghurt">Natural yoghurt</string>
@@ -320,11 +442,122 @@
     <string name="product_CakeApple">Cake with apple</string>
     <string name="product_Gingerbread">Gingerbread</string>
     <string name="product_Cake">Cake</string>
-
+  
+    <string name="product_BlackTea">Black tea</string>
+    <string name="product_GreenTea">Green tea</string>
+    <string name="product_HibiscusTea">Hibiscus tea</string>
+    <string name="product_YellowTea">Yellow tea</string>
+    <string name="product_CoffeeRoasted">Coffee roasted</string> 
+    <string name="product_InstantCoffee">Instant coffee</string>
+    <string name="product_GroundCoffee">Ground coffee</string>
+    <string name="product_BlackCoffee">Black coffee</string>
+    <string name="product_Espresso">Espresso</string>
+    <string name="product_Latte">Latte</string> 
+    <string name="product_FrozenCoffee">Frozen coffee</string>
+    <string name="product_Cappuccino">Cappuccino</string>
+    <string name="product_Americano">Americano</string>
+    <string name="product_StrawberryCocktail">Strawberry cocktail</string>
+    <string name="product_BananaCocktail">Banana cocktail</string>
+    <string name="product_VanillaCocktail">Vanilla cocktail</string>
+    <string name="product_ChocolateCocktail">Chocolate cocktail</string>    
+    <string name="product_PearJuice">Pear juice</string>
+    <string name="product_PruneJuice">Prune juice</string>
+    <string name="product_LemonJuice">Lemon juice</string>
+    <string name="product_CherryJuice">Cherry juice</string>
+    <string name="product_AppleJuice">Apple juice</string>
+    <string name="product_PineappleJuice">Pineapple juice</string>
+    <string name="product_OrangeJuice">Orange juice</string>
+    <string name="product_BananaJuice">Banana juice</string>
+    <string name="product_GrapefruitJuice">Grapefruit juice</string>
+    <string name="product_TomatoJuice">Tomato juice</string>  
+    <string name="product_CarrotJuice">Carrot juice</string>
+    <string name="product_BeetJuice">Beet juice</string>
+    <string name="product_PumpkinJuice">Pumpkin juice</string>
+    <string name="product_PlumСompote">Plum compote</string>
+    <string name="product_CherryСompote">Cherry compote</string>
+    <string name="product_PearСompote">Pear compote</string>
+    <string name="product_AppleСompote">Apple compote</string>
+    <string name="product_PeachСompote">Peach compote</string>
+    <string name="product_ApricotСompote">Apricot compote</string>  
+    <string name="product_GrapeСompote">Grape compote</string>
+    <string name="product_TangerineСompote">Tangerine compote</string>
+    <string name="product_BlackcurrantСompote">Blackcurrant compote</string>
+  
+    <string name="alcohol_NonalcoholicBeer">Non-alcoholic beer</string>  
+    <string name="alcohol_LightBeer">Light beer</string>
+    <string name="alcohol_DryWhiteWine">Dry white wine</string>  
+    <string name="alcohol_DryRedWine">Dry red wine</string>
+    <string name="alcohol_Сhampagne">Сhampagne</string>  
+    <string name="alcohol_LiquorBaileys">Liquor baileys</string>
+    <string name="alcohol_PortWine">Port wine</string>  
+    <string name="alcohol_Sambuca">Sambuca</string>
+    <string name="alcohol_Cognac">Cognac</string>  
+    <string name="alcohol_Tequila">Tequila</string>
+    <string name="alcohol_Vodka">Vodka</string>
+    <string name="alcohol_Whiskey">Whiskey</string>  
+    <string name="alcohol_Absinthe">Absinthe</string>
+  
     <string name="other_Amount">amount</string>
     <string name="other_Name">name</string>
     <string name="other_Age">age</string>
+    <string name="other_date">date</string>
     <string name="other_Weight">weight</string>
     <string name="other_Height">height</string>
-  
+    <string name="other_Kilograms"> kilograms.</string>
+    <string name="other_Centimetres"> centimeters taller now.</string>
+    <string name="other_Date">Date:</string>
+    <string name="other_Hours">hours.</string>
+    <string name="other_Maximum">Maximum</string>
+    <string name="other_Minimum">Minimum</string>
+    <string name="other_Nicotine">amount of nicotine</string>
+    <string name="other_Private">Only for me</string>
+    <string name="other_date">date</string>
+
+    <string name="country_Ukraine">Ukraine</string>
+    <string name="country_Russia">Russia</string>
+    <string name="country_Albania">Albania</string>
+    <string name="country_Andorra">Andorra</string>
+    <string name="country_Armenia">Armenia</string>
+    <string name="country_Azerbaijan">Azerbaijan</string>
+    <string name="country_Austria">Austria</string>
+    <string name="country_Belarus">Belarus</string>
+    <string name="country_Belgium">Belgium</string>
+    <string name="country_BosniaAndHerzegovina">Bosnia and Herzegovina</string>
+    <string name="country_Bulgaria">Bulgaria</string>
+    <string name="country_Croatia">Croatia</string>
+    <string name="country_Cyprus">Cyprus</string>
+    <string name="country_CzechRepublic">Czech Republic</string>
+    <string name="country_Denmark">Denmark</string>
+    <string name="country_Estonia">Estonia</string>
+    <string name="country_Finland">Finland</string>    
+    <string name="country_France">France</string>
+    <string name="country_Georgia">Georgia</string>
+    <string name="country_Germany">Germany</string>
+    <string name="country_Greece">Greece</string>
+    <string name="country_Hungary">Hungary</string>
+    <string name="country_Iceland">Iceland</string>
+    <string name="country_Ireland">Ireland</string>
+    <string name="country_Italy">Italy</string>
+    <string name="country_Latvia">Latvia</string>
+    <string name="country_Liechtenstein">Liechtenstein</string>
+    <string name="country_Lithuania">Lithuania</string>
+    <string name="country_Luxembourg">Luxembourg</string>
+    <string name="country_Macedonia">Macedonia</string>
+    <string name="country_Malta">Malta</string>
+    <string name="country_Moldova">Moldova</string>
+    <string name="country_Montenegro">Montenegro</string>
+    <string name="country_Netherlands">Netherlands</string>
+    <string name="country_Norway">Norway</string>
+    <string name="country_Poland">Poland</string>
+    <string name="country_Portugal">Portugal</string>    
+    <string name="country_Romania">Romania</string>
+    <string name="country_Serbia">Serbia</string>
+    <string name="country_Slovakia">Slovakia</string>
+    <string name="country_Slovenia">Slovenia</string>
+    <string name="country_Spain">Spain</string>
+    <string name="country_Sweden">Sweden</string>
+    <string name="country_Switzerland">Switzerland</string>
+    <string name="country_Turkey">Turkey</string>
+    <string name="country_UK">UK</string>
+
 </resources>

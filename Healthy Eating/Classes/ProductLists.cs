@@ -41,6 +41,8 @@ namespace Healthy_Eating.Classes.ProductsRange
             Temp.Add(Application.Context.Resources.GetString(Resource.String.producttype_Caviar));
             Temp.Add(Application.Context.Resources.GetString(Resource.String.producttype_Nuts));
             Temp.Add(Application.Context.Resources.GetString(Resource.String.producttype_Sweets));
+            Temp.Add(Application.Context.Resources.GetString(Resource.String.producttype_Drinks));
+            Temp.Add(Application.Context.Resources.GetString(Resource.String.producttype_UserProducts));
 
             return Temp;
         }
@@ -115,6 +117,14 @@ namespace Healthy_Eating.Classes.ProductsRange
 
                 case 16:
                     Chooser = "Sweets";
+                    break;
+
+                case 17:
+                    Chooser = "Drinks";
+                    break;
+
+                case 18:
+                    Chooser = "Userproducts";
                     break;
             }
         }

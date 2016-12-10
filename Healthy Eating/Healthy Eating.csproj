@@ -58,6 +58,10 @@
       <HintPath>..\packages\Plugin.CurrentActivity.1.0.1\lib\MonoAndroid10\Plugin.CurrentActivity.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Refractored.FloatingActionButton, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Refractored.FloatingActionButton.1.3.0\lib\MonoAndroid10\Refractored.FloatingActionButton.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SQLite-net, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\sqlite-net-pcl.1.0.11\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
       <Private>True</Private>
@@ -78,37 +82,72 @@
       <HintPath>..\packages\SQLitePCL.raw_basic.0.7.1\lib\MonoAndroid\SQLitePCL.raw.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Square.AndroidTimesSquare, Version=1.6.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Square.AndroidTimesSquare.1.6.5.0\lib\MonoAndroid\Square.AndroidTimesSquare.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Syncfusion.SfCalendar.Android">
+      <HintPath>G:\Program Files (x86)\Syncfusion\Essential Studio\14.3.0.49\Xamarin\lib\android\Syncfusion.SfCalendar.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfChart.Android">
+      <HintPath>G:\Program Files (x86)\Syncfusion\Essential Studio\14.3.0.49\Xamarin\lib\android\Syncfusion.SfChart.Android.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.22.0.0.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.22.0.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActivityS\products_Add.cs" />
-    <Compile Include="ActivityS\page_MyMenu.cs" />
-    <Compile Include="ActivityS\tab_products_List.cs" />
-    <Compile Include="ActivityS\tab_products_GraphHeight.cs" />
-    <Compile Include="ActivityS\tab_products_GraphWeight.cs" />
-    <Compile Include="ActivityS\products_Types.cs" />
-    <Compile Include="Classes\helpclass_GraphFormattercs.cs" />
-    <Compile Include="Classes\helpclass_MenuCcalsAdapter.cs" />
-    <Compile Include="Classes\helpclass_MenuAdapter.cs" />
-    <Compile Include="Classes\helpclass_ListAdapter.cs" />
-    <Compile Include="Classes\tablerow_MenuCcals.cs" />
-    <Compile Include="Classes\tablerow_Menu.cs" />
-    <Compile Include="Classes\helpclass_DataValidation.cs" />
-    <Compile Include="Classes\tablerow_Parameters.cs" />
+    <Compile Include="ActivityS\PageAlcohol.cs" />
+    <Compile Include="ActivityS\AlcoholAdd.cs" />
+    <Compile Include="ActivityS\PageCigarettes.cs" />
+    <Compile Include="ActivityS\PageUsers.cs" />
+    <Compile Include="ActivityS\ProductsAdd.cs" />
+    <Compile Include="ActivityS\PageMyMenu.cs" />
+    <Compile Include="ActivityS\TabCigaretteCalendar.cs" />
+    <Compile Include="ActivityS\TabAlcoholCalendar.cs" />
+    <Compile Include="ActivityS\TabCigaretteList.cs" />
+    <Compile Include="ActivityS\TabAlcoholList.cs" />
+    <Compile Include="ActivityS\TabMenuProtsFatsCarbs.cs" />
+    <Compile Include="ActivityS\TabMenuWaterCcals.cs" />
+    <Compile Include="ActivityS\TabParametersList.cs" />
+    <Compile Include="ActivityS\TabParametersGraphHeight.cs" />
+    <Compile Include="ActivityS\TabParametersGraphWeight.cs" />
+    <Compile Include="ActivityS\ProductsTypes.cs" />
+    <Compile Include="Classes\Alcohol.cs" />
+    <Compile Include="Classes\Cigarette.cs" />
+    <Compile Include="Classes\DatabaseAlcohol.cs" />
+    <Compile Include="Classes\HelpclassCigarettesAdapter.cs" />
+    <Compile Include="Classes\HelpclassAlcoholAdapter.cs" />
+    <Compile Include="Classes\HelpclassMenuCcalsAdapter.cs" />
+    <Compile Include="Classes\HelpclassMenuAdapter.cs" />
+    <Compile Include="Classes\HelpclassListAdapter.cs" />
+    <Compile Include="Classes\HelpclassNumberPickerFormatter.cs" />
+    <Compile Include="Classes\TableRowCigarettes.cs" />
+    <Compile Include="Classes\TableRowMenuCcals.cs" />
+    <Compile Include="Classes\TableRowMenu.cs" />
+    <Compile Include="Classes\HelpclassDataValidation.cs" />
+    <Compile Include="Classes\TableRowAlcohol.cs" />
+    <Compile Include="Classes\TableRowParameters.cs" />
     <Compile Include="Classes\ParametresOfUser.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\ProductLists.cs" />
     <Compile Include="Classes\User.cs" />
-    <Compile Include="Classes\database_Products.cs" />
-    <Compile Include="Classes\database_User.cs" />
+    <Compile Include="Classes\DatabaseProducts.cs" />
+    <Compile Include="Classes\DatabaseUser.cs" />
     <Compile Include="ActivityS\StartPage.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ActivityS\page_Parameters.cs" />
+    <Compile Include="ActivityS\PageParameters.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -116,7 +155,7 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\tab_products_List.axml">
+    <AndroidResource Include="Resources\layout\tab_parameters_List.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\user_Add.axml">
@@ -134,10 +173,7 @@
     <AndroidResource Include="Resources\layout\parameters_Changes.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\helpform_Row.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\product_MyMenu.axml">
+    <AndroidResource Include="Resources\layout\tab_menu_ProtsFatsCarbs.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\product_Add.axml">
@@ -164,10 +200,89 @@
     <AndroidResource Include="Resources\layout\product_Info.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\tab_products_GraphWeight.axml">
+    <AndroidResource Include="Resources\layout\tab_parameters_GraphWeight.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\tab_products_GraphHeight.axml">
+    <AndroidResource Include="Resources\layout\tab_parameters_GraphHeight.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\tab_menu_WaterCcals.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\helpform_MenuConnector.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\helpform_AlcoholConnector.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\tab_alcohol_List.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\helpform_AlcoholRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\alcohol_Add.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\alcohol_Quantity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\alcohol_Info.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\alcohol_Warnings.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\helpform_MenuRowFooter.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\tab_alcohol_Calendar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\helpform_AlcoholRowFooter.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\helpform_ParametersRowFooter.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\helpform_ParametersRow.axml" />
+    <AndroidResource Include="Resources\layout\helpform_CigarettesConnector.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\tab_cigarette_List.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\tab_cigarette_Calendar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\helpform_CigarettesRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\helpform_CigarettesRowFooter.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\cigarettes_Add.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\useritems_Add.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\useritems_Alcohol.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\useritems_Product.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\user_ChooseCategory.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\user_MiniMenu.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\user_Info.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\user_ChangeCategory.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -189,6 +304,10 @@
     <XamarinComponentReference Include="achartengine">
       <Visible>False</Visible>
       <Version>0.0.0.1</Version>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="fab">
+      <Visible>False</Visible>
+      <Version>1.3.0</Version>
     </XamarinComponentReference>
     <XamarinComponentReference Include="sqlite-net">
       <Visible>False</Visible>

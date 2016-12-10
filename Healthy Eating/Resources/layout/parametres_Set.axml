@@ -3,16 +3,43 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <EditText
-        android:inputType="numberDecimal"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your weight"
-        android:id="@+id/WeightEdit" />
-    <EditText
-        android:inputType="numberDecimal"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:id="@+id/textView1"
+            android:text="@string/Message_Height"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_width="192.0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp" />
+        <TextView
+            android:id="@+id/textView1"
+            android:text="@string/Message_Weight"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_width="192.0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your height"
-        android:id="@+id/HeightEdit" />
+        android:id="@+id/linearLayout1">
+        <NumberPicker
+            android:id="@+id/HeightPicker"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="180.0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp" />
+        <NumberPicker
+            android:id="@+id/WeightPicker"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="180.0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="14dp" />
+    </LinearLayout>
 </LinearLayout>

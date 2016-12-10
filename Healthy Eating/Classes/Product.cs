@@ -21,6 +21,7 @@ namespace Healthy_Eating.Classes
         public DateTime Date { get; set; }
         public string Type { get; set; }
         public double Quantity { get; set; }
+        public string Visibility { get; set; }
 
         public double Water { get; set; }
         public double Protein { get; set; }
@@ -30,10 +31,11 @@ namespace Healthy_Eating.Classes
 
         public Product() { }
 
-        public Product(string name, string type, double water, double protein, double fats, double carbohydrates, double ccal)
+        public Product(string name, string type, string visibility, double water, double protein, double fats, double carbohydrates, double ccal)
         {
             Name = name;
             Type = type;
+            Visibility = visibility;
 
             Water = water;
             Protein = protein;

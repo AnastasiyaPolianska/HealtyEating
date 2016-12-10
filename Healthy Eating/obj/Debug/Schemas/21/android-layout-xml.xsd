@@ -3,7 +3,7 @@
   <xs:import schemaLocation="schemas.android.com.apk.res.android.xsd" namespace="http://schemas.android.com/apk/res/android" />
   <xs:annotation>
     <xs:documentation>v21</xs:documentation>
-    <xs:documentation>14.11.2016 19:33:15</xs:documentation>
+    <xs:documentation>10.12.2016 19:36:26</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -80,7 +80,18 @@
       <xs:element ref="AdapterViewFlipper" />
       <xs:element ref="ViewFlipper" />
       <xs:element ref="fragment" />
+      <xs:element ref="com.squareup.timessquare.CalendarCellView" />
+      <xs:element ref="com.squareup.timessquare.CalendarPickerView" />
       <xs:element ref="org.achartengine.GraphicalView" />
+      <xs:element ref="android.support.v4.widget.SwipeRefreshLayout" />
+      <xs:element ref="android.support.v4.widget.SlidingPaneLayout" />
+      <xs:element ref="android.support.v4.widget.DrawerLayout" />
+      <xs:element ref="android.support.v4.widget.ContentLoadingProgressBar" />
+      <xs:element ref="android.support.v4.view.ViewPager" />
+      <xs:element ref="android.support.v4.view.PagerTitleStrip" />
+      <xs:element ref="android.support.v4.view.PagerTabStrip" />
+      <xs:element ref="android.support.v4.app.FragmentTabHost" />
+      <xs:element ref="android.support.v7.widget.RecyclerView" />
       <xs:element ref="com.github.mikephil.charting.components.MarkerView" />
       <xs:element ref="com.github.mikephil.charting.charts.ScatterChart" />
       <xs:element ref="com.github.mikephil.charting.charts.RadarChart" />
@@ -94,6 +105,33 @@
       <xs:element ref="com.github.mikephil.charting.charts.BubbleChart" />
       <xs:element ref="com.github.mikephil.charting.charts.BarLineChartBase" />
       <xs:element ref="com.github.mikephil.charting.charts.BarChart" />
+      <xs:element ref="com.refractored.fab.ObservableScrollView" />
+      <xs:element ref="com.refractored.fab.FloatingActionButton" />
+      <xs:element ref="com.syncfusion.rangenavigator.SfDateTimeRangeNavigator" />
+      <xs:element ref="com.syncfusion.rangenavigator.LabelsRenderer" />
+      <xs:element ref="com.syncfusion.charts.TooltipView" />
+      <xs:element ref="com.syncfusion.charts.TechnicalIndicatorRenderer" />
+      <xs:element ref="com.syncfusion.charts.SfChart" />
+      <xs:element ref="com.syncfusion.charts.SeriesRenderer" />
+      <xs:element ref="com.syncfusion.charts.GridLinesRenderer" />
+      <xs:element ref="com.syncfusion.charts.DataMarkerRenderer" />
+      <xs:element ref="com.syncfusion.charts.ChartTitle" />
+      <xs:element ref="com.syncfusion.charts.ChartStripLinesRenderer" />
+      <xs:element ref="com.syncfusion.charts.ChartRootLayout" />
+      <xs:element ref="com.syncfusion.charts.ChartLegendTitleView" />
+      <xs:element ref="com.syncfusion.charts.ChartLegendLayout" />
+      <xs:element ref="com.syncfusion.charts.ChartLegendItem" />
+      <xs:element ref="com.syncfusion.charts.ChartLegendIconView" />
+      <xs:element ref="com.syncfusion.charts.ChartAxisLayout" />
+      <xs:element ref="com.syncfusion.charts.ChartAreaLayout" />
+      <xs:element ref="com.syncfusion.charts.BehaviorRenderer" />
+      <xs:element ref="com.syncfusion.calendar.ViewRenderer" />
+      <xs:element ref="com.syncfusion.calendar.SfCalendar" />
+      <xs:element ref="com.syncfusion.calendar.MonthView" />
+      <xs:element ref="com.syncfusion.calendar.InlineLayout" />
+      <xs:element ref="com.syncfusion.calendar.CustomVerticalViewScroller" />
+      <xs:element ref="com.syncfusion.calendar.CustomHorizontalViewScroller" />
+      <xs:element ref="com.syncfusion.calendar.CalendarHeader" />
     </xs:choice>
   </xs:group>
   <xs:element name="TimePicker" type="TimePicker">
@@ -1361,6 +1399,26 @@
     <xs:attribute ref="android:layout_marginEnd" />
     <xs:attribute ref="android:style" />
   </xs:complexType>
+  <xs:element name="com.squareup.timessquare.CalendarCellView" type="com.squareup.timessquare.CalendarCellView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Square.TimesSquare.CalendarCellView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.squareup.timessquare.CalendarCellView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FrameLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.squareup.timessquare.CalendarPickerView" type="com.squareup.timessquare.CalendarPickerView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Square.TimesSquare.CalendarPickerView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.squareup.timessquare.CalendarPickerView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ListView" />
+    </xs:complexContent>
+  </xs:complexType>
   <xs:element name="org.achartengine.GraphicalView" type="org.achartengine.GraphicalView">
     <xs:annotation>
       <xs:documentation>Runtime Type: AChartEngine.GraphicalView</xs:documentation>
@@ -1369,6 +1427,96 @@
   <xs:complexType name="org.achartengine.GraphicalView">
     <xs:complexContent mixed="false">
       <xs:extension base="View" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="android.support.v4.widget.SwipeRefreshLayout" type="android.support.v4.widget.SwipeRefreshLayout">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V4.Widget.SwipeRefreshLayout</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v4.widget.SwipeRefreshLayout">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="android.support.v4.widget.SlidingPaneLayout" type="android.support.v4.widget.SlidingPaneLayout">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V4.Widget.SlidingPaneLayout</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v4.widget.SlidingPaneLayout">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="android.support.v4.widget.DrawerLayout" type="android.support.v4.widget.DrawerLayout">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V4.Widget.DrawerLayout</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v4.widget.DrawerLayout">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="android.support.v4.widget.ContentLoadingProgressBar" type="android.support.v4.widget.ContentLoadingProgressBar">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V4.Widget.ContentLoadingProgressBar</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v4.widget.ContentLoadingProgressBar">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ProgressBar" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="android.support.v4.view.ViewPager" type="android.support.v4.view.ViewPager">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V4.View.ViewPager</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v4.view.ViewPager">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="android.support.v4.view.PagerTitleStrip" type="android.support.v4.view.PagerTitleStrip">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V4.View.PagerTitleStrip</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v4.view.PagerTitleStrip">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="android.support.v4.view.PagerTabStrip" type="android.support.v4.view.PagerTabStrip">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V4.View.PagerTabStrip</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v4.view.PagerTabStrip">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="android.support.v4.app.FragmentTabHost" type="android.support.v4.app.FragmentTabHost">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V4.App.FragmentTabHost</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v4.app.FragmentTabHost">
+    <xs:complexContent mixed="false">
+      <xs:extension base="TabHost" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="android.support.v7.widget.RecyclerView" type="android.support.v7.widget.RecyclerView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V7.Widget.RecyclerView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v7.widget.RecyclerView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="com.github.mikephil.charting.components.MarkerView" type="com.github.mikephil.charting.components.MarkerView">
@@ -1499,6 +1647,276 @@
   <xs:complexType name="com.github.mikephil.charting.charts.BarChart">
     <xs:complexContent mixed="false">
       <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.refractored.fab.ObservableScrollView" type="com.refractored.fab.ObservableScrollView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: com.refractored.fab.ObservableScrollView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.refractored.fab.ObservableScrollView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ScrollView" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.refractored.fab.FloatingActionButton" type="com.refractored.fab.FloatingActionButton">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: com.refractored.fab.FloatingActionButton</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.refractored.fab.FloatingActionButton">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ImageButton" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.rangenavigator.SfDateTimeRangeNavigator" type="com.syncfusion.rangenavigator.SfDateTimeRangeNavigator">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Rangenavigator.SfDateTimeRangeNavigator</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.rangenavigator.SfDateTimeRangeNavigator">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FrameLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.rangenavigator.LabelsRenderer" type="com.syncfusion.rangenavigator.LabelsRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Rangenavigator.LabelsRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.rangenavigator.LabelsRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="View" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.TooltipView" type="com.syncfusion.charts.TooltipView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.TooltipView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.TooltipView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FrameLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.TechnicalIndicatorRenderer" type="com.syncfusion.charts.TechnicalIndicatorRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.TechnicalIndicatorRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.TechnicalIndicatorRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="View" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.SfChart" type="com.syncfusion.charts.SfChart">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.SfChart</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.SfChart">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FrameLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.SeriesRenderer" type="com.syncfusion.charts.SeriesRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.SeriesRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.SeriesRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="View" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.GridLinesRenderer" type="com.syncfusion.charts.GridLinesRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.GridLinesRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.GridLinesRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="View" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.DataMarkerRenderer" type="com.syncfusion.charts.DataMarkerRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.DataMarkerRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.DataMarkerRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="RelativeLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.ChartTitle" type="com.syncfusion.charts.ChartTitle">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.ChartTitle</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.ChartTitle">
+    <xs:complexContent mixed="false">
+      <xs:extension base="TextView" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.ChartStripLinesRenderer" type="com.syncfusion.charts.ChartStripLinesRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.ChartStripLinesRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.ChartStripLinesRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="View" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.ChartRootLayout" type="com.syncfusion.charts.ChartRootLayout">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.ChartRootLayout</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.ChartRootLayout">
+    <xs:complexContent mixed="false">
+      <xs:extension base="RelativeLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.ChartLegendTitleView" type="com.syncfusion.charts.ChartLegendTitleView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.ChartLegendTitleView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.ChartLegendTitleView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="TextView" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.ChartLegendLayout" type="com.syncfusion.charts.ChartLegendLayout">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.ChartLegendLayout</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.ChartLegendLayout">
+    <xs:complexContent mixed="false">
+      <xs:extension base="LinearLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.ChartLegendItem" type="com.syncfusion.charts.ChartLegendItem">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.ChartLegendItem</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.ChartLegendItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="LinearLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.ChartLegendIconView" type="com.syncfusion.charts.ChartLegendIconView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.ChartLegendIconView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.ChartLegendIconView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="View" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.ChartAxisLayout" type="com.syncfusion.charts.ChartAxisLayout">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.ChartAxisLayout</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.ChartAxisLayout">
+    <xs:complexContent mixed="false">
+      <xs:extension base="View" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.ChartAreaLayout" type="com.syncfusion.charts.ChartAreaLayout">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.ChartAreaLayout</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.ChartAreaLayout">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FrameLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.charts.BehaviorRenderer" type="com.syncfusion.charts.BehaviorRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Charts.BehaviorRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.charts.BehaviorRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="RelativeLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.calendar.ViewRenderer" type="com.syncfusion.calendar.ViewRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Calendar.ViewRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.calendar.ViewRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FrameLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.calendar.SfCalendar" type="com.syncfusion.calendar.SfCalendar">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Calendar.SfCalendar</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.calendar.SfCalendar">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FrameLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.calendar.MonthView" type="com.syncfusion.calendar.MonthView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Calendar.MonthView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.calendar.MonthView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FrameLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.calendar.InlineLayout" type="com.syncfusion.calendar.InlineLayout">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Calendar.InlineLayout</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.calendar.InlineLayout">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FrameLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.calendar.CustomVerticalViewScroller" type="com.syncfusion.calendar.CustomVerticalViewScroller">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Calendar.CustomVerticalViewScroller</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.calendar.CustomVerticalViewScroller">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ScrollView" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.calendar.CustomHorizontalViewScroller" type="com.syncfusion.calendar.CustomHorizontalViewScroller">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Calendar.CustomHorizontalViewScroller</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.calendar.CustomHorizontalViewScroller">
+    <xs:complexContent mixed="false">
+      <xs:extension base="HorizontalScrollView" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.syncfusion.calendar.CalendarHeader" type="com.syncfusion.calendar.CalendarHeader">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Com.Syncfusion.Calendar.CalendarHeader</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.syncfusion.calendar.CalendarHeader">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FrameLayout" />
     </xs:complexContent>
   </xs:complexType>
 </xs:schema>

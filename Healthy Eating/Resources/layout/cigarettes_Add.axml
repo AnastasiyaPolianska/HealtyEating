@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:layout_width="180.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView1"
+            android:text="@string/Message_NumberOfCigarettes"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="200.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView1"
+            android:text="@string/Message_NicotineAmount"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="123.0dp"
+        android:id="@+id/linearLayout2">
+        <NumberPicker
+            android:layout_width="180.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/CigarettesPicker"
+            android:descendantFocusability="blocksDescendants" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/AmountOfNicotine"
+            android:hint="@string/Message_EnterNicotineAmount"
+            android:layout_width="200.0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

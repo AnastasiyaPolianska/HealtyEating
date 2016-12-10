@@ -8,382 +8,1305 @@
 package com.github.mikephil.charting;
 
 public final class R {
+    public static final class anim {
+        public static final int fadein=0x7f040000;
+        public static final int fadeout=0x7f040001;
+        public static final int scale_in=0x7f040002;
+        public static final int scale_out=0x7f040003;
+    }
     public static final class attr {
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fab_colorDisabled=0x7f01000f;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fab_colorNormal=0x7f01000e;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fab_colorPressed=0x7f01000d;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fab_colorRipple=0x7f010010;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fab_shadow=0x7f010011;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0</td><td></td></tr>
+<tr><td><code>mini</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int fab_size=0x7f010012;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int tsquare_dayBackground=0x7f010001;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tsquare_dayTextColor=0x7f010002;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tsquare_displayHeader=0x7f010004;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tsquare_dividerColor=0x7f010000;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tsquare_headerTextColor=0x7f010005;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tsquare_state_current_month=0x7f010007;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tsquare_state_highlighted=0x7f01000c;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tsquare_state_range_first=0x7f010009;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tsquare_state_range_last=0x7f01000b;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tsquare_state_range_middle=0x7f01000a;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tsquare_state_selectable=0x7f010006;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tsquare_state_today=0x7f010008;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int tsquare_titleTextColor=0x7f010003;
+    }
+    public static final class color {
+        public static final int calendar_active_month_bg=0x7f070000;
+        public static final int calendar_bg=0x7f070001;
+        public static final int calendar_divider=0x7f070002;
+        public static final int calendar_highlighted_day_bg=0x7f070003;
+        public static final int calendar_inactive_month_bg=0x7f070004;
+        public static final int calendar_selected_day_bg=0x7f070005;
+        public static final int calendar_selected_range_bg=0x7f070006;
+        public static final int calendar_text_active=0x7f070007;
+        public static final int calendar_text_highlighted=0x7f070008;
+        public static final int calendar_text_inactive=0x7f070009;
+        public static final int calendar_text_selected=0x7f07000a;
+        public static final int calendar_text_selector=0x7f07000d;
+        public static final int calendar_text_unselectable=0x7f07000b;
+        /**  http://www.google.com/design/spec/style/color.html#color-ui-color-palette 
+         */
+        public static final int fab_material_blue_500=0x7f07000c;
+    }
+    public static final class dimen {
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
+        public static final int calendar_day_headers_paddingbottom=0x7f060008;
+        public static final int calendar_month_title_bottommargin=0x7f060009;
+        public static final int calendar_month_topmargin=0x7f06000a;
+        public static final int calendar_text_medium=0x7f06000b;
+        public static final int calendar_text_small=0x7f06000c;
+        public static final int date_text_size=0x7f060002;
+        public static final int date_text_tab_size=0x7f060003;
+        public static final int fab_elevation_lollipop=0x7f060011;
+        public static final int fab_scroll_threshold=0x7f060010;
+        public static final int fab_shadow_size=0x7f06000f;
+        public static final int fab_size_mini=0x7f06000e;
+        public static final int fab_size_normal=0x7f06000d;
+        public static final int month_row_size=0x7f060004;
+        public static final int month_row_tab_size=0x7f060005;
+        public static final int month_text_size=0x7f060006;
+        public static final int month_text_tab_size=0x7f060007;
     }
     public static final class drawable {
-        public static final int icon=0x7f020000;
+        public static final int calendar_bg_selector=0x7f020000;
+        public static final int calendarbackward=0x7f020001;
+        public static final int calendarforward=0x7f020002;
+        public static final int fab_shadow=0x7f020003;
+        public static final int fab_shadow_mini=0x7f020004;
+        public static final int focused=0x7f020009;
+        public static final int icon=0x7f020005;
+        public static final int month_current_date_circle=0x7f020006;
+        public static final int month_selected_item=0x7f020007;
+        public static final int month_view_item_border=0x7f020008;
+        public static final int selected=0x7f02000a;
     }
     public static final class id {
-        public static final int AmountText=0x7f050025;
-        public static final int BMIText=0x7f05000e;
-        public static final int CarbohydratesText=0x7f050006;
-        public static final int CarbsText=0x7f050018;
-        public static final int CcalsText=0x7f050009;
-        public static final int ChooseButton=0x7f050028;
-        public static final int ChooseDateButton=0x7f05001b;
-        public static final int Column1=0x7f05001e;
-        public static final int Column2=0x7f05001f;
-        public static final int Column3=0x7f050020;
-        public static final int Connector=0x7f05000a;
-        public static final int CurrentDateText=0x7f05001a;
-        public static final int DateChooser=0x7f050014;
-        public static final int DateText=0x7f05000b;
-        public static final int DeleteUserText=0x7f050033;
-        public static final int FatsText=0x7f050005;
-        public static final int Graph=0x7f05002b;
-        public static final int HeightEdit=0x7f050012;
-        public static final int HeightText=0x7f05000d;
-        public static final int IdentifierOfAUser=0x7f050019;
-        public static final int ListForChoosingProducts=0x7f050013;
-        public static final int ListForParameters=0x7f05002e;
-        public static final int ListOfUsers=0x7f050032;
-        public static final int MenuButton=0x7f05002a;
-        public static final int MenuList=0x7f050021;
-        public static final int Mode=0x7f050023;
-        public static final int MyButton=0x7f050027;
-        public static final int NameText=0x7f050002;
-        public static final int ParametersListButton=0x7f050029;
-        public static final int ProteinText=0x7f050004;
-        public static final int ProteinsText=0x7f050017;
-        public static final int QuantityText=0x7f050007;
-        public static final int SetParametersButton=0x7f05002c;
-        public static final int SetProductsButton=0x7f050024;
-        public static final int TextForIndex=0x7f05000f;
-        public static final int TextForParameters=0x7f050010;
-        public static final int TypesOfProductsList=0x7f050026;
-        public static final int UserAge=0x7f050030;
-        public static final int UserName=0x7f05002f;
-        public static final int UserSex=0x7f050031;
-        public static final int WaterText=0x7f050008;
-        public static final int WeightEdit=0x7f050011;
-        public static final int WeightText=0x7f05000c;
-        public static final int linearLayout1=0x7f050001;
-        public static final int linearLayout2=0x7f050015;
-        public static final int linearLayout3=0x7f05001c;
-        public static final int linearLayout4=0x7f050022;
-        public static final int relativeLayout1=0x7f050000;
-        public static final int scrollView1=0x7f05002d;
-        public static final int textView1=0x7f05001d;
-        public static final int textView2=0x7f050016;
-        public static final int view1=0x7f050003;
+        public static final int AddUserButton=0x7f08006e;
+        public static final int AddUserItemsButton=0x7f080051;
+        public static final int AgeText=0x7f080070;
+        public static final int AlcoholButton=0x7f08004f;
+        public static final int AlcoholList=0x7f08005a;
+        public static final int AmountOfNicotine=0x7f08001f;
+        public static final int AmountPicker=0x7f08000c;
+        public static final int BMIText=0x7f08002f;
+        public static final int BMIText1=0x7f080033;
+        public static final int Calendar=0x7f080052;
+        public static final int CarbohydratesText=0x7f080029;
+        public static final int CarbsText=0x7f080041;
+        public static final int CategoryChooser=0x7f08006b;
+        public static final int CcalsText=0x7f08000a;
+        public static final int ChangeButton=0x7f08006c;
+        public static final int ChildDiseases=0x7f080067;
+        public static final int ChooseButton=0x7f08004c;
+        public static final int ChooseDateButton=0x7f080056;
+        public static final int ChronicDiseases=0x7f080068;
+        public static final int CigarettesButton=0x7f080050;
+        public static final int CigarettesList=0x7f08005c;
+        public static final int CigarettesPicker=0x7f08001e;
+        public static final int Col1=0x7f080023;
+        public static final int Col2=0x7f080024;
+        public static final int Col3=0x7f08002b;
+        public static final int Column1=0x7f080058;
+        public static final int Column2=0x7f080059;
+        public static final int Column3=0x7f08005e;
+        public static final int Connector=0x7f080020;
+        public static final int CountryChooser=0x7f080066;
+        public static final int CountryText=0x7f080072;
+        public static final int CurrentDateText=0x7f080055;
+        public static final int DateChooser=0x7f08003f;
+        public static final int DateText=0x7f08002c;
+        public static final int DateText1=0x7f080030;
+        public static final int DeleteUser=0x7f080075;
+        public static final int DeleteUserText=0x7f08006f;
+        public static final int DrivingLicences=0x7f080073;
+        public static final int FatsText=0x7f080028;
+        public static final int HeightPicker=0x7f08003c;
+        public static final int HeightText=0x7f08002e;
+        public static final int HeightText1=0x7f080032;
+        public static final int IdentifierOfAUser=0x7f080054;
+        public static final int ListForChoosingAlcohols=0x7f080003;
+        public static final int ListForChoosingProducts=0x7f08003e;
+        public static final int ListForParameters=0x7f080063;
+        public static final int ListForTypes=0x7f080076;
+        public static final int ListOfUsers=0x7f08006d;
+        public static final int MenuButton=0x7f08004e;
+        public static final int MenuList=0x7f08005f;
+        public static final int NameText=0x7f080007;
+        public static final int NicotineText=0x7f080026;
+        public static final int ParametersListButton=0x7f08004d;
+        public static final int PercentageText=0x7f080009;
+        public static final int PrivateChooser=0x7f08007a;
+        public static final int ProductAlcohols=0x7f080078;
+        public static final int ProductCarbs=0x7f08007d;
+        public static final int ProductCcals=0x7f080079;
+        public static final int ProductFats=0x7f08007c;
+        public static final int ProductName=0x7f080077;
+        public static final int ProductProteins=0x7f08007b;
+        public static final int ProductWater=0x7f08007e;
+        public static final int ProteinText=0x7f080027;
+        public static final int ProteinsText=0x7f080040;
+        public static final int QuantityText=0x7f080025;
+        public static final int SetAlcoholButton=0x7f08005b;
+        public static final int SetCigarettesButton=0x7f08005d;
+        public static final int SetParametersButton=0x7f080061;
+        public static final int SetProductsButton=0x7f080060;
+        public static final int SexText=0x7f080071;
+        public static final int ShowingInfo=0x7f080074;
+        public static final int TextForIndex=0x7f08003a;
+        public static final int TextForLevel=0x7f08000d;
+        public static final int TextForMessage=0x7f08006a;
+        public static final int TextForParameters=0x7f08003b;
+        public static final int TextForWarning=0x7f08000e;
+        public static final int TypeChooser=0x7f08007f;
+        public static final int TypesOfProductsList=0x7f080042;
+        public static final int UserLicence=0x7f080069;
+        public static final int UserName=0x7f080064;
+        public static final int UserSex=0x7f080065;
+        public static final int WaterText=0x7f08002a;
+        public static final int WeightPicker=0x7f08003d;
+        public static final int WeightText=0x7f08002d;
+        public static final int WeightText1=0x7f080031;
+        public static final int axisLayout=0x7f080017;
+        public static final int bottom_labels=0x7f080044;
+        public static final int calendar_grid=0x7f080035;
+        public static final int chartAreaLayout=0x7f080011;
+        public static final int chartTitle=0x7f080010;
+        public static final int content=0x7f080045;
+        public static final int dataMarkerLayout=0x7f080015;
+        public static final int day_view_adapter_class=0x7f080000;
+        public static final int gridLineLayout=0x7f080012;
+        public static final int gridLinesLayout=0x7f080046;
+        public static final int gridview=0x7f080039;
+        public static final int header_layout=0x7f080048;
+        public static final int iconView=0x7f08001c;
+        public static final int label=0x7f08001d;
+        public static final int legendHeader=0x7f080019;
+        public static final int legendItemsLayout=0x7f08001b;
+        public static final int legendScrollView=0x7f08001a;
+        public static final int legendViewGroup=0x7f080018;
+        public static final int linearLayout=0x7f080049;
+        public static final int linearLayout1=0x7f080004;
+        public static final int linearLayout2=0x7f080005;
+        public static final int linearLayout3=0x7f080057;
+        public static final int linearLayout4=0x7f080053;
+        public static final int mini=0x7f080001;
+        public static final int monthLayout=0x7f080036;
+        public static final int month_cell_border=0x7f080037;
+        public static final int normal=0x7f080002;
+        public static final int relativeLayout1=0x7f080021;
+        public static final int rootLayout=0x7f08000f;
+        public static final int scrollView1=0x7f080062;
+        public static final int selectedDate=0x7f08004b;
+        public static final int seriesLayout=0x7f080014;
+        public static final int stripLinesLayout=0x7f080013;
+        public static final int technicalIndicatorLayout=0x7f080016;
+        public static final int text=0x7f080038;
+        public static final int textView1=0x7f08000b;
+        public static final int textView2=0x7f080006;
+        public static final int textView3=0x7f080008;
+        public static final int thumbLayout=0x7f080047;
+        public static final int title=0x7f080034;
+        public static final int top_labels=0x7f080043;
+        public static final int view1=0x7f080022;
+        public static final int viewPager=0x7f08004a;
     }
     public static final class layout {
-        public static final int helpform_menurow=0x7f030000;
-        public static final int helpform_menurowccals=0x7f030001;
-        public static final int helpform_parametersconnector=0x7f030002;
-        public static final int helpform_row=0x7f030003;
-        public static final int parameters_changes=0x7f030004;
-        public static final int parametres_set=0x7f030005;
-        public static final int product_add=0x7f030006;
-        public static final int product_choosedate=0x7f030007;
-        public static final int product_info=0x7f030008;
-        public static final int product_mymenu=0x7f030009;
-        public static final int product_quantity=0x7f03000a;
-        public static final int product_types=0x7f03000b;
-        public static final int startpage=0x7f03000c;
-        public static final int tab_products_graphheight=0x7f03000d;
-        public static final int tab_products_graphweight=0x7f03000e;
-        public static final int tab_products_list=0x7f03000f;
-        public static final int user_add=0x7f030010;
-        public static final int user_choose=0x7f030011;
-        public static final int user_delete=0x7f030012;
+        public static final int alcohol_add=0x7f030000;
+        public static final int alcohol_info=0x7f030001;
+        public static final int alcohol_quantity=0x7f030002;
+        public static final int alcohol_warnings=0x7f030003;
+        public static final int chart_layout=0x7f030004;
+        public static final int chart_legend=0x7f030005;
+        public static final int chart_legend_item=0x7f030006;
+        public static final int cigarettes_add=0x7f030007;
+        public static final int helpform_alcoholconnector=0x7f030008;
+        public static final int helpform_alcoholrow=0x7f030009;
+        public static final int helpform_alcoholrowfooter=0x7f03000a;
+        public static final int helpform_cigarettesconnector=0x7f03000b;
+        public static final int helpform_cigarettesrow=0x7f03000c;
+        public static final int helpform_cigarettesrowfooter=0x7f03000d;
+        public static final int helpform_menuconnector=0x7f03000e;
+        public static final int helpform_menurow=0x7f03000f;
+        public static final int helpform_menurowccals=0x7f030010;
+        public static final int helpform_menurowfooter=0x7f030011;
+        public static final int helpform_parametersconnector=0x7f030012;
+        public static final int helpform_parametersrow=0x7f030013;
+        public static final int helpform_parametersrowfooter=0x7f030014;
+        public static final int month=0x7f030015;
+        public static final int month_tile=0x7f030016;
+        public static final int month_view=0x7f030017;
+        public static final int parameters_changes=0x7f030018;
+        public static final int parametres_set=0x7f030019;
+        public static final int product_add=0x7f03001a;
+        public static final int product_choosedate=0x7f03001b;
+        public static final int product_info=0x7f03001c;
+        public static final int product_quantity=0x7f03001d;
+        public static final int product_types=0x7f03001e;
+        public static final int range_navigator_layout=0x7f03001f;
+        public static final int schedule_header=0x7f030020;
+        public static final int schedule_layout=0x7f030021;
+        public static final int selection_popup=0x7f030022;
+        public static final int startpage=0x7f030023;
+        public static final int tab_alcohol_calendar=0x7f030024;
+        public static final int tab_alcohol_list=0x7f030025;
+        public static final int tab_cigarette_calendar=0x7f030026;
+        public static final int tab_cigarette_list=0x7f030027;
+        public static final int tab_menu_protsfatscarbs=0x7f030028;
+        public static final int tab_menu_waterccals=0x7f030029;
+        public static final int tab_parameters_graphheight=0x7f03002a;
+        public static final int tab_parameters_graphweight=0x7f03002b;
+        public static final int tab_parameters_list=0x7f03002c;
+        public static final int user_add=0x7f03002d;
+        public static final int user_changecategory=0x7f03002e;
+        public static final int user_choose=0x7f03002f;
+        public static final int user_choosecategory=0x7f030030;
+        public static final int user_delete=0x7f030031;
+        public static final int user_info=0x7f030032;
+        public static final int user_minimenu=0x7f030033;
+        public static final int useritems_add=0x7f030034;
+        public static final int useritems_alcohol=0x7f030035;
+        public static final int useritems_product=0x7f030036;
+        public static final int week=0x7f030037;
     }
     public static final class string {
-        public static final int Action_Add=0x7f040009;
-        public static final int Action_AddEntry=0x7f04000b;
-        public static final int Action_ChooseDate=0x7f04000c;
-        public static final int Action_ChooseFromExist=0x7f04000a;
-        public static final int ApplicationName=0x7f040001;
-        public static final int Cancel=0x7f040004;
-        public static final int ErrorMessage_AlreadyInSystem=0x7f040018;
-        public static final int ErrorMessage_Unchoosed=0x7f040019;
-        public static final int Hello=0x7f040000;
-        public static final int MainMenuitem_Menu=0x7f04001b;
-        public static final int MainMenuitem_ParametersList=0x7f04001a;
-        public static final int Message_BMIout=0x7f04000d;
-        public static final int Message_DeleteUser=0x7f04000e;
-        public static final int Message_EnterCorrect=0x7f040017;
-        public static final int Message_HealthyWeight=0x7f040012;
-        public static final int Message_ModeratelyOverweight=0x7f040014;
-        public static final int Message_Overweight=0x7f040013;
-        public static final int Message_SeverelyOverweight=0x7f040015;
-        public static final int Message_SeverelyUnderweight=0x7f040010;
-        public static final int Message_Underweight=0x7f040011;
-        public static final int Message_VerySeverelyOverweight=0x7f040016;
-        public static final int Message_VerySeverelyUnderweight=0x7f04000f;
-        public static final int OK=0x7f040003;
-        public static final int PageName_MyMenu=0x7f040002;
-        public static final int Parameterscolumn_BMI=0x7f04001f;
-        public static final int Parameterscolumn_Date=0x7f04001c;
-        public static final int Parameterscolumn_Height=0x7f04001e;
-        public static final int Parameterscolumn_Weight=0x7f04001d;
-        public static final int Productcolumn_Carbs=0x7f040026;
-        public static final int Productcolumn_Ccals=0x7f040029;
-        public static final int Productcolumn_Fats=0x7f040025;
-        public static final int Productcolumn_Name=0x7f040023;
-        public static final int Productcolumn_Proteins=0x7f040024;
-        public static final int Productcolumn_Quantity=0x7f040027;
-        public static final int Productcolumn_Water=0x7f040028;
-        public static final int UserCharacteristic_Female=0x7f040006;
-        public static final int UserCharacteristic_Male=0x7f040005;
-        public static final int UserCharacteristic_MenuOfUser=0x7f040008;
-        public static final int UserCharacteristic_ParametersOfUser=0x7f040007;
-        public static final int other_Age=0x7f040125;
-        public static final int other_Amount=0x7f040123;
-        public static final int other_Height=0x7f040127;
-        public static final int other_Name=0x7f040124;
-        public static final int other_Weight=0x7f040126;
-        public static final int product_Almonds=0x7f04010d;
-        public static final int product_Apple=0x7f04008f;
-        public static final int product_Apricot=0x7f04007d;
-        public static final int product_Backing=0x7f040053;
-        public static final int product_Bagels=0x7f040054;
-        public static final int product_Banana=0x7f040081;
-        public static final int product_Barley=0x7f04005e;
-        public static final int product_Beans=0x7f0400a8;
-        public static final int product_Beef=0x7f0400b3;
-        public static final int product_Beefheart=0x7f0400bf;
-        public static final int product_Beefkidney=0x7f0400bd;
-        public static final int product_Beefliver=0x7f0400bc;
-        public static final int product_Beefmarrow=0x7f0400bb;
-        public static final int product_Beeftongue=0x7f0400c0;
-        public static final int product_Beefudder=0x7f0400be;
-        public static final int product_Beet=0x7f040075;
-        public static final int product_BlackCurrant=0x7f04009e;
-        public static final int product_Blackberry=0x7f040097;
-        public static final int product_Blueberries=0x7f040096;
-        public static final int product_Bream=0x7f0400e4;
-        public static final int product_BreamCaviar=0x7f040108;
-        public static final int product_Buckwheat=0x7f040058;
-        public static final int product_Bulls=0x7f0400de;
-        public static final int product_Burbot=0x7f0400e9;
-        public static final int product_Butter=0x7f04004f;
-        public static final int product_Cabbage=0x7f040065;
-        public static final int product_Cake=0x7f040122;
-        public static final int product_CakeApple=0x7f040120;
-        public static final int product_CakeCream=0x7f04011f;
-        public static final int product_CandyChocolatePoured=0x7f040117;
-        public static final int product_Capelin=0x7f0400e7;
-        public static final int product_Caramel=0x7f040116;
-        public static final int product_Carp=0x7f0400e2;
-        public static final int product_Carrot=0x7f04006b;
-        public static final int product_Cauliflower=0x7f040066;
-        public static final int product_Cheese=0x7f040048;
-        public static final int product_Cherry=0x7f040082;
-        public static final int product_Chicken=0x7f0400c7;
-        public static final int product_ChickenEgg=0x7f0400d9;
-        public static final int product_Condensedmilk=0x7f040040;
-        public static final int product_Condensedmilkwithsugar=0x7f040041;
-        public static final int product_CookedSausageDiabetic=0x7f0400c9;
-        public static final int product_CookedSausageDietary=0x7f0400ca;
-        public static final int product_CookedSausageDoctorska=0x7f0400cb;
-        public static final int product_CookedSausageLubitelska=0x7f0400cc;
-        public static final int product_CookedSausageMolochna=0x7f0400cd;
-        public static final int product_CookedSausageVeal=0x7f0400ce;
-        public static final int product_Corngrits=0x7f040060;
-        public static final int product_Courgette=0x7f040064;
-        public static final int product_Crab=0x7f040104;
-        public static final int product_Cranberry=0x7f040094;
-        public static final int product_Cream10=0x7f040044;
-        public static final int product_Cream20=0x7f040045;
-        public static final int product_Cucumber=0x7f04006c;
-        public static final int product_DarkChocolate=0x7f04011b;
-        public static final int product_Dates=0x7f04008b;
-        public static final int product_DriedApples=0x7f0400a7;
-        public static final int product_DriedApricots=0x7f0400a0;
-        public static final int product_DriedCherry=0x7f0400a3;
-        public static final int product_DriedFigs=0x7f0400a1;
-        public static final int product_DriedPeaches=0x7f0400a5;
-        public static final int product_DriedPear=0x7f0400a4;
-        public static final int product_DriedPrunes=0x7f0400a6;
-        public static final int product_DriedRaisins=0x7f0400a2;
-        public static final int product_Driedbirchbolete=0x7f0400b0;
-        public static final int product_Driedcep=0x7f0400ae;
-        public static final int product_DryEggWhite=0x7f0400db;
-        public static final int product_DryEggYolk=0x7f0400dc;
-        public static final int product_Duck=0x7f0400c8;
-        public static final int product_Eel=0x7f0400fe;
-        public static final int product_EelMarine=0x7f0400fd;
-        public static final int product_EggPowder=0x7f0400da;
-        public static final int product_Eggplant=0x7f040061;
-        public static final int product_Elm=0x7f040101;
-        public static final int product_Fig=0x7f040085;
-        public static final int product_FishSaber=0x7f0400f0;
-        public static final int product_Flounder=0x7f0400e0;
-        public static final int product_Freshbirchbolete=0x7f0400af;
-        public static final int product_Freshcep=0x7f0400ad;
-        public static final int product_FruitDrops=0x7f040112;
-        public static final int product_Garlic=0x7f04007a;
-        public static final int product_Geese=0x7f0400c5;
-        public static final int product_Gingerbread=0x7f040121;
-        public static final int product_Gooseberry=0x7f040099;
-        public static final int product_Grapefruit=0x7f040091;
-        public static final int product_Grapes=0x7f040095;
-        public static final int product_Greenbeans=0x7f040077;
-        public static final int product_Greenonion=0x7f040068;
-        public static final int product_Greenpeas=0x7f040063;
-        public static final int product_Greenpepper=0x7f04006d;
-        public static final int product_Hake=0x7f0400ff;
-        public static final int product_Halibut=0x7f0400ee;
-        public static final int product_Halva=0x7f04011a;
-        public static final int product_Ham=0x7f0400d8;
-        public static final int product_Haricotbeans=0x7f0400ab;
-        public static final int product_Hazelnut=0x7f04010c;
-        public static final int product_Herring=0x7f0400f5;
-        public static final int product_Homemadecheese=0x7f04004a;
-        public static final int product_Honey=0x7f040111;
-        public static final int product_Horse=0x7f0400b4;
-        public static final int product_Horseradish=0x7f040078;
-        public static final int product_Iris=0x7f040114;
-        public static final int product_Kalmar=0x7f040103;
-        public static final int product_Karas=0x7f0400e1;
-        public static final int product_KetyGranularCaviar=0x7f040107;
-        public static final int product_Kvass=0x7f04007c;
-        public static final int product_Kyzyl=0x7f040086;
-        public static final int product_Lambheart=0x7f0400ba;
-        public static final int product_Lambkidneys=0x7f0400b8;
-        public static final int product_Lambliver=0x7f0400b9;
-        public static final int product_Lamprey=0x7f0400e5;
-        public static final int product_Leanpork=0x7f0400b6;
-        public static final int product_Leek=0x7f040069;
-        public static final int product_Lemon=0x7f040092;
-        public static final int product_Lentils=0x7f0400ac;
-        public static final int product_Lowfatkefir=0x7f04003d;
-        public static final int product_Mackerel=0x7f0400f7;
-        public static final int product_Mandarin=0x7f040093;
-        public static final int product_Margarine=0x7f04004d;
-        public static final int product_Marmalade=0x7f040115;
-        public static final int product_Marshmallow=0x7f040113;
-        public static final int product_Mayonnaise=0x7f04004e;
-        public static final int product_Meltedbutter=0x7f040050;
-        public static final int product_Meltedfat=0x7f04004b;
-        public static final int product_Merry=0x7f04008d;
-        public static final int product_Milk=0x7f04003e;
-        public static final int product_MilkChocolate=0x7f04011c;
-        public static final int product_Milkpowder=0x7f04003f;
-        public static final int product_Millet=0x7f04005c;
-        public static final int product_Mintay=0x7f0400e6;
-        public static final int product_Mulberry=0x7f04008e;
-        public static final int product_Mutton=0x7f0400b2;
-        public static final int product_Naturalyoghurt=0x7f04003c;
-        public static final int product_Navaga=0x7f0400e8;
-        public static final int product_NototeniyaMarble=0x7f0400ea;
-        public static final int product_Oatflakes=0x7f04005f;
-        public static final int product_Oatmeal=0x7f04005a;
-        public static final int product_Onion=0x7f04006a;
-        public static final int product_Orange=0x7f040090;
-        public static final int product_Parsleygreen=0x7f04006f;
-        public static final int product_Parsleyroot=0x7f040070;
-        public static final int product_Pastille=0x7f040118;
-        public static final int product_Peach=0x7f040087;
-        public static final int product_Peanuts=0x7f04010f;
-        public static final int product_Pear=0x7f040084;
-        public static final int product_Pearlbarley=0x7f04005b;
-        public static final int product_Peas=0x7f0400a9;
-        public static final int product_Persimmon=0x7f04008c;
-        public static final int product_Pike=0x7f040100;
-        public static final int product_Pineapple=0x7f040080;
-        public static final int product_PinkSalmon=0x7f0400df;
-        public static final int product_Plum=0x7f04007f;
-        public static final int product_PlumGarden=0x7f04008a;
-        public static final int product_PollockRoe=0x7f040109;
-        public static final int product_Pomegranate=0x7f040083;
-        public static final int product_PorkSausages=0x7f0400cf;
-        public static final int product_Porkfat=0x7f04004c;
-        public static final int product_Porkheart=0x7f0400c3;
-        public static final int product_Porkkidneys=0x7f0400c1;
-        public static final int product_Porkliver=0x7f0400c2;
-        public static final int product_Porktongue=0x7f0400c4;
-        public static final int product_Potato=0x7f040067;
-        public static final int product_Processedcheese=0x7f040049;
-        public static final int product_QuailEggs=0x7f0400dd;
-        public static final int product_Quince=0x7f04007e;
-        public static final int product_Rabbit=0x7f0400b5;
-        public static final int product_Radish=0x7f040072;
-        public static final int product_Ramson=0x7f040079;
-        public static final int product_Raspberry=0x7f04009a;
-        public static final int product_RedCurrant=0x7f04009d;
-        public static final int product_Redpepper=0x7f04006e;
-        public static final int product_Rhubarb=0x7f040071;
-        public static final int product_Rice=0x7f04005d;
-        public static final int product_RiverPerch=0x7f0400ec;
-        public static final int product_Rosehip=0x7f04009f;
-        public static final int product_RowanAronia=0x7f040089;
-        public static final int product_RowanGarden=0x7f040088;
-        public static final int product_Rusk=0x7f040055;
-        public static final int product_Russule=0x7f0400b1;
-        public static final int product_Rutabaga=0x7f040062;
-        public static final int product_Ryazhanka =0x7f040043;
-        public static final int product_Ryebread=0x7f040051;
-        public static final int product_Ryeflour=0x7f040057;
-        public static final int product_SairaLarge=0x7f0400f2;
-        public static final int product_SairaSmall=0x7f0400f3;
-        public static final int product_Salad=0x7f040074;
-        public static final int product_Salak=0x7f0400f4;
-        public static final int product_Salmon=0x7f0400e3;
-        public static final int product_SausageStuffing=0x7f0400d5;
-        public static final int product_SausagesMolochni=0x7f0400d0;
-        public static final int product_SausagesRussian=0x7f0400d1;
-        public static final int product_Scad=0x7f0400f9;
-        public static final int product_SeaPerch=0x7f0400eb;
-        public static final int product_Seabuckthorn=0x7f04009b;
-        public static final int product_Seaweed=0x7f040106;
-        public static final int product_Semolina=0x7f040059;
-        public static final int product_Shrimp=0x7f040105;
-        public static final int product_ShrimpFarEast=0x7f040102;
-        public static final int product_Sliver=0x7f0400fb;
-        public static final int product_SmokedBrisket=0x7f0400d7;
-        public static final int product_Som=0x7f0400f8;
-        public static final int product_Sourcream10=0x7f040046;
-        public static final int product_Sourcream20=0x7f040047;
-        public static final int product_Sourmilk=0x7f040042;
-        public static final int product_Soybeans=0x7f0400aa;
-        public static final int product_Spinach=0x7f04007b;
-        public static final int product_Sterlet=0x7f0400fa;
-        public static final int product_StewedBeef=0x7f0400d2;
-        public static final int product_StewedPork=0x7f0400d6;
-        public static final int product_Strawberry=0x7f040098;
-        public static final int product_Sturgeon=0x7f0400ed;
-        public static final int product_SturgeonCaviar=0x7f04010b;
-        public static final int product_SturgeonGranularCaviar=0x7f04010a;
-        public static final int product_Sugar=0x7f040119;
-        public static final int product_Sunflower=0x7f040110;
-        public static final int product_Tomato=0x7f040076;
-        public static final int product_TouristBreakfastBeef=0x7f0400d3;
-        public static final int product_TouristBreakfastPork=0x7f0400d4;
-        public static final int product_Tuna=0x7f0400fc;
-        public static final int product_Turkey=0x7f0400c6;
-        public static final int product_Turnip=0x7f040073;
-        public static final int product_Veal=0x7f0400b7;
-        public static final int product_VimbaCaspian=0x7f0400f1;
-        public static final int product_WafflesFattyToppings=0x7f04011e;
-        public static final int product_WafflesFruitToppings=0x7f04011d;
-        public static final int product_Walnut=0x7f04010e;
-        public static final int product_Wheatflour=0x7f040056;
-        public static final int product_WhiteCurrant=0x7f04009c;
-        public static final int product_Whitebread=0x7f040052;
-        public static final int product_Whitecheese=0x7f04003b;
-        public static final int product_Whitefish=0x7f0400f6;
-        public static final int product_Whiting=0x7f0400ef;
-        public static final int producttype_Beans=0x7f040031;
-        public static final int producttype_Breadandbakeryproducts=0x7f04002c;
-        public static final int producttype_Caviar=0x7f040038;
-        public static final int producttype_Cereals=0x7f04002d;
-        public static final int producttype_Dairyproducts=0x7f04002a;
-        public static final int producttype_Driedfruits=0x7f040030;
-        public static final int producttype_Eggs=0x7f040036;
-        public static final int producttype_Fatsmargarinebutter=0x7f04002b;
-        public static final int producttype_Fishandseafood=0x7f040037;
-        public static final int producttype_Fruitsandberries=0x7f04002f;
-        public static final int producttype_Meatandcannedmeat=0x7f040035;
-        public static final int producttype_Meatandpoultry=0x7f040033;
-        public static final int producttype_Mushrooms=0x7f040032;
-        public static final int producttype_Nuts=0x7f040039;
-        public static final int producttype_Sausageandsausageproducts=0x7f040034;
-        public static final int producttype_Sweets=0x7f04003a;
-        public static final int producttype_Vegetables=0x7f04002e;
-        public static final int tab_GraphHeight=0x7f040021;
-        public static final int tab_GraphWeight=0x7f040020;
-        public static final int tab_List=0x7f040022;
+        public static final int Action_Add=0x7f050013;
+        public static final int Action_AddEntry=0x7f050015;
+        public static final int Action_ChooseDate=0x7f050016;
+        public static final int Action_SetParameters=0x7f050017;
+        public static final int ApplicationName=0x7f050009;
+        public static final int Cancel=0x7f05000c;
+        public static final int Category_A=0x7f05007b;
+        public static final int Category_A1=0x7f05007a;
+        public static final int Category_B=0x7f05007d;
+        public static final int Category_B1=0x7f05007c;
+        public static final int Category_BE=0x7f050082;
+        public static final int Category_C=0x7f05007f;
+        public static final int Category_C1=0x7f05007e;
+        public static final int Category_C1E=0x7f050084;
+        public static final int Category_CE=0x7f050083;
+        public static final int Category_D=0x7f050081;
+        public static final int Category_D1=0x7f050080;
+        public static final int Category_D1E=0x7f050085;
+        public static final int Category_DE=0x7f050086;
+        public static final int Category_T=0x7f050087;
+        public static final int Column_Age=0x7f050067;
+        public static final int Column_BaseDrink=0x7f05006d;
+        public static final int Column_BaseProduct=0x7f05006c;
+        public static final int Column_Carbs=0x7f050070;
+        public static final int Column_Ccals=0x7f050073;
+        public static final int Column_ChildDiseases=0x7f050077;
+        public static final int Column_ChronicDiseases=0x7f050078;
+        public static final int Column_Country=0x7f050068;
+        public static final int Column_Drink=0x7f05006b;
+        public static final int Column_DrivingLicences=0x7f050079;
+        public static final int Column_Fats=0x7f05006f;
+        public static final int Column_Name=0x7f050066;
+        public static final int Column_Nicotine=0x7f050076;
+        public static final int Column_Percentage=0x7f050074;
+        public static final int Column_Product=0x7f05006a;
+        public static final int Column_Proteins=0x7f05006e;
+        public static final int Column_Quantity=0x7f050071;
+        public static final int Column_Sex=0x7f050069;
+        public static final int Column_Sum=0x7f050075;
+        public static final int Column_Water=0x7f050072;
+        public static final int Disease_Adnexitis=0x7f0500a6;
+        public static final int Disease_Atherosclerosis=0x7f050091;
+        public static final int Disease_BronchialAsthma=0x7f05009b;
+        public static final int Disease_COPD=0x7f050098;
+        public static final int Disease_CardiacIschemia=0x7f050092;
+        public static final int Disease_Cardiomyopathy=0x7f050094;
+        public static final int Disease_ChickenPox=0x7f050089;
+        public static final int Disease_ChronicColitis=0x7f0500a1;
+        public static final int Disease_ChronicCystitis=0x7f05009d;
+        public static final int Disease_ChronicGastritis=0x7f05009f;
+        public static final int Disease_ChronicLungAbscess=0x7f050099;
+        public static final int Disease_ChronicMyocarditis=0x7f050093;
+        public static final int Disease_ChronicPancreatitis=0x7f0500a0;
+        public static final int Disease_ChronicalBronchitis=0x7f05009a;
+        public static final int Disease_Cytomegalovirus=0x7f050096;
+        public static final int Disease_Diphtheria=0x7f05008b;
+        public static final int Disease_Epididymitis=0x7f0500a5;
+        public static final int Disease_HPV=0x7f050097;
+        public static final int Disease_HaemophilusInfluenzae=0x7f050090;
+        public static final int Disease_Herpes=0x7f050095;
+        public static final int Disease_Measles=0x7f050088;
+        public static final int Disease_Mumps=0x7f05008d;
+        public static final int Disease_Orchitis=0x7f0500a4;
+        public static final int Disease_PneumococcalDisease=0x7f05008f;
+        public static final int Disease_Polio=0x7f05008e;
+        public static final int Disease_Prostatitis=0x7f0500a3;
+        public static final int Disease_Pyelonephritis=0x7f05009c;
+        public static final int Disease_ScarletFever=0x7f05008c;
+        public static final int Disease_StonesInTheKidneys=0x7f05009e;
+        public static final int Disease_Urethritis=0x7f0500a2;
+        public static final int Disease_WhoopingCough=0x7f05008a;
+        public static final int ErrorMessage_AlreadyInSystem=0x7f050052;
+        public static final int ErrorMessage_EnterCorrect=0x7f050051;
+        public static final int ErrorMessage_Unchoosed=0x7f050053;
+        public static final int Hello=0x7f050008;
+        public static final int MainMenuitem_AddUserItems=0x7f050058;
+        public static final int MainMenuitem_Alcohol=0x7f050056;
+        public static final int MainMenuitem_Cigarettes=0x7f050057;
+        public static final int MainMenuitem_Menu=0x7f050055;
+        public static final int MainMenuitem_ParametersList=0x7f050054;
+        public static final int MainMenuitem_Users=0x7f050014;
+        public static final int Message_AddCarbs=0x7f050040;
+        public static final int Message_AddCcals=0x7f050042;
+        public static final int Message_AddDrinkName=0x7f05004b;
+        public static final int Message_AddFats=0x7f05003f;
+        public static final int Message_AddPercentage=0x7f05004c;
+        public static final int Message_AddProductName=0x7f05003d;
+        public static final int Message_AddProteins=0x7f05003e;
+        public static final int Message_AddWater=0x7f050041;
+        public static final int Message_Alcohol=0x7f05003c;
+        public static final int Message_AmountGrams=0x7f050027;
+        public static final int Message_Apply=0x7f050050;
+        public static final int Message_BMIout=0x7f050018;
+        public static final int Message_BirthdayDate=0x7f050036;
+        public static final int Message_ChildDeseases=0x7f050039;
+        public static final int Message_ChooseType=0x7f050049;
+        public static final int Message_ChronicDeseases=0x7f05003a;
+        public static final int Message_Country=0x7f050035;
+        public static final int Message_Delete=0x7f05004f;
+        public static final int Message_DeleteUser=0x7f050019;
+        public static final int Message_DrivingLicence=0x7f050038;
+        public static final int Message_EnterAge=0x7f050029;
+        public static final int Message_EnterCarbs=0x7f050046;
+        public static final int Message_EnterCcals=0x7f050048;
+        public static final int Message_EnterFats=0x7f050045;
+        public static final int Message_EnterHeight=0x7f050026;
+        public static final int Message_EnterName=0x7f050028;
+        public static final int Message_EnterNicotineAmount=0x7f050031;
+        public static final int Message_EnterPercentage=0x7f05004d;
+        public static final int Message_EnterProductName=0x7f050043;
+        public static final int Message_EnterProteins=0x7f050044;
+        public static final int Message_EnterWater=0x7f050047;
+        public static final int Message_EnterWeight=0x7f050025;
+        public static final int Message_Gained=0x7f050023;
+        public static final int Message_HealthyWeight=0x7f05001d;
+        public static final int Message_Height=0x7f050032;
+        public static final int Message_Lost=0x7f050022;
+        public static final int Message_ModeratelyOverweight=0x7f05001f;
+        public static final int Message_Name=0x7f050034;
+        public static final int Message_NicotineAmount=0x7f050030;
+        public static final int Message_NumberOfCigarettes=0x7f05002f;
+        public static final int Message_Overweight=0x7f05001e;
+        public static final int Message_PrivareOrGeneral=0x7f05004a;
+        public static final int Message_Products=0x7f05003b;
+        public static final int Message_SeverelyOverweight=0x7f050020;
+        public static final int Message_SeverelyUnderweight=0x7f05001b;
+        public static final int Message_Sex=0x7f050037;
+        public static final int Message_Underweight=0x7f05001c;
+        public static final int Message_UserInfo=0x7f05004e;
+        public static final int Message_VerySeverelyOverweight=0x7f050021;
+        public static final int Message_VerySeverelyUnderweight=0x7f05001a;
+        public static final int Message_WarningAlcohol=0x7f05002c;
+        public static final int Message_WarningAlcoholDeath=0x7f05002e;
+        public static final int Message_WarningAlcoholTime=0x7f05002d;
+        public static final int Message_Weight=0x7f050033;
+        public static final int Message_YouAre=0x7f050024;
+        public static final int Message_YouHave=0x7f05002a;
+        public static final int Message_ppmOfAlcohol=0x7f05002b;
+        public static final int No=0x7f05000e;
+        public static final int OK=0x7f05000b;
+        public static final int PageName_MyMenu=0x7f05000a;
+        public static final int Parameterscolumn_BMI=0x7f05005c;
+        public static final int Parameterscolumn_Date=0x7f050059;
+        public static final int Parameterscolumn_Height=0x7f05005b;
+        public static final int Parameterscolumn_Weight=0x7f05005a;
+        public static final int UserCharacteristic_Female=0x7f050010;
+        public static final int UserCharacteristic_Male=0x7f05000f;
+        public static final int UserCharacteristic_MenuOfUser=0x7f050012;
+        public static final int UserCharacteristic_ParametersOfUser=0x7f050011;
+        public static final int Yes=0x7f05000d;
+        public static final int alcohol_Absinthe=0x7f0501d5;
+        public static final int alcohol_Cognac=0x7f0501d1;
+        public static final int alcohol_DryRedWine=0x7f0501cc;
+        public static final int alcohol_DryWhiteWine=0x7f0501cb;
+        public static final int alcohol_LightBeer=0x7f0501ca;
+        public static final int alcohol_LiquorBaileys=0x7f0501ce;
+        public static final int alcohol_NonalcoholicBeer=0x7f0501c9;
+        public static final int alcohol_PortWine=0x7f0501cf;
+        public static final int alcohol_Sambuca=0x7f0501d0;
+        public static final int alcohol_Tequila=0x7f0501d2;
+        public static final int alcohol_Vodka=0x7f0501d3;
+        public static final int alcohol_Whiskey=0x7f0501d4;
+        public static final int alcohol_Сhampagne=0x7f0501cd;
+        public static final int app_name=0x7f050004;
+        public static final int country_Albania=0x7f0501e6;
+        public static final int country_Andorra=0x7f0501e7;
+        public static final int country_Armenia=0x7f0501e8;
+        public static final int country_Austria=0x7f0501ea;
+        public static final int country_Azerbaijan=0x7f0501e9;
+        public static final int country_Belarus=0x7f0501eb;
+        public static final int country_Belgium=0x7f0501ec;
+        public static final int country_BosniaAndHerzegovina=0x7f0501ed;
+        public static final int country_Bulgaria=0x7f0501ee;
+        public static final int country_Croatia=0x7f0501ef;
+        public static final int country_Cyprus=0x7f0501f0;
+        public static final int country_CzechRepublic=0x7f0501f1;
+        public static final int country_Denmark=0x7f0501f2;
+        public static final int country_Estonia=0x7f0501f3;
+        public static final int country_Finland=0x7f0501f4;
+        public static final int country_France=0x7f0501f5;
+        public static final int country_Georgia=0x7f0501f6;
+        public static final int country_Germany=0x7f0501f7;
+        public static final int country_Greece=0x7f0501f8;
+        public static final int country_Hungary=0x7f0501f9;
+        public static final int country_Iceland=0x7f0501fa;
+        public static final int country_Ireland=0x7f0501fb;
+        public static final int country_Italy=0x7f0501fc;
+        public static final int country_Latvia=0x7f0501fd;
+        public static final int country_Liechtenstein=0x7f0501fe;
+        public static final int country_Lithuania=0x7f0501ff;
+        public static final int country_Luxembourg=0x7f050200;
+        public static final int country_Macedonia=0x7f050201;
+        public static final int country_Malta=0x7f050202;
+        public static final int country_Moldova=0x7f050203;
+        public static final int country_Montenegro=0x7f050204;
+        public static final int country_Netherlands=0x7f050205;
+        public static final int country_Norway=0x7f050206;
+        public static final int country_Poland=0x7f050207;
+        public static final int country_Portugal=0x7f050208;
+        public static final int country_Romania=0x7f050209;
+        public static final int country_Russia=0x7f0501e5;
+        public static final int country_Serbia=0x7f05020a;
+        public static final int country_Slovakia=0x7f05020b;
+        public static final int country_Slovenia=0x7f05020c;
+        public static final int country_Spain=0x7f05020d;
+        public static final int country_Sweden=0x7f05020e;
+        public static final int country_Switzerland=0x7f05020f;
+        public static final int country_Turkey=0x7f050210;
+        public static final int country_UK=0x7f050211;
+        public static final int country_Ukraine=0x7f0501e4;
+        public static final int day_name_format=0x7f050007;
+        public static final int invalid_date=0x7f050005;
+        public static final int month_name_format=0x7f050006;
+        public static final int other_Age=0x7f0501d8;
+        public static final int other_Amount=0x7f0501d6;
+        public static final int other_Centimetres=0x7f0501dd;
+        public static final int other_Date=0x7f0501de;
+        public static final int other_Height=0x7f0501db;
+        public static final int other_Hours=0x7f0501df;
+        public static final int other_Kilograms=0x7f0501dc;
+        public static final int other_Maximum=0x7f0501e0;
+        public static final int other_Minimum=0x7f0501e1;
+        public static final int other_Name=0x7f0501d7;
+        public static final int other_Nicotine=0x7f0501e2;
+        public static final int other_Private=0x7f0501e3;
+        public static final int other_Weight=0x7f0501da;
+        public static final int other_date=0x7f0501d9;
+        public static final int product_Almonds=0x7f05018c;
+        public static final int product_Americano=0x7f0501ae;
+        public static final int product_Apple=0x7f05010e;
+        public static final int product_AppleJuice=0x7f0501b7;
+        public static final int product_AppleСompote=0x7f0501c3;
+        public static final int product_Apricot=0x7f0500fc;
+        public static final int product_ApricotСompote=0x7f0501c5;
+        public static final int product_Backing=0x7f0500d2;
+        public static final int product_Bagels=0x7f0500d3;
+        public static final int product_Banana=0x7f050100;
+        public static final int product_BananaCocktail=0x7f0501b0;
+        public static final int product_BananaJuice=0x7f0501ba;
+        public static final int product_Barley=0x7f0500dd;
+        public static final int product_Beans=0x7f050127;
+        public static final int product_Beef=0x7f050132;
+        public static final int product_Beefheart=0x7f05013e;
+        public static final int product_Beefkidney=0x7f05013c;
+        public static final int product_Beefliver=0x7f05013b;
+        public static final int product_Beefmarrow=0x7f05013a;
+        public static final int product_Beeftongue=0x7f05013f;
+        public static final int product_Beefudder=0x7f05013d;
+        public static final int product_Beet=0x7f0500f4;
+        public static final int product_BeetJuice=0x7f0501be;
+        public static final int product_BlackCoffee=0x7f0501a9;
+        public static final int product_BlackCurrant=0x7f05011d;
+        public static final int product_BlackTea=0x7f0501a2;
+        public static final int product_Blackberry=0x7f050116;
+        public static final int product_BlackcurrantСompote=0x7f0501c8;
+        public static final int product_Blueberries=0x7f050115;
+        public static final int product_Bream=0x7f050163;
+        public static final int product_BreamCaviar=0x7f050187;
+        public static final int product_Buckwheat=0x7f0500d7;
+        public static final int product_Bulls=0x7f05015d;
+        public static final int product_Burbot=0x7f050168;
+        public static final int product_Butter=0x7f0500ce;
+        public static final int product_Cabbage=0x7f0500e4;
+        public static final int product_Cake=0x7f0501a1;
+        public static final int product_CakeApple=0x7f05019f;
+        public static final int product_CakeCream=0x7f05019e;
+        public static final int product_CandyChocolatePoured=0x7f050196;
+        public static final int product_Capelin=0x7f050166;
+        public static final int product_Cappuccino=0x7f0501ad;
+        public static final int product_Caramel=0x7f050195;
+        public static final int product_Carp=0x7f050161;
+        public static final int product_Carrot=0x7f0500ea;
+        public static final int product_CarrotJuice=0x7f0501bd;
+        public static final int product_Cauliflower=0x7f0500e5;
+        public static final int product_Cheese=0x7f0500c7;
+        public static final int product_Cherry=0x7f050101;
+        public static final int product_CherryJuice=0x7f0501b6;
+        public static final int product_CherryСompote=0x7f0501c1;
+        public static final int product_Chicken=0x7f050146;
+        public static final int product_ChickenEgg=0x7f050158;
+        public static final int product_ChocolateCocktail=0x7f0501b2;
+        public static final int product_CoffeeRoasted=0x7f0501a6;
+        public static final int product_Condensedmilk=0x7f0500bf;
+        public static final int product_Condensedmilkwithsugar=0x7f0500c0;
+        public static final int product_CookedSausageDiabetic=0x7f050148;
+        public static final int product_CookedSausageDietary=0x7f050149;
+        public static final int product_CookedSausageDoctorska=0x7f05014a;
+        public static final int product_CookedSausageLubitelska=0x7f05014b;
+        public static final int product_CookedSausageMolochna=0x7f05014c;
+        public static final int product_CookedSausageVeal=0x7f05014d;
+        public static final int product_Corngrits=0x7f0500df;
+        public static final int product_Courgette=0x7f0500e3;
+        public static final int product_Crab=0x7f050183;
+        public static final int product_Cranberry=0x7f050113;
+        public static final int product_Cream10=0x7f0500c3;
+        public static final int product_Cream20=0x7f0500c4;
+        public static final int product_Cucumber=0x7f0500eb;
+        public static final int product_DarkChocolate=0x7f05019a;
+        public static final int product_Dates=0x7f05010a;
+        public static final int product_DriedApples=0x7f050126;
+        public static final int product_DriedApricots=0x7f05011f;
+        public static final int product_DriedCherry=0x7f050122;
+        public static final int product_DriedFigs=0x7f050120;
+        public static final int product_DriedPeaches=0x7f050124;
+        public static final int product_DriedPear=0x7f050123;
+        public static final int product_DriedPrunes=0x7f050125;
+        public static final int product_DriedRaisins=0x7f050121;
+        public static final int product_Driedbirchbolete=0x7f05012f;
+        public static final int product_Driedcep=0x7f05012d;
+        public static final int product_DryEggWhite=0x7f05015a;
+        public static final int product_DryEggYolk=0x7f05015b;
+        public static final int product_Duck=0x7f050147;
+        public static final int product_Eel=0x7f05017d;
+        public static final int product_EelMarine=0x7f05017c;
+        public static final int product_EggPowder=0x7f050159;
+        public static final int product_Eggplant=0x7f0500e0;
+        public static final int product_Elm=0x7f050180;
+        public static final int product_Espresso=0x7f0501aa;
+        public static final int product_Fig=0x7f050104;
+        public static final int product_FishSaber=0x7f05016f;
+        public static final int product_Flounder=0x7f05015f;
+        public static final int product_Freshbirchbolete=0x7f05012e;
+        public static final int product_Freshcep=0x7f05012c;
+        public static final int product_FrozenCoffee=0x7f0501ac;
+        public static final int product_FruitDrops=0x7f050191;
+        public static final int product_Garlic=0x7f0500f9;
+        public static final int product_Geese=0x7f050144;
+        public static final int product_Gingerbread=0x7f0501a0;
+        public static final int product_Gooseberry=0x7f050118;
+        public static final int product_Grapefruit=0x7f050110;
+        public static final int product_GrapefruitJuice=0x7f0501bb;
+        public static final int product_Grapes=0x7f050114;
+        public static final int product_GrapeСompote=0x7f0501c6;
+        public static final int product_GreenTea=0x7f0501a3;
+        public static final int product_Greenbeans=0x7f0500f6;
+        public static final int product_Greenonion=0x7f0500e7;
+        public static final int product_Greenpeas=0x7f0500e2;
+        public static final int product_Greenpepper=0x7f0500ec;
+        public static final int product_GroundCoffee=0x7f0501a8;
+        public static final int product_Hake=0x7f05017e;
+        public static final int product_Halibut=0x7f05016d;
+        public static final int product_Halva=0x7f050199;
+        public static final int product_Ham=0x7f050157;
+        public static final int product_Haricotbeans=0x7f05012a;
+        public static final int product_Hazelnut=0x7f05018b;
+        public static final int product_Herring=0x7f050174;
+        public static final int product_HibiscusTea=0x7f0501a4;
+        public static final int product_Homemadecheese=0x7f0500c9;
+        public static final int product_Honey=0x7f050190;
+        public static final int product_Horse=0x7f050133;
+        public static final int product_Horseradish=0x7f0500f7;
+        public static final int product_InstantCoffee=0x7f0501a7;
+        public static final int product_Iris=0x7f050193;
+        public static final int product_Kalmar=0x7f050182;
+        public static final int product_Karas=0x7f050160;
+        public static final int product_KetyGranularCaviar=0x7f050186;
+        public static final int product_Kvass=0x7f0500fb;
+        public static final int product_Kyzyl=0x7f050105;
+        public static final int product_Lambheart=0x7f050139;
+        public static final int product_Lambkidneys=0x7f050137;
+        public static final int product_Lambliver=0x7f050138;
+        public static final int product_Lamprey=0x7f050164;
+        public static final int product_Latte=0x7f0501ab;
+        public static final int product_Leanpork=0x7f050135;
+        public static final int product_Leek=0x7f0500e8;
+        public static final int product_Lemon=0x7f050111;
+        public static final int product_LemonJuice=0x7f0501b5;
+        public static final int product_Lentils=0x7f05012b;
+        public static final int product_Lowfatkefir=0x7f0500bc;
+        public static final int product_Mackerel=0x7f050176;
+        public static final int product_Mandarin=0x7f050112;
+        public static final int product_Margarine=0x7f0500cc;
+        public static final int product_Marmalade=0x7f050194;
+        public static final int product_Marshmallow=0x7f050192;
+        public static final int product_Mayonnaise=0x7f0500cd;
+        public static final int product_Meltedbutter=0x7f0500cf;
+        public static final int product_Meltedfat=0x7f0500ca;
+        public static final int product_Merry=0x7f05010c;
+        public static final int product_Milk=0x7f0500bd;
+        public static final int product_MilkChocolate=0x7f05019b;
+        public static final int product_Milkpowder=0x7f0500be;
+        public static final int product_Millet=0x7f0500db;
+        public static final int product_Mintay=0x7f050165;
+        public static final int product_Mulberry=0x7f05010d;
+        public static final int product_Mutton=0x7f050131;
+        public static final int product_Naturalyoghurt=0x7f0500bb;
+        public static final int product_Navaga=0x7f050167;
+        public static final int product_NototeniyaMarble=0x7f050169;
+        public static final int product_Oatflakes=0x7f0500de;
+        public static final int product_Oatmeal=0x7f0500d9;
+        public static final int product_Onion=0x7f0500e9;
+        public static final int product_Orange=0x7f05010f;
+        public static final int product_OrangeJuice=0x7f0501b9;
+        public static final int product_Parsleygreen=0x7f0500ee;
+        public static final int product_Parsleyroot=0x7f0500ef;
+        public static final int product_Pastille=0x7f050197;
+        public static final int product_Peach=0x7f050106;
+        public static final int product_PeachСompote=0x7f0501c4;
+        public static final int product_Peanuts=0x7f05018e;
+        public static final int product_Pear=0x7f050103;
+        public static final int product_PearJuice=0x7f0501b3;
+        public static final int product_Pearlbarley=0x7f0500da;
+        public static final int product_PearСompote=0x7f0501c2;
+        public static final int product_Peas=0x7f050128;
+        public static final int product_Persimmon=0x7f05010b;
+        public static final int product_Pike=0x7f05017f;
+        public static final int product_Pineapple=0x7f0500ff;
+        public static final int product_PineappleJuice=0x7f0501b8;
+        public static final int product_PinkSalmon=0x7f05015e;
+        public static final int product_Plum=0x7f0500fe;
+        public static final int product_PlumGarden=0x7f050109;
+        public static final int product_PlumСompote=0x7f0501c0;
+        public static final int product_PollockRoe=0x7f050188;
+        public static final int product_Pomegranate=0x7f050102;
+        public static final int product_PorkSausages=0x7f05014e;
+        public static final int product_Porkfat=0x7f0500cb;
+        public static final int product_Porkheart=0x7f050142;
+        public static final int product_Porkkidneys=0x7f050140;
+        public static final int product_Porkliver=0x7f050141;
+        public static final int product_Porktongue=0x7f050143;
+        public static final int product_Potato=0x7f0500e6;
+        public static final int product_Processedcheese=0x7f0500c8;
+        public static final int product_PruneJuice=0x7f0501b4;
+        public static final int product_PumpkinJuice=0x7f0501bf;
+        public static final int product_QuailEggs=0x7f05015c;
+        public static final int product_Quince=0x7f0500fd;
+        public static final int product_Rabbit=0x7f050134;
+        public static final int product_Radish=0x7f0500f1;
+        public static final int product_Ramson=0x7f0500f8;
+        public static final int product_Raspberry=0x7f050119;
+        public static final int product_RedCurrant=0x7f05011c;
+        public static final int product_Redpepper=0x7f0500ed;
+        public static final int product_Rhubarb=0x7f0500f0;
+        public static final int product_Rice=0x7f0500dc;
+        public static final int product_RiverPerch=0x7f05016b;
+        public static final int product_Rosehip=0x7f05011e;
+        public static final int product_RowanAronia=0x7f050108;
+        public static final int product_RowanGarden=0x7f050107;
+        public static final int product_Rusk=0x7f0500d4;
+        public static final int product_Russule=0x7f050130;
+        public static final int product_Rutabaga=0x7f0500e1;
+        public static final int product_Ryazhanka =0x7f0500c2;
+        public static final int product_Ryebread=0x7f0500d0;
+        public static final int product_Ryeflour=0x7f0500d6;
+        public static final int product_SairaLarge=0x7f050171;
+        public static final int product_SairaSmall=0x7f050172;
+        public static final int product_Salad=0x7f0500f3;
+        public static final int product_Salak=0x7f050173;
+        public static final int product_Salmon=0x7f050162;
+        public static final int product_SausageStuffing=0x7f050154;
+        public static final int product_SausagesMolochni=0x7f05014f;
+        public static final int product_SausagesRussian=0x7f050150;
+        public static final int product_Scad=0x7f050178;
+        public static final int product_SeaPerch=0x7f05016a;
+        public static final int product_Seabuckthorn=0x7f05011a;
+        public static final int product_Seaweed=0x7f050185;
+        public static final int product_Semolina=0x7f0500d8;
+        public static final int product_Shrimp=0x7f050184;
+        public static final int product_ShrimpFarEast=0x7f050181;
+        public static final int product_Sliver=0x7f05017a;
+        public static final int product_SmokedBrisket=0x7f050156;
+        public static final int product_Som=0x7f050177;
+        public static final int product_Sourcream10=0x7f0500c5;
+        public static final int product_Sourcream20=0x7f0500c6;
+        public static final int product_Sourmilk=0x7f0500c1;
+        public static final int product_Soybeans=0x7f050129;
+        public static final int product_Spinach=0x7f0500fa;
+        public static final int product_Sterlet=0x7f050179;
+        public static final int product_StewedBeef=0x7f050151;
+        public static final int product_StewedPork=0x7f050155;
+        public static final int product_Strawberry=0x7f050117;
+        public static final int product_StrawberryCocktail=0x7f0501af;
+        public static final int product_Sturgeon=0x7f05016c;
+        public static final int product_SturgeonCaviar=0x7f05018a;
+        public static final int product_SturgeonGranularCaviar=0x7f050189;
+        public static final int product_Sugar=0x7f050198;
+        public static final int product_Sunflower=0x7f05018f;
+        public static final int product_TangerineСompote=0x7f0501c7;
+        public static final int product_Tomato=0x7f0500f5;
+        public static final int product_TomatoJuice=0x7f0501bc;
+        public static final int product_TouristBreakfastBeef=0x7f050152;
+        public static final int product_TouristBreakfastPork=0x7f050153;
+        public static final int product_Tuna=0x7f05017b;
+        public static final int product_Turkey=0x7f050145;
+        public static final int product_Turnip=0x7f0500f2;
+        public static final int product_VanillaCocktail=0x7f0501b1;
+        public static final int product_Veal=0x7f050136;
+        public static final int product_VimbaCaspian=0x7f050170;
+        public static final int product_WafflesFattyToppings=0x7f05019d;
+        public static final int product_WafflesFruitToppings=0x7f05019c;
+        public static final int product_Walnut=0x7f05018d;
+        public static final int product_Wheatflour=0x7f0500d5;
+        public static final int product_WhiteCurrant=0x7f05011b;
+        public static final int product_Whitebread=0x7f0500d1;
+        public static final int product_Whitecheese=0x7f0500ba;
+        public static final int product_Whitefish=0x7f050175;
+        public static final int product_Whiting=0x7f05016e;
+        public static final int product_YellowTea=0x7f0501a5;
+        public static final int producttype_Beans=0x7f0500ae;
+        public static final int producttype_Breadandbakeryproducts=0x7f0500a9;
+        public static final int producttype_Caviar=0x7f0500b5;
+        public static final int producttype_Cereals=0x7f0500aa;
+        public static final int producttype_Dairyproducts=0x7f0500a7;
+        public static final int producttype_Driedfruits=0x7f0500ad;
+        public static final int producttype_Drinks=0x7f0500b8;
+        public static final int producttype_Eggs=0x7f0500b3;
+        public static final int producttype_Fatsmargarinebutter=0x7f0500a8;
+        public static final int producttype_Fishandseafood=0x7f0500b4;
+        public static final int producttype_Fruitsandberries=0x7f0500ac;
+        public static final int producttype_Meatandcannedmeat=0x7f0500b2;
+        public static final int producttype_Meatandpoultry=0x7f0500b0;
+        public static final int producttype_Mushrooms=0x7f0500af;
+        public static final int producttype_Nuts=0x7f0500b6;
+        public static final int producttype_Sausageandsausageproducts=0x7f0500b1;
+        public static final int producttype_Sweets=0x7f0500b7;
+        public static final int producttype_UserProducts=0x7f0500b9;
+        public static final int producttype_Vegetables=0x7f0500ab;
+        public static final int q=0x7f050000;
+        public static final int quarter=0x7f050001;
+        public static final int tab_CalendarAlcohol=0x7f050063;
+        public static final int tab_CalendarCigarettes=0x7f050065;
+        public static final int tab_GraphHeight=0x7f05005e;
+        public static final int tab_GraphWeight=0x7f05005d;
+        public static final int tab_ListAlcohol=0x7f050062;
+        public static final int tab_ListCigarettes=0x7f050064;
+        public static final int tab_ListParameters=0x7f05005f;
+        public static final int tab_ProtsFatsCarbs=0x7f050060;
+        public static final int tab_WaterCcals=0x7f050061;
+        public static final int w=0x7f050002;
+        public static final int week=0x7f050003;
     }
+    public static final class style {
+        public static final int CalendarCell=0x7f090000;
+        public static final int CalendarCell_CalendarDate=0x7f090001;
+        public static final int CalendarCell_DayHeader=0x7f090002;
+        public static final int CalendarTitle=0x7f090003;
+    }
+    public static final class styleable {
+        /** Attributes that can be used with a CalendarPickerView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CalendarPickerView_android_background android:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #CalendarPickerView_tsquare_dayBackground Healthy_Eating.Healthy_Eating:tsquare_dayBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #CalendarPickerView_tsquare_dayTextColor Healthy_Eating.Healthy_Eating:tsquare_dayTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CalendarPickerView_tsquare_displayHeader Healthy_Eating.Healthy_Eating:tsquare_displayHeader}</code></td><td></td></tr>
+           <tr><td><code>{@link #CalendarPickerView_tsquare_dividerColor Healthy_Eating.Healthy_Eating:tsquare_dividerColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CalendarPickerView_tsquare_headerTextColor Healthy_Eating.Healthy_Eating:tsquare_headerTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CalendarPickerView_tsquare_titleTextColor Healthy_Eating.Healthy_Eating:tsquare_titleTextColor}</code></td><td></td></tr>
+           </table>
+           @see #CalendarPickerView_android_background
+           @see #CalendarPickerView_tsquare_dayBackground
+           @see #CalendarPickerView_tsquare_dayTextColor
+           @see #CalendarPickerView_tsquare_displayHeader
+           @see #CalendarPickerView_tsquare_dividerColor
+           @see #CalendarPickerView_tsquare_headerTextColor
+           @see #CalendarPickerView_tsquare_titleTextColor
+         */
+        public static final int[] CalendarPickerView = {
+            0x010100d4, 0x7f010000, 0x7f010001, 0x7f010002,
+            0x7f010003, 0x7f010004, 0x7f010005
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#background}
+          attribute's value can be found in the {@link #CalendarPickerView} array.
+          @attr name android:background
+        */
+        public static final int CalendarPickerView_android_background = 0;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#tsquare_dayBackground}
+          attribute's value can be found in the {@link #CalendarPickerView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name Healthy_Eating.Healthy_Eating:tsquare_dayBackground
+        */
+        public static final int CalendarPickerView_tsquare_dayBackground = 2;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#tsquare_dayTextColor}
+          attribute's value can be found in the {@link #CalendarPickerView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:tsquare_dayTextColor
+        */
+        public static final int CalendarPickerView_tsquare_dayTextColor = 3;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#tsquare_displayHeader}
+          attribute's value can be found in the {@link #CalendarPickerView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:tsquare_displayHeader
+        */
+        public static final int CalendarPickerView_tsquare_displayHeader = 5;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#tsquare_dividerColor}
+          attribute's value can be found in the {@link #CalendarPickerView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:tsquare_dividerColor
+        */
+        public static final int CalendarPickerView_tsquare_dividerColor = 1;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#tsquare_headerTextColor}
+          attribute's value can be found in the {@link #CalendarPickerView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:tsquare_headerTextColor
+        */
+        public static final int CalendarPickerView_tsquare_headerTextColor = 6;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#tsquare_titleTextColor}
+          attribute's value can be found in the {@link #CalendarPickerView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:tsquare_titleTextColor
+        */
+        public static final int CalendarPickerView_tsquare_titleTextColor = 4;
+        /** Attributes that can be used with a FloatingActionButton.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_colorDisabled Healthy_Eating.Healthy_Eating:fab_colorDisabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_colorNormal Healthy_Eating.Healthy_Eating:fab_colorNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_colorPressed Healthy_Eating.Healthy_Eating:fab_colorPressed}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_colorRipple Healthy_Eating.Healthy_Eating:fab_colorRipple}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_shadow Healthy_Eating.Healthy_Eating:fab_shadow}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fab_size Healthy_Eating.Healthy_Eating:fab_size}</code></td><td></td></tr>
+           </table>
+           @see #FloatingActionButton_fab_colorDisabled
+           @see #FloatingActionButton_fab_colorNormal
+           @see #FloatingActionButton_fab_colorPressed
+           @see #FloatingActionButton_fab_colorRipple
+           @see #FloatingActionButton_fab_shadow
+           @see #FloatingActionButton_fab_size
+         */
+        public static final int[] FloatingActionButton = {
+            0x7f01000d, 0x7f01000e, 0x7f01000f, 0x7f010010,
+            0x7f010011, 0x7f010012
+        };
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#fab_colorDisabled}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:fab_colorDisabled
+        */
+        public static final int FloatingActionButton_fab_colorDisabled = 2;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#fab_colorNormal}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:fab_colorNormal
+        */
+        public static final int FloatingActionButton_fab_colorNormal = 1;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#fab_colorPressed}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:fab_colorPressed
+        */
+        public static final int FloatingActionButton_fab_colorPressed = 0;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#fab_colorRipple}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:fab_colorRipple
+        */
+        public static final int FloatingActionButton_fab_colorRipple = 3;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#fab_shadow}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:fab_shadow
+        */
+        public static final int FloatingActionButton_fab_shadow = 4;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#fab_size}
+          attribute's value can be found in the {@link #FloatingActionButton} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0</td><td></td></tr>
+<tr><td><code>mini</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name Healthy_Eating.Healthy_Eating:fab_size
+        */
+        public static final int FloatingActionButton_fab_size = 5;
+        /** Attributes that can be used with a calendar_cell.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #calendar_cell_tsquare_state_current_month Healthy_Eating.Healthy_Eating:tsquare_state_current_month}</code></td><td></td></tr>
+           <tr><td><code>{@link #calendar_cell_tsquare_state_highlighted Healthy_Eating.Healthy_Eating:tsquare_state_highlighted}</code></td><td></td></tr>
+           <tr><td><code>{@link #calendar_cell_tsquare_state_range_first Healthy_Eating.Healthy_Eating:tsquare_state_range_first}</code></td><td></td></tr>
+           <tr><td><code>{@link #calendar_cell_tsquare_state_range_last Healthy_Eating.Healthy_Eating:tsquare_state_range_last}</code></td><td></td></tr>
+           <tr><td><code>{@link #calendar_cell_tsquare_state_range_middle Healthy_Eating.Healthy_Eating:tsquare_state_range_middle}</code></td><td></td></tr>
+           <tr><td><code>{@link #calendar_cell_tsquare_state_selectable Healthy_Eating.Healthy_Eating:tsquare_state_selectable}</code></td><td></td></tr>
+           <tr><td><code>{@link #calendar_cell_tsquare_state_today Healthy_Eating.Healthy_Eating:tsquare_state_today}</code></td><td></td></tr>
+           </table>
+           @see #calendar_cell_tsquare_state_current_month
+           @see #calendar_cell_tsquare_state_highlighted
+           @see #calendar_cell_tsquare_state_range_first
+           @see #calendar_cell_tsquare_state_range_last
+           @see #calendar_cell_tsquare_state_range_middle
+           @see #calendar_cell_tsquare_state_selectable
+           @see #calendar_cell_tsquare_state_today
+         */
+        public static final int[] calendar_cell = {
+            0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009,
+            0x7f01000a, 0x7f01000b, 0x7f01000c
+        };
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#tsquare_state_current_month}
+          attribute's value can be found in the {@link #calendar_cell} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:tsquare_state_current_month
+        */
+        public static final int calendar_cell_tsquare_state_current_month = 1;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#tsquare_state_highlighted}
+          attribute's value can be found in the {@link #calendar_cell} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:tsquare_state_highlighted
+        */
+        public static final int calendar_cell_tsquare_state_highlighted = 6;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#tsquare_state_range_first}
+          attribute's value can be found in the {@link #calendar_cell} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:tsquare_state_range_first
+        */
+        public static final int calendar_cell_tsquare_state_range_first = 3;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#tsquare_state_range_last}
+          attribute's value can be found in the {@link #calendar_cell} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:tsquare_state_range_last
+        */
+        public static final int calendar_cell_tsquare_state_range_last = 5;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#tsquare_state_range_middle}
+          attribute's value can be found in the {@link #calendar_cell} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:tsquare_state_range_middle
+        */
+        public static final int calendar_cell_tsquare_state_range_middle = 4;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#tsquare_state_selectable}
+          attribute's value can be found in the {@link #calendar_cell} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:tsquare_state_selectable
+        */
+        public static final int calendar_cell_tsquare_state_selectable = 0;
+        /**
+          <p>This symbol is the offset where the {@link Healthy_Eating.Healthy_Eating.R.attr#tsquare_state_today}
+          attribute's value can be found in the {@link #calendar_cell} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name Healthy_Eating.Healthy_Eating:tsquare_state_today
+        */
+        public static final int calendar_cell_tsquare_state_today = 2;
+    };
 }

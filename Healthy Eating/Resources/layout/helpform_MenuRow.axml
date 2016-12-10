@@ -21,8 +21,9 @@
                 android:layout_width="170.0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/NameText"
-                android:background="@android:color/darker_gray"
-                android:layout_marginLeft="1.0dp" />
+                android:background="@android:color/holo_green_light"
+                android:layout_marginLeft="1.0dp"
+                android:editable="false" />
             <View
                 android:layout_width="1.0dp"
                 android:layout_height="match_parent"
@@ -31,7 +32,8 @@
                 android:layout_width="60.0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/ProteinText"
-                android:background="@android:color/holo_purple" />
+                android:background="@android:color/holo_orange_light"
+                android:editable="false" />
             <View
                 android:layout_width="1.0dp"
                 android:layout_height="match_parent"
@@ -40,7 +42,8 @@
                 android:layout_width="60.0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/FatsText"
-                android:background="@android:color/darker_gray" />
+                android:background="@android:color/holo_green_light"
+                android:editable="false" />
             <View
                 android:layout_width="1.0dp"
                 android:layout_height="match_parent"
@@ -49,7 +52,8 @@
                 android:layout_width="60.0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/CarbohydratesText"
-                android:background="@android:color/holo_purple" />
+                android:background="@android:color/holo_orange_light"
+                android:editable="false" />
             <View
                 android:layout_width="1.0dp"
                 android:layout_height="match_parent"

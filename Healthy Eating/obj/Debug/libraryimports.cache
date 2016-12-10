@@ -2,10 +2,18 @@
 <Paths>
   <ManifestDocuments>
     <ManifestDocument>obj\Debug\__library_projects__\MPAndroidChart\library_project_imports\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\__library_projects__\Square.AndroidTimesSquare\library_project_imports\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\__library_projects__\Square.AndroidTimesSquare\library_project_imports\aapt\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\__library_projects__\Syncfusion.SfCalendar.Android\library_project_imports\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\__library_projects__\Syncfusion.SfCalendar.Android\library_project_imports\bin\aapt\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\__library_projects__\Syncfusion.SfChart.Android\library_project_imports\AndroidManifest.xml</ManifestDocument>
   </ManifestDocuments>
   <NativeLibraries />
   <Jars>
     <Jar>obj\Debug\__library_projects__\AChartEngine.Bindings.XamarinAndroid\library_project_imports\achartengine-1.1.0.jar</Jar>
     <Jar>obj\Debug\__library_projects__\MPAndroidChart\library_project_imports\bin\classes.jar</Jar>
+    <Jar>obj\Debug\__library_projects__\Square.AndroidTimesSquare\library_project_imports\bin\classes.jar</Jar>
+    <Jar>obj\Debug\__library_projects__\Syncfusion.SfCalendar.Android\library_project_imports\bin\SfCalendar.Android.jar</Jar>
+    <Jar>obj\Debug\__library_projects__\Syncfusion.SfChart.Android\library_project_imports\bin\SfChart.Android.jar</Jar>
   </Jars>
 </Paths>

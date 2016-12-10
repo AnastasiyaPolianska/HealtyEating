@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="35.5dp"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="@string/Message_AddProductName"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView2"
+            android:layout_width="170.0dp"
+            android:layout_height="30.0dp"
+            android:textStyle="bold" />
+        <EditText
+            android:inputType="text"
+            android:id="@+id/ProductName"
+            android:hint="@string/Message_EnterProductName"
+            android:layout_width="210dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="35.5dp"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="@string/Message_AddProteins"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView2"
+            android:layout_width="170.0dp"
+            android:layout_height="30.0dp"
+            android:textStyle="bold" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/ProductProteins"
+            android:hint="@string/Message_EnterProteins"
+            android:layout_width="210dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="35.5dp"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="@string/Message_AddFats"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView2"
+            android:layout_width="170.0dp"
+            android:layout_height="30.0dp"
+            android:textStyle="bold" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/ProductFats"
+            android:hint="@string/Message_EnterFats"
+            android:layout_width="210dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="35.5dp"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="@string/Message_AddCarbs"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView2"
+            android:layout_width="170.0dp"
+            android:layout_height="30.0dp"
+            android:textStyle="bold" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/ProductCarbs"
+            android:hint="@string/Message_EnterCarbs"
+            android:layout_width="210dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="35.5dp"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="@string/Message_AddWater"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView2"
+            android:layout_width="170.0dp"
+            android:layout_height="30.0dp"
+            android:textStyle="bold" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/ProductWater"
+            android:hint="@string/Message_EnterWater"
+            android:layout_width="210dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="35.5dp"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="@string/Message_AddCcals"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView2"
+            android:layout_width="170.0dp"
+            android:layout_height="30.0dp"
+            android:textStyle="bold" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/ProductCcals"
+            android:hint="@string/Message_EnterCcals"
+            android:layout_width="210dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="70.5dp"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="@string/Message_ChooseType"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView2"
+            android:layout_width="170.0dp"
+            android:layout_height="30.0dp"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/TypeChooser"
+            android:layout_width="210dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="35.5dp"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="@string/Message_PrivareOrGeneral"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView2"
+            android:layout_width="170.0dp"
+            android:layout_height="30.0dp"
+            android:textStyle="bold" />
+        <CheckBox
+            android:layout_width="210dp"
+            android:layout_height="match_parent"
+            android:id="@+id/PrivateChooser"
+            android:text="@string/other_Private" />
+    </LinearLayout>
+</LinearLayout>
