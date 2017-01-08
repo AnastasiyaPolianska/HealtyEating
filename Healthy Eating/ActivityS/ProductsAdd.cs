@@ -46,7 +46,6 @@ namespace Healthy_Eating.ActivityS
             ListForChoosingProducts.ItemLongClick += ListForChoosingProducts_ItemLongClick;
             ListForChoosingProducts.ItemClick += ListForChoosingProducts_ItemClick;
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Showing product information.
@@ -81,9 +80,9 @@ namespace Healthy_Eating.ActivityS
             //Action on positive button.
             Object.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1) {}));
 
+            //Showing the form.
             Object.Show();
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Adding a new product.
@@ -113,14 +112,12 @@ namespace Healthy_Eating.ActivityS
                     User TempUser = DatabaseUser.GetUser(User.CurrentUser);
                     TempUser.Products.Add(TempProduct);
                     DatabaseUser.SQConnection.UpdateWithChildren(TempUser);
-                    
-                    //Showing information about the hew product added.
-                    Toast.MakeText(this, DatabaseUser.GetUser(User.CurrentUser).Products.Last().ToString(), ToastLength.Long).Show();
             }));
 
             //Action on pressing negative button.
             Object.SetNegativeButton(Resource.String.Cancel, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1){}));
 
+            //Showing the form.
             Object.Show();     
         }
     }

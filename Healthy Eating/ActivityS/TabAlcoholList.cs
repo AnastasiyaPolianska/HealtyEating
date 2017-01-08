@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -26,7 +25,6 @@ namespace Healthy_Eating.ActivityS
         TextView IdentifierOfAUser;
         View List;
         View Footer;
-
         EditText ForSumPercentage;
         EditText ForSumCcals;
 
@@ -34,9 +32,11 @@ namespace Healthy_Eating.ActivityS
         {
             base.OnCreate(savedInstanceState);
 
+            //Making the footer.
             LayoutInflater inflater_ = LayoutInflater.From(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity);
             Footer = inflater_.Inflate(Resource.Layout.helpform_AlcoholRowFooter, null);
         }
+        //----------------------------------------------------------------------------------------------------------------------------------------------------
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -54,13 +54,11 @@ namespace Healthy_Eating.ActivityS
             ListForUserAlcohols = new List<TableRowAlcohol>();
 
             //Action on button clicks.
-
             SetAlcoholButton.Click += SetAlcoholButton_Click;
             ChooseDataButton.Click += ChooseDataButton_Click;
 
             return List;
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Updating the layout.
@@ -74,6 +72,7 @@ namespace Healthy_Eating.ActivityS
             //If the user is choosed.
             if (Classes.User.CurrentUser != -1)
             {
+                //Setting texts.
                 CurrentDateText.Text = Resources.GetString(Resource.String.other_Date) + " " + ProductLists.CurrentDate.ToShortDateString();
                 IdentifierOfAUser.Text = Resources.GetString(Resource.String.UserCharacteristic_MenuOfUser) + " " + DatabaseUser.GetUser(User.CurrentUser).Name;
 
@@ -96,12 +95,14 @@ namespace Healthy_Eating.ActivityS
                 HelpclassAlcoholAdapter AdapterForUserAlcohols = new HelpclassAlcoholAdapter(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity, ListForUserAlcohols);
                 AlcoholList.Adapter = AdapterForUserAlcohols;
 
+                //For sums.
                 ForSumPercentage = Footer.FindViewById<EditText>(Resource.Id.Col1);
                 ForSumCcals = Footer.FindViewById<EditText>(Resource.Id.Col2);
 
                 ForSumPercentage.Text = SumOfPercentage.ToString();
                 ForSumCcals.Text = SumOfCcals.ToString();
 
+                //If there isn't a footer, adding one.
                 if (AlcoholList.FooterViewsCount == 0)
                     AlcoholList.AddFooterView(Footer);
             }
@@ -120,7 +121,7 @@ namespace Healthy_Eating.ActivityS
         {
             //If the user isn't choosed.
             if (Classes.User.CurrentUser == -1)
-                Toast.MakeText(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity, Resources.GetString(Resource.String.ErrorMessage_Unchoosed), ToastLength.Long).Show();
+               HelpclassDataValidation.MakingErrorToast(Resource.String.ErrorMessage_Unchoosed);
 
             //If the user is choosed, moving to adding products.
             else
@@ -137,23 +138,23 @@ namespace Healthy_Eating.ActivityS
                 //Action on pressing positive button.
                 Object.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1)
                 {
-                    Toast.MakeText(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity, DateChooser.DateTime.ToShortDateString(), ToastLength.Long).Show();
                     ProductLists.CurrentDate = DateChooser.DateTime;
                     OnResume();
                 }
                 ));
 
+                //Showing the form.
                 Object.Show();
             }
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Making a new alcohol entry.
         private void SetAlcoholButton_Click(object sender, EventArgs e)
         {
             //If the user isn't choosed.
             if (Classes.User.CurrentUser == -1)
-                Toast.MakeText(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity, Resources.GetString(Resource.String.ErrorMessage_Unchoosed), ToastLength.Long).Show();
+                HelpclassDataValidation.MakingErrorToast(Resource.String.ErrorMessage_Unchoosed);
 
             //If the user is choosed, moving to adding products.
             else

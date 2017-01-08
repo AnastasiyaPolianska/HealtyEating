@@ -16,7 +16,10 @@ namespace Healthy_Eating.ActivityS
     [Activity(Label = "Users in system: ")]
     public class PageUsers : Activity
     {
-        //Elements from the layout.       
+        //Elements from the layout.
+        Spinner CountryChooser;
+        View FormViewAdd;
+        AlertDialog DialogForAdding;
         ListView ListOfUsers;
         ListView CategoryChooser;
         Button AddNewUserButton;
@@ -84,6 +87,9 @@ namespace Healthy_Eating.ActivityS
         {
             //Setting the current user.
             User.CurrentUser = e.Position;
+
+            //Showing info that user is choosed.
+            HelpclassDataValidation.MakingInfoToast(Resource.String.MessageUser_Choosed);
        }
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -99,9 +105,11 @@ namespace Healthy_Eating.ActivityS
             View FormViewMenu = inflater.Inflate(Resource.Layout.user_MiniMenu, layout);
             Object.SetView(FormViewMenu);
 
+            //Elements from the layout.
             Button ShowingInfo = FormViewMenu.FindViewById<Button>(Resource.Id.ShowingInfo);
             Button DeleteUser = FormViewMenu.FindViewById<Button>(Resource.Id.DeleteUser);
 
+            //Actions on clicks.
             ShowingInfo.Click += ShowingInfo_Click;
             DeleteUser.Click += DeleteUser_Click;
 
@@ -111,9 +119,9 @@ namespace Healthy_Eating.ActivityS
             //Showing the new form for deleting a user.
             Object.Show();
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Deleting the user.
         private void DeleteUser_Click(object sender, EventArgs e)
         {
             //Creating a new layout for deleting one user.
@@ -126,11 +134,13 @@ namespace Healthy_Eating.ActivityS
             //Text for displaying the message.
             FormViewDelete.FindViewById<TextView>(Resource.Id.DeleteUserText).Text = Resources.GetString(Resource.String.MessageUser_DeleteUser) + DatabaseUser.GetUser(UserChoosed).Name + " ?";
 
-            //Action on pressing negative button.
+            //Action on pressing positive button.
             Object1.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1)
             {
                 //If current user is deleted, then the current user isn't choosed.
                 if (User.CurrentUser == UserChoosed) User.CurrentUser = -1;
+
+                //When the number of current user is more than deleted. Correcting it.
                 else if (UserChoosed < User.CurrentUser) User.CurrentUser--;
 
                 //Deleting the products for the user that is being deleted.
@@ -140,13 +150,16 @@ namespace Healthy_Eating.ActivityS
                         DatabaseProducts.DeleteProduct(TempProduct.Name);
                 }
 
-                //Deleting fromm the DB.
+                //Deleting from the DB.
                 DatabaseUser.DeleteUser(TempList.ElementAt(UserChoosed));
 
                 //Deleting from the list.
                 TempList.RemoveAt(UserChoosed);
                 var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, TempList);
                 ListOfUsers.Adapter = adapter;
+
+                //Showing info that user is deleted.
+                HelpclassDataValidation.MakingInfoToast(Resource.String.MessageUser_Deleted);
             }));
 
             //Action on pressing negative button.
@@ -155,9 +168,9 @@ namespace Healthy_Eating.ActivityS
             //Showing the new form for deleting a user.
             Object1.Show();
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Showing info about the user.
         private void ShowingInfo_Click(object sender, EventArgs e)
         {
             //Creating a new layout for showing information about the user.
@@ -167,10 +180,13 @@ namespace Healthy_Eating.ActivityS
             View FormViewInfo = inflater1.Inflate(Resource.Layout.user_Info, layout1);
             Object1.SetView(FormViewInfo);
 
+            //Elements from the layout.
             TextView NameText = FormViewInfo.FindViewById<TextView>(Resource.Id.NameText);
             TextView AgeText = FormViewInfo.FindViewById<TextView>(Resource.Id.AgeText);
             TextView SexText = FormViewInfo.FindViewById<TextView>(Resource.Id.SexText);
             TextView CountryText = FormViewInfo.FindViewById<TextView>(Resource.Id.CountryText);
+
+            /*Info about the user*/
 
             NameText.Text = DatabaseUser.GetUser(UserChoosed).Name;
 
@@ -181,10 +197,12 @@ namespace Healthy_Eating.ActivityS
             SexText.Text = DatabaseUser.GetUser(UserChoosed).Sex.ToString();
             CountryText.Text = DatabaseUser.GetUser(UserChoosed).Country.ToString();
 
+            //Elements from the layout.
             Button ChildDiseases = FormViewInfo.FindViewById<Button>(Resource.Id.ChildDiseases);
             Button ChronicDiseases = FormViewInfo.FindViewById<Button>(Resource.Id.ChronicDiseases);
             Button DrivingLicences = FormViewInfo.FindViewById<Button>(Resource.Id.DrivingLicences);
 
+            //Actions on clicks.
             ChildDiseases.Click += ChildDiseases_Click1;
             ChronicDiseases.Click += ChronicDiseases_Click1;
             DrivingLicences.Click += DrivingLicences_Click;
@@ -195,7 +213,9 @@ namespace Healthy_Eating.ActivityS
             //Showing the new form.
             Object1.Show();
         }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Action on clicking the driving licence.
         private void DrivingLicences_Click(object sender, EventArgs e)
         {
             //Creating a new layout for choosing category.
@@ -214,7 +234,7 @@ namespace Healthy_Eating.ActivityS
 
             Change = ChooseCategoryForm.FindViewById<Button>(Resource.Id.ChangeButton);
 
-            //List for holding items for CountryChooser.
+            //List for holding items for CategoryChooser.
             List<string> ListForCategories = new List<string>();
 
             //Adding categories to the list.
@@ -233,11 +253,13 @@ namespace Healthy_Eating.ActivityS
             ListForCategories.Add(Resources.GetString(Resource.String.Category_DE));
             ListForCategories.Add(Resources.GetString(Resource.String.Category_T));
 
+            //Parameters of chooser.
             var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItemChecked, ListForCategories);
             CategoryChooser.Adapter = adapter;
 
             CategoryChooser.ChoiceMode = Android.Widget.ChoiceMode.Multiple;
 
+            //Setting items checked if they are already choosed.
             if (DatabaseUser.GetUser(UserChoosed).DriverLicence.Contains(ENDriverLicence.A1)) CategoryChooser.SetItemChecked(0, true);
             if (DatabaseUser.GetUser(UserChoosed).DriverLicence.Contains(ENDriverLicence.A)) CategoryChooser.SetItemChecked(1, true);
             if (DatabaseUser.GetUser(UserChoosed).DriverLicence.Contains(ENDriverLicence.B1)) CategoryChooser.SetItemChecked(2, true);
@@ -253,21 +275,25 @@ namespace Healthy_Eating.ActivityS
             if (DatabaseUser.GetUser(UserChoosed).DriverLicence.Contains(ENDriverLicence.DE)) CategoryChooser.SetItemChecked(12, true);
             if (DatabaseUser.GetUser(UserChoosed).DriverLicence.Contains(ENDriverLicence.T)) CategoryChooser.SetItemChecked(13, true);
 
+            //Actions on clicks.
             CategoryChooser.ItemClick += CategoryChooser_ItemClick;
             Change.Click += Change_ClickDrivingLicence;
 
             //Action on pressing positive button.
-            Object1.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1)
-            {
-            }));
+            Object1.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1){}));
 
+            //Showing the form.
             Object1.Show();
         }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Action on clicking the driving licence changer.
         private void Change_ClickDrivingLicence(object sender, EventArgs e)
         {
+            //Clearing the temp list of licences.
             TempLicences.Clear();
 
+            //Adding licences to the list of user.
             var sparseArray = CategoryChooser.CheckedItemPositions;
             for (var i = 0; i < sparseArray.Size(); i++)
             {
@@ -287,17 +313,22 @@ namespace Healthy_Eating.ActivityS
                 if (sparseArray.KeyAt(i) == 13 && sparseArray.ValueAt(i) == true) TempLicences.Add(ENDriverLicence.T);
             }           
 
+            //Bool for checking if the list isn't empty.
             bool temp;
             if (TempLicences.Count == 0) temp = false;
             else temp = true;
             User tempuser = DatabaseUser.GetUser(UserChoosed);
 
+            //Giving the parameters to the user.
             tempuser.DrivingLicence = temp;
             tempuser.DriverLicence = TempLicences;
 
+            //Updating the user.
             DatabaseUser.SQConnection.UpdateWithChildren(tempuser);
         }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Action on clicking the chronic diseases.
         private void ChronicDiseases_Click1(object sender, EventArgs e)
         {
             //Creating a new layout for choosing category.
@@ -316,10 +347,10 @@ namespace Healthy_Eating.ActivityS
 
             Change = ChooseCtegoryForm.FindViewById<Button>(Resource.Id.ChangeButton);
 
-            //List for holding items for CountryChooser.
+            //List for holding items for Categoryhooser.
             List<string> ListForCategories = new List<string>();
 
-            //Adding countries to the list.
+            //Adding diseases to the list.
             ListForCategories.Add(Resources.GetString(Resource.String.Disease_Atherosclerosis));
             ListForCategories.Add(Resources.GetString(Resource.String.Disease_CardiacIschemia));
             ListForCategories.Add(Resources.GetString(Resource.String.Disease_ChronicMyocarditis));
@@ -343,11 +374,13 @@ namespace Healthy_Eating.ActivityS
             ListForCategories.Add(Resources.GetString(Resource.String.Disease_Epididymitis));
             ListForCategories.Add(Resources.GetString(Resource.String.Disease_Adnexitis));
 
+            //Parameters of the chooser.
             var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItemChecked, ListForCategories);
             CategoryChooser.Adapter = adapter;
 
             CategoryChooser.ChoiceMode = Android.Widget.ChoiceMode.Multiple;
 
+            //Setting items checked if they are already choosed.
             if (DatabaseUser.GetUser(UserChoosed).ChronicDiseasesList.Contains(ENChronicDiseases.Atherosclerosis)) CategoryChooser.SetItemChecked(0, true);
             if (DatabaseUser.GetUser(UserChoosed).ChronicDiseasesList.Contains(ENChronicDiseases.CardiacIschemia)) CategoryChooser.SetItemChecked(1, true);
             if (DatabaseUser.GetUser(UserChoosed).ChronicDiseasesList.Contains(ENChronicDiseases.ChronicMyocarditis)) CategoryChooser.SetItemChecked(2, true);
@@ -371,20 +404,25 @@ namespace Healthy_Eating.ActivityS
             if (DatabaseUser.GetUser(UserChoosed).ChronicDiseasesList.Contains(ENChronicDiseases.Epididymitis)) CategoryChooser.SetItemChecked(20, true);
             if (DatabaseUser.GetUser(UserChoosed).ChronicDiseasesList.Contains(ENChronicDiseases.Adnexitis)) CategoryChooser.SetItemChecked(21, true);
 
+            //Actions on clicks.
             CategoryChooser.ItemClick += CategoryChooser_ItemClick;
             Change.Click += Change_ClickChronicDiseases;
 
             //Action on pressing positive button.
-            Object1.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1)
-            {}));
+            Object1.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1) {}));
 
+            //Showing the form.
             Object1.Show();
         }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Action on clicking the chronic diseases changer.
         private void Change_ClickChronicDiseases(object sender, EventArgs e)
         {
+            //Clearing the temp list of diseases.
             TempChronicDiseases.Clear();
 
+            //Adding items to the user list.
             var sparseArray = CategoryChooser.CheckedItemPositions;
             for (var i = 0; i < sparseArray.Size(); i++)
             {
@@ -412,17 +450,22 @@ namespace Healthy_Eating.ActivityS
                 if (sparseArray.KeyAt(i) == 21 && sparseArray.ValueAt(i) == true) TempChronicDiseases.Add(ENChronicDiseases.Adnexitis);
             }
 
+            //Bool for checking if the list isn't empty.
             bool temp;
             if (TempChronicDiseases.Count == 0) temp = false;
             else temp = true;
             User tempuser = DatabaseUser.GetUser(UserChoosed);
-
+            
+            //Giving parameters to the user.
             tempuser.ChronicDiseases = temp;
             tempuser.ChronicDiseasesList = TempChronicDiseases;
 
+            //Updating the user.
             DatabaseUser.SQConnection.UpdateWithChildren(tempuser);
         }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Action on clicking the child diseases changer.
         private void ChildDiseases_Click1(object sender, EventArgs e)
         {
             //Creating a new layout for choosing category.
@@ -441,10 +484,10 @@ namespace Healthy_Eating.ActivityS
 
             Change = ChooseCtegoryForm.FindViewById<Button>(Resource.Id.ChangeButton);
 
-            //List for holding items for CountryChooser.
+            //List for holding items for CategoryChooser.
             List<string> ListForCategories = new List<string>();
 
-            //Adding countries to the list.
+            //Adding diseases to the list.
             ListForCategories.Add(Resources.GetString(Resource.String.Disease_Measles));
             ListForCategories.Add(Resources.GetString(Resource.String.Disease_ChickenPox));
             ListForCategories.Add(Resources.GetString(Resource.String.Disease_WhoopingCough));
@@ -455,11 +498,13 @@ namespace Healthy_Eating.ActivityS
             ListForCategories.Add(Resources.GetString(Resource.String.Disease_PneumococcalDisease));
             ListForCategories.Add(Resources.GetString(Resource.String.Disease_HaemophilusInfluenzae));
 
+            //Parameters of the chooser.
             var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItemChecked, ListForCategories);
             CategoryChooser.Adapter = adapter;
 
             CategoryChooser.ChoiceMode = Android.Widget.ChoiceMode.Multiple;
 
+            //Setting items checked if they are already choosed.
             if (DatabaseUser.GetUser(UserChoosed).ChildrenDiseasesList.Contains(ENChildDiseases.Measles)) CategoryChooser.SetItemChecked(0, true);
             if (DatabaseUser.GetUser(UserChoosed).ChildrenDiseasesList.Contains(ENChildDiseases.ChickenPox)) CategoryChooser.SetItemChecked(1, true);
             if (DatabaseUser.GetUser(UserChoosed).ChildrenDiseasesList.Contains(ENChildDiseases.WhoopingCough)) CategoryChooser.SetItemChecked(2, true);
@@ -470,20 +515,25 @@ namespace Healthy_Eating.ActivityS
             if (DatabaseUser.GetUser(UserChoosed).ChildrenDiseasesList.Contains(ENChildDiseases.Pneumococcal)) CategoryChooser.SetItemChecked(7, true);
             if (DatabaseUser.GetUser(UserChoosed).ChildrenDiseasesList.Contains(ENChildDiseases.Haemophilus)) CategoryChooser.SetItemChecked(8, true);
 
+            //Actions on clicks.
             CategoryChooser.ItemClick += CategoryChooser_ItemClick;
             Change.Click += Change_ClickChildDiseases;
 
             //Action on pressing positive button.
-            Object1.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1)
-            {}));
+            Object1.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1) {}));
 
+            //Showing the form.
             Object1.Show();
         }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Action on clicking the child diseases changer.
         private void Change_ClickChildDiseases(object sender, EventArgs e)
         {
+            //Clearing the temp list of diseases.
             TempChildDiseases.Clear();
 
+            //Adding items to the user list.
             var sparseArray = CategoryChooser.CheckedItemPositions;
             for (var i = 0; i < sparseArray.Size(); i++)
             {
@@ -498,17 +548,19 @@ namespace Healthy_Eating.ActivityS
                 if (sparseArray.KeyAt(i) == 8 && sparseArray.ValueAt(i) == true) TempChildDiseases.Add(ENChildDiseases.Haemophilus);
             }
 
+            //Bool for checking if the list isn't empty.
             bool temp;
             if (TempChildDiseases.Count == 0) temp = false;
             else temp = true;
             User tempuser = DatabaseUser.GetUser(UserChoosed);
 
+            //Giving parameters to the user.
             tempuser.ChildDiseases = temp;
             tempuser.ChildrenDiseasesList = TempChildDiseases;
 
+            //Updating the user.
             DatabaseUser.SQConnection.UpdateWithChildren(tempuser);
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Clicking on one item in the list makes the button of applying changes enabled.
@@ -516,7 +568,6 @@ namespace Healthy_Eating.ActivityS
         {
             Change.Enabled = true;
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Adding a new user to the system.
@@ -529,11 +580,11 @@ namespace Healthy_Eating.ActivityS
             AlertDialog.Builder Object = new AlertDialog.Builder(this);
             LayoutInflater inflater = LayoutInflater.From(this);
             LinearLayout layout = new LinearLayout(this);
-            View FormViewAdd = inflater.Inflate(Resource.Layout.user_Add, layout);
+            FormViewAdd = inflater.Inflate(Resource.Layout.user_Add, layout);
             Object.SetView(FormViewAdd);
 
             //List for countries.
-            Spinner CountryChooser = FormViewAdd.FindViewById<Spinner>(Resource.Id.CountryChooser);
+            CountryChooser = FormViewAdd.FindViewById<Spinner>(Resource.Id.CountryChooser);
             Button ChooseDateButton = FormViewAdd.FindViewById<Button>(Resource.Id.ChooseDateButton);
 
             //Button for choosing the date.
@@ -606,403 +657,421 @@ namespace Healthy_Eating.ActivityS
             var adapter_ = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, ListForCountries);
             CountryChooser.Adapter = adapter_;
 
-            //Action on pressing positive button.
-            Object.SetPositiveButton(Resource.String.Action_Add, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1)
-            {
-                //bool for checking is there is such name in database.
-                bool IsExisting = false;
-
-                //Name of the user that is going to be added.
-                string TempName = FormViewAdd.FindViewById<EditText>(Resource.Id.UserName).Text;
-                
-                //Destroying spaces on the beginning and in the end of the name.
-                TempName = TempName.TrimEnd(' ');
-                TempName = TempName.TrimStart(' ');
-
-                //If the name of the user was entered incorrectly.
-                if (!HelpclassDataValidation.CheckForLenth(TempName, 0, 20))
-                    Toast.MakeText(this, HelpclassDataValidation.RequestToCorrectEnter(Resources.GetString(Resource.String.other_Name)), ToastLength.Long).Show();
-
-                //If the name was entered.
-                else
-                {
-                    //Checking if there is already a user with such name in our list.
-                    foreach (User TempUser in DatabaseUser.SQConnection.Table<User>())
-                        if (TempUser.Name.ToUpper() == TempName.ToUpper()) IsExisting = true;
-
-                    //If there isn't such user.
-                    if (!IsExisting)
-                    {
-                        /*Setting the country.*/
-                        ENCountry TempCountry = ENCountry.Ukraine;
-
-                        switch (CountryChooser.SelectedItemId)
-                        {
-                            case 0:
-                                {
-                                    TempCountry = ENCountry.Ukraine;
-                                }
-
-                                break;
-
-                            case 1:
-                                {
-                                    TempCountry = ENCountry.Russia;
-                                }
-
-                                break;
-
-                            case 2:
-                                {
-                                    TempCountry = ENCountry.Albania;
-                                }
-
-                                break;
-
-                            case 3:
-                                {
-                                    TempCountry = ENCountry.Andorra;
-                                }
-
-                                break;
-
-                            case 4:
-                                {
-                                    TempCountry = ENCountry.Armenia;
-                                }
-
-                                break;
-
-                            case 5:
-                                {
-                                    TempCountry = ENCountry.Azerbaijan;
-                                }
-
-                                break;
-
-                            case 6:
-                                {
-                                    TempCountry = ENCountry.Austria;
-                                }
-
-                                break;
-
-                            case 7:
-                                {
-                                    TempCountry = ENCountry.Belarus;
-                                }
-
-                                break;
-
-                            case 8:
-                                {
-                                    TempCountry = ENCountry.Belgium;
-                                }
-
-                                break;
-
-                            case 9:
-                                {
-                                    TempCountry = ENCountry.BosniaAndHerzegovina;
-                                }
-
-                                break;
-
-                            case 10:
-                                {
-                                    TempCountry = ENCountry.Bulgaria;
-                                }
-
-                                break;
-
-                            case 11:
-                                {
-                                    TempCountry = ENCountry.Croatia;
-                                }
-
-                                break;
-
-                            case 12:
-                                {
-                                    TempCountry = ENCountry.Cyprus;
-                                }
-
-                                break;
-
-                            case 13:
-                                {
-                                    TempCountry = ENCountry.CzechRepublic;
-                                }
-
-                                break;
-
-                            case 14:
-                                {
-                                    TempCountry = ENCountry.Denmark;
-                                }
-
-                                break;
-
-                            case 15:
-                                {
-                                    TempCountry = ENCountry.Estonia;
-                                }
-
-                                break;
-
-                            case 16:
-                                {
-                                    TempCountry = ENCountry.Finland;
-                                }
-
-                                break;
-
-                            case 17:
-                                {
-                                    TempCountry = ENCountry.France;
-                                }
-
-                                break;
-
-                            case 18:
-                                {
-                                    TempCountry = ENCountry.Georgia;
-                                }
-
-                                break;
-
-                            case 19:
-                                {
-                                    TempCountry = ENCountry.Germany;
-                                }
-
-                                break;
-
-                            case 20:
-                                {
-                                    TempCountry = ENCountry.Greece;
-                                }
-
-                                break;
-
-                            case 21:
-                                {
-                                    TempCountry = ENCountry.Hungary;
-                                }
-
-                                break;
-
-                            case 22:
-                                {
-                                    TempCountry = ENCountry.Iceland;
-                                }
-
-                                break;
-
-                            case 23:
-                                {
-                                    TempCountry = ENCountry.Ireland;
-                                }
-
-                                break;
-
-                            case 24:
-                                {
-                                    TempCountry = ENCountry.Italy;
-                                }
-
-                                break;
-
-                            case 25:
-                                {
-                                    TempCountry = ENCountry.Latvia;
-                                }
-
-                                break;
-
-                            case 26:
-                                {
-                                    TempCountry = ENCountry.Liechtenstein;
-                                }
-
-                                break;
-
-                            case 27:
-                                {
-                                    TempCountry = ENCountry.Lithuania;
-                                }
-
-                                break;
-
-                            case 28:
-                                {
-                                    TempCountry = ENCountry.Luxembourg;
-                                }
-
-                                break;
-
-                            case 29:
-                                {
-                                    TempCountry = ENCountry.Macedonia;
-                                }
-
-                                break;
-
-                            case 30:
-                                {
-                                    TempCountry = ENCountry.Malta;
-                                }
-
-                                break;
-
-                            case 31:
-                                {
-                                    TempCountry = ENCountry.Moldova;
-                                }
-
-                                break;
-
-                            case 32:
-                                {
-                                    TempCountry = ENCountry.Montenegro;
-                                }
-
-                                break;
-
-                            case 33:
-                                {
-                                    TempCountry = ENCountry.Netherlands;
-                                }
-
-                                break;
-
-                            case 34:
-                                {
-                                    TempCountry = ENCountry.Norway;
-                                }
-
-                                break;
-
-                            case 35:
-                                {
-                                    TempCountry = ENCountry.Poland;
-                                }
-
-                                break;
-
-                            case 36:
-                                {
-                                    TempCountry = ENCountry.Portugal;
-                                }
-
-                                break;
-
-                            case 37:
-                                {
-                                    TempCountry = ENCountry.Romania;
-                                }
-
-                                break;
-
-                            case 38:
-                                {
-                                    TempCountry = ENCountry.Serbia;
-                                }
-
-                                break;
-
-                            case 39:
-                                {
-                                    TempCountry = ENCountry.Slovakia;
-                                }
-
-                                break;
-
-                            case 40:
-                                {
-                                    TempCountry = ENCountry.Slovenia;
-                                }
-
-                                break;
-
-                            case 41:
-                                {
-                                    TempCountry = ENCountry.Spain;
-                                }
-
-                                break;
-
-                            case 42:
-                                {
-                                    TempCountry = ENCountry.Sweden;
-                                }
-
-                                break;
-
-                            case 43:
-                                {
-                                    TempCountry = ENCountry.Switzerland;
-                                }
-
-                                break;
-
-                            case 44:
-                                {
-                                    TempCountry = ENCountry.Turkey;
-                                }
-
-                                break;
-
-                            case 45:
-                                {
-                                    TempCountry = ENCountry.UK;
-                                }
-
-                                break;
-                        }
-
-                        //If the date isn't bigger than today's.
-                        if (Entry.ToShortDateString() != DateTime.Now.ToShortDateString() && Entry < DateTime.Now)
-                        {
-                            //User's sex.
-                            ToggleButton UserSex = FormViewAdd.FindViewById<ToggleButton>(Resource.Id.UserSex);
-
-                            if (!UserLicence.Checked) TempLicences.Clear();
-                            if (!ChildDiseases.Checked) TempChildDiseases.Clear();
-                            if (!ChronicDiseases.Checked) TempChronicDiseases.Clear();
-
-                            //Creating a new user.
-                            User TempUser = new User(FormViewAdd.FindViewById<EditText>(Resource.Id.UserName).Text, Entry, UserSex.Checked ? Classes.ENSex.Male : Classes.ENSex.Female, TempCountry, UserLicence.Checked ? true : false, TempLicences, ChildDiseases.Checked ? true : false, TempChildDiseases, ChronicDiseases.Checked ? true : false, TempChronicDiseases);
-                            DatabaseUser.SQConnection.Insert(TempUser);
-                            TempUser.Parameters = new System.Collections.Generic.List<ParametresOfUser>();
-                            TempUser.Products = new System.Collections.Generic.List<Product>();
-                            TempUser.Alcohols = new System.Collections.Generic.List<Alcohol>();
-                            TempUser.Cigarettes = new List<Cigarette>();
-                            DatabaseUser.SQConnection.UpdateWithChildren(TempUser);
-
-                            //Renewing the list.
-                            OnResume();
-                        }
-
-                        //Error message.
-                        else Toast.MakeText(this, HelpclassDataValidation.RequestToCorrectEnter(Resources.GetString(Resource.String.other_date)), ToastLength.Long).Show();
-                    }
-
-                    //If there is such user.
-                    else Toast.MakeText(this, Resource.String.ErrorMessage_AlreadyInSystem, ToastLength.Long).Show();
-                }
-            }
-            ));
-
-            //Action on pressing negative button.
-            Object.SetNegativeButton(Resource.String.Cancel, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1) { }));
-
-            //Showing the new form of adding a new user.
-            Object.Show();
+            //On pressing positive button.
+            Object.SetPositiveButton(Resource.String.OK, (EventHandler<DialogClickEventArgs>)null);
+            Object.SetNegativeButton(Resource.String.Cancel, (EventHandler<DialogClickEventArgs>)null);
+
+            //Saving dialog to variable
+            DialogForAdding = Object.Create();
+            //Showing a form.
+            DialogForAdding.Show();
+
+            //Saving button to variable.
+            var positiveButton = DialogForAdding.GetButton((int)DialogButtonType.Positive);
+            positiveButton.Click += PositiveButton_Click;
+
+            //Saving button to variable.
+            var negativeButton = DialogForAdding.GetButton((int)DialogButtonType.Negative);
+            negativeButton.Click += NegativeButton_Click;
         }
+    //---------------------------------------------------------------------------------------------------------------------------------------------------
 
-        //---------------------------------------------------------------------------------------------------------------------------------------------------
+    //On pressing positive button.
+    private void PositiveButton_Click(object sender, EventArgs e)
+    {
+        //bool for checking is there is such name in database.
+        bool IsExisting = false;
 
+        //Name of the user that is going to be added.
+        string TempName = FormViewAdd.FindViewById<EditText>(Resource.Id.UserName).Text;
+
+        //Destroying spaces on the beginning and in the end of the name.
+        TempName = TempName.TrimEnd(' ');
+        TempName = TempName.TrimStart(' ');
+
+        //If the name of the user was entered incorrectly.
+        if (!HelpclassDataValidation.CheckForLenth(TempName, 0, 20))
+            HelpclassDataValidation.RequestCorrectEnter(Resource.String.other_Name);
+
+        //If the name was entered.
+        else
+        {
+            //Checking if there is already a user with such name in our list.
+            foreach (User TempUser in DatabaseUser.SQConnection.Table<User>())
+                if (TempUser.Name.ToUpper() == TempName.ToUpper()) IsExisting = true;
+
+            //If there isn't such user.
+            if (!IsExisting)
+            {
+                /*Setting the country.*/
+                ENCountry TempCountry = ENCountry.Ukraine;
+
+                switch (CountryChooser.SelectedItemId)
+                {
+                    case 0:
+                        {
+                            TempCountry = ENCountry.Ukraine;
+                        }
+
+                        break;
+
+                    case 1:
+                        {
+                            TempCountry = ENCountry.Russia;
+                        }
+
+                        break;
+
+                    case 2:
+                        {
+                            TempCountry = ENCountry.Albania;
+                        }
+
+                        break;
+
+                    case 3:
+                        {
+                            TempCountry = ENCountry.Andorra;
+                        }
+
+                        break;
+
+                    case 4:
+                        {
+                            TempCountry = ENCountry.Armenia;
+                        }
+
+                        break;
+
+                    case 5:
+                        {
+                            TempCountry = ENCountry.Azerbaijan;
+                        }
+
+                        break;
+
+                    case 6:
+                        {
+                            TempCountry = ENCountry.Austria;
+                        }
+
+                        break;
+
+                    case 7:
+                        {
+                            TempCountry = ENCountry.Belarus;
+                        }
+
+                        break;
+
+                    case 8:
+                        {
+                            TempCountry = ENCountry.Belgium;
+                        }
+
+                        break;
+
+                    case 9:
+                        {
+                            TempCountry = ENCountry.BosniaAndHerzegovina;
+                        }
+
+                        break;
+
+                    case 10:
+                        {
+                            TempCountry = ENCountry.Bulgaria;
+                        }
+
+                        break;
+
+                    case 11:
+                        {
+                            TempCountry = ENCountry.Croatia;
+                        }
+
+                        break;
+
+                    case 12:
+                        {
+                            TempCountry = ENCountry.Cyprus;
+                        }
+
+                        break;
+
+                    case 13:
+                        {
+                            TempCountry = ENCountry.CzechRepublic;
+                        }
+
+                        break;
+
+                    case 14:
+                        {
+                            TempCountry = ENCountry.Denmark;
+                        }
+
+                        break;
+
+                    case 15:
+                        {
+                            TempCountry = ENCountry.Estonia;
+                        }
+
+                        break;
+
+                    case 16:
+                        {
+                            TempCountry = ENCountry.Finland;
+                        }
+
+                        break;
+
+                    case 17:
+                        {
+                            TempCountry = ENCountry.France;
+                        }
+
+                        break;
+
+                    case 18:
+                        {
+                            TempCountry = ENCountry.Georgia;
+                        }
+
+                        break;
+
+                    case 19:
+                        {
+                            TempCountry = ENCountry.Germany;
+                        }
+
+                        break;
+
+                    case 20:
+                        {
+                            TempCountry = ENCountry.Greece;
+                        }
+
+                        break;
+
+                    case 21:
+                        {
+                            TempCountry = ENCountry.Hungary;
+                        }
+
+                        break;
+
+                    case 22:
+                        {
+                            TempCountry = ENCountry.Iceland;
+                        }
+
+                        break;
+
+                    case 23:
+                        {
+                            TempCountry = ENCountry.Ireland;
+                        }
+
+                        break;
+
+                    case 24:
+                        {
+                            TempCountry = ENCountry.Italy;
+                        }
+
+                        break;
+
+                    case 25:
+                        {
+                            TempCountry = ENCountry.Latvia;
+                        }
+
+                        break;
+
+                    case 26:
+                        {
+                            TempCountry = ENCountry.Liechtenstein;
+                        }
+
+                        break;
+
+                    case 27:
+                        {
+                            TempCountry = ENCountry.Lithuania;
+                        }
+
+                        break;
+
+                    case 28:
+                        {
+                            TempCountry = ENCountry.Luxembourg;
+                        }
+
+                        break;
+
+                    case 29:
+                        {
+                            TempCountry = ENCountry.Macedonia;
+                        }
+
+                        break;
+
+                    case 30:
+                        {
+                            TempCountry = ENCountry.Malta;
+                        }
+
+                        break;
+
+                    case 31:
+                        {
+                            TempCountry = ENCountry.Moldova;
+                        }
+
+                        break;
+
+                    case 32:
+                        {
+                            TempCountry = ENCountry.Montenegro;
+                        }
+
+                        break;
+
+                    case 33:
+                        {
+                            TempCountry = ENCountry.Netherlands;
+                        }
+
+                        break;
+
+                    case 34:
+                        {
+                            TempCountry = ENCountry.Norway;
+                        }
+
+                        break;
+
+                    case 35:
+                        {
+                            TempCountry = ENCountry.Poland;
+                        }
+
+                        break;
+
+                    case 36:
+                        {
+                            TempCountry = ENCountry.Portugal;
+                        }
+
+                        break;
+
+                    case 37:
+                        {
+                            TempCountry = ENCountry.Romania;
+                        }
+
+                        break;
+
+                    case 38:
+                        {
+                            TempCountry = ENCountry.Serbia;
+                        }
+
+                        break;
+
+                    case 39:
+                        {
+                            TempCountry = ENCountry.Slovakia;
+                        }
+
+                        break;
+
+                    case 40:
+                        {
+                            TempCountry = ENCountry.Slovenia;
+                        }
+
+                        break;
+
+                    case 41:
+                        {
+                            TempCountry = ENCountry.Spain;
+                        }
+
+                        break;
+
+                    case 42:
+                        {
+                            TempCountry = ENCountry.Sweden;
+                        }
+
+                        break;
+
+                    case 43:
+                        {
+                            TempCountry = ENCountry.Switzerland;
+                        }
+
+                        break;
+
+                    case 44:
+                        {
+                            TempCountry = ENCountry.Turkey;
+                        }
+
+                        break;
+
+                    case 45:
+                        {
+                            TempCountry = ENCountry.UK;
+                        }
+
+                        break;
+                }
+
+                //If the date isn't bigger than today's.
+                if (Entry.ToShortDateString() != DateTime.Now.ToShortDateString() && Entry < DateTime.Now)
+                {
+                    //User's sex.
+                    ToggleButton UserSex = FormViewAdd.FindViewById<ToggleButton>(Resource.Id.UserSex);
+
+                    if (!UserLicence.Checked) TempLicences.Clear();
+                    if (!ChildDiseases.Checked) TempChildDiseases.Clear();
+                    if (!ChronicDiseases.Checked) TempChronicDiseases.Clear();
+
+                    //Creating a new user.
+                    User TempUser = new User(FormViewAdd.FindViewById<EditText>(Resource.Id.UserName).Text, Entry, UserSex.Checked ? Classes.ENSex.Male : Classes.ENSex.Female, TempCountry, UserLicence.Checked ? true : false, TempLicences, ChildDiseases.Checked ? true : false, TempChildDiseases, ChronicDiseases.Checked ? true : false, TempChronicDiseases);
+                    DatabaseUser.SQConnection.Insert(TempUser);
+                    TempUser.Parameters = new System.Collections.Generic.List<ParametresOfUser>();
+                    TempUser.Products = new System.Collections.Generic.List<Product>();
+                    TempUser.Alcohols = new System.Collections.Generic.List<Alcohol>();
+                    TempUser.Cigarettes = new List<Cigarette>();
+                    DatabaseUser.SQConnection.UpdateWithChildren(TempUser);
+                    HelpclassDataValidation.MakingInfoToast(Resource.String.MessageUser_Added);
+                    DialogForAdding.Dismiss();
+
+                    //Renewing the list.
+                    OnResume();
+                }
+
+                //Error message.
+                else HelpclassDataValidation.RequestCorrectEnter(Resource.String.other_date);
+            }
+
+            //If there is such user.
+            else HelpclassDataValidation.MakingErrorToast(Resource.String.ErrorMessage_AlreadyInSystem);
+        }
+    }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------     
+
+        //On pressing negative button.
+        private void NegativeButton_Click(object sender, EventArgs e)
+        {
+            DialogForAdding.Dismiss();
+        }
+//---------------------------------------------------------------------------------------------------------------------------------------------------
         //Choosing the date of user's birth.
         private void ChooseDateButton_Click(object sender, EventArgs e)
         {
@@ -1021,7 +1090,7 @@ namespace Healthy_Eating.ActivityS
             {
                 //If the date isn't correct.
                 if (DateChooser.DateTime > DateTime.Now)
-                    Toast.MakeText(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity, HelpclassDataValidation.RequestToCorrectEnter(Resources.GetString(Resource.String.other_date)), ToastLength.Long).Show();
+                    HelpclassDataValidation.RequestCorrectEnter(Resource.String.other_date);
                 
                 //If everything is correct.
                 else
@@ -1034,14 +1103,15 @@ namespace Healthy_Eating.ActivityS
             }
             ));
 
+            //Showing the form.
             Object.Show();
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Choosing the type of licence.
         private void UserLicence_Click(object sender, EventArgs e)
         {
+            //If the user wants to choose the licence.
             if (UserLicence.Checked)
             {
                 //Creating a new layout for choosing category.
@@ -1077,11 +1147,13 @@ namespace Healthy_Eating.ActivityS
                 ListForCategories.Add(Resources.GetString(Resource.String.Category_DE));
                 ListForCategories.Add(Resources.GetString(Resource.String.Category_T));
 
+                //Parameters of the chooser.
                 var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItemChecked, ListForCategories);
                 CategoryChooser.Adapter = adapter;
 
                 CategoryChooser.ChoiceMode = Android.Widget.ChoiceMode.Multiple;
 
+                //Making the choosed items cheked.
                  if (TempLicences.Contains(ENDriverLicence.A1)) CategoryChooser.SetItemChecked(0, true);
                 if (TempLicences.Contains(ENDriverLicence.A)) CategoryChooser.SetItemChecked(1, true);
                 if (TempLicences.Contains(ENDriverLicence.B1)) CategoryChooser.SetItemChecked(2, true);
@@ -1100,8 +1172,10 @@ namespace Healthy_Eating.ActivityS
                 //Action on pressing positive button.
                 Object1.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1)
                 {
+                    //Clearing the list.
                     TempLicences.Clear();
 
+                    //Adding items to the user list.
                     var sparseArray = ChooseCtegoryForm.FindViewById<ListView>(Resource.Id.CategoryChooser).CheckedItemPositions;
                     for (var i = 0; i < sparseArray.Size(); i++)
                     {
@@ -1124,15 +1198,16 @@ namespace Healthy_Eating.ActivityS
                     if (TempLicences.Count == 0) UserLicence.Checked = false;
                 }));
 
+                //Showing the form.
                 Object1.Show();
             }
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Choosing child diseases.
         private void ChildDiseases_Click(object sender, EventArgs e)
         {
+            //If the user wants to choose the diseases.
             if (ChildDiseases.Checked)
             {
                 //Creating a new layout for choosing category.
@@ -1152,7 +1227,7 @@ namespace Healthy_Eating.ActivityS
                 //List for holding items for CountryChooser.
                 List<string> ListForCategories = new List<string>();
 
-                //Adding countries to the list.
+                //Adding diseases to the list.
                 ListForCategories.Add(Resources.GetString(Resource.String.Disease_Measles));
                 ListForCategories.Add(Resources.GetString(Resource.String.Disease_ChickenPox));
                 ListForCategories.Add(Resources.GetString(Resource.String.Disease_WhoopingCough));
@@ -1163,11 +1238,13 @@ namespace Healthy_Eating.ActivityS
                 ListForCategories.Add(Resources.GetString(Resource.String.Disease_PneumococcalDisease));
                 ListForCategories.Add(Resources.GetString(Resource.String.Disease_HaemophilusInfluenzae));
 
+                //Parameters of the chooser.
                 var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItemChecked, ListForCategories);
                 CategoryChooser.Adapter = adapter;
 
                 CategoryChooser.ChoiceMode = Android.Widget.ChoiceMode.Multiple;
 
+                //Making the choosed items cheked.
                 if (TempChildDiseases.Contains(ENChildDiseases.Measles)) CategoryChooser.SetItemChecked(0, true);
                 if (TempChildDiseases.Contains(ENChildDiseases.ChickenPox)) CategoryChooser.SetItemChecked(1, true);
                 if (TempChildDiseases.Contains(ENChildDiseases.WhoopingCough)) CategoryChooser.SetItemChecked(2, true);
@@ -1181,8 +1258,10 @@ namespace Healthy_Eating.ActivityS
                 //Action on pressing positive button.
                 Object1.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1)
                 {
+                    //Clearing the list.
                     TempChildDiseases.Clear();
 
+                    //Adding items to the user list.
                     var sparseArray = ChooseCtegoryForm.FindViewById<ListView>(Resource.Id.CategoryChooser).CheckedItemPositions;
                     for (var i = 0; i < sparseArray.Size(); i++)
                     {
@@ -1200,14 +1279,16 @@ namespace Healthy_Eating.ActivityS
                     if (TempChildDiseases.Count == 0) ChildDiseases.Checked = false;
                 }));
 
+                //Showing the form.
                 Object1.Show();
             }
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Choosing chronic diseases.
         private void ChronicDiseases_Click(object sender, EventArgs e)
         {
+            //If the user wants to choose the diseases.
             if (ChronicDiseases.Checked)
             {
                 //Creating a new layout for choosing category.
@@ -1224,10 +1305,10 @@ namespace Healthy_Eating.ActivityS
                 TextView ForText = ChooseCtegoryForm.FindViewById<TextView>(Resource.Id.TextForMessage);
                 ForText.Text = Resources.GetString(Resource.String.MessageUser_ChronicDeseases);
 
-                //List for holding items for CountryChooser.
+                //List for holding items for category chooser.
                 List<string> ListForCategories = new List<string>();
 
-                //Adding countries to the list.
+                //Adding diseases to the list.
                 ListForCategories.Add(Resources.GetString(Resource.String.Disease_Atherosclerosis));
                 ListForCategories.Add(Resources.GetString(Resource.String.Disease_CardiacIschemia));
                 ListForCategories.Add(Resources.GetString(Resource.String.Disease_ChronicMyocarditis));
@@ -1251,6 +1332,7 @@ namespace Healthy_Eating.ActivityS
                 ListForCategories.Add(Resources.GetString(Resource.String.Disease_Epididymitis));
                 ListForCategories.Add(Resources.GetString(Resource.String.Disease_Adnexitis));
 
+                //Parameters of chooser.
                 var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItemChecked, ListForCategories);
                 CategoryChooser.Adapter = adapter;
 
@@ -1282,8 +1364,10 @@ namespace Healthy_Eating.ActivityS
                 //Action on pressing positive button.
                 Object1.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1)
                 {
+                    //Clearing the temp list.
                     TempChronicDiseases.Clear();
 
+                    //Adding items to the list.
                     var sparseArray = ChooseCtegoryForm.FindViewById<ListView>(Resource.Id.CategoryChooser).CheckedItemPositions;
                     for (var i = 0; i < sparseArray.Size(); i++)
                     {
@@ -1314,6 +1398,7 @@ namespace Healthy_Eating.ActivityS
                     if (TempChronicDiseases.Count == 0) ChronicDiseases.Checked = false;
                 }));
 
+                //Showing the form.
                 Object1.Show();
             }
         }

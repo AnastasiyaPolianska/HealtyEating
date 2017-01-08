@@ -25,7 +25,6 @@ namespace Healthy_Eating.ActivityS
         TextView IdentifierOfAUser;
         View List;
         View Footer;
-
         EditText ForSumProteins;
         EditText ForSumFats;
         EditText ForSumCarbs;
@@ -37,6 +36,7 @@ namespace Healthy_Eating.ActivityS
             LayoutInflater inflater_ = LayoutInflater.From(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity);
             Footer = inflater_.Inflate(Resource.Layout.helpform_MenuRowFooter, null);
         }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -59,7 +59,6 @@ namespace Healthy_Eating.ActivityS
 
             return List;
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Updating the layout.
@@ -70,10 +69,12 @@ namespace Healthy_Eating.ActivityS
             //If the user is choosed.
             if (Classes.User.CurrentUser != -1)
             {
+                //Variables for sums.
                 double SumOfProteins = 0;
                 double SumOfFats = 0;
                 double SumOfCarbs = 0;
 
+                //Setting the texts.
                 CurrentDateText.Text = Resources.GetString(Resource.String.other_Date)+" " + ProductLists.CurrentDate.ToShortDateString();
                 IdentifierOfAUser.Text = Resources.GetString(Resource.String.UserCharacteristic_MenuOfUser) + " " + DatabaseUser.GetUser(User.CurrentUser).Name;
 
@@ -86,6 +87,7 @@ namespace Healthy_Eating.ActivityS
                     //If the date matches the choosed date.
                     if (TempProduct.Date.ToShortDateString() == ProductLists.CurrentDate.ToShortDateString())
                     {
+                        //Making he sums.
                         ListForUserProducts.Add(new TableRowMenu(TempProduct.Name, TempProduct.Protein, TempProduct.Fats, TempProduct.Carbohydrates));
                         SumOfProteins += TempProduct.Protein;
                         SumOfFats += TempProduct.Fats;
@@ -97,6 +99,7 @@ namespace Healthy_Eating.ActivityS
                 HelpclassMenuAdapter AdapterForUserParameters = new HelpclassMenuAdapter(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity, ListForUserProducts);
                 MenuList.Adapter = AdapterForUserParameters;
 
+                //Working with footer.
                 ForSumProteins = Footer.FindViewById<EditText>(Resource.Id.Col1);
                 ForSumFats = Footer.FindViewById<EditText>(Resource.Id.Col2);
                 ForSumCarbs = Footer.FindViewById<EditText>(Resource.Id.Col3);
@@ -105,6 +108,7 @@ namespace Healthy_Eating.ActivityS
                 ForSumFats.Text = SumOfFats.ToString();
                 ForSumCarbs.Text = SumOfCarbs.ToString();
 
+                //If there isn't a footer, adding one.
                 if (MenuList.FooterViewsCount==0)
                     MenuList.AddFooterView(Footer);
             }
@@ -123,7 +127,7 @@ namespace Healthy_Eating.ActivityS
         {
             //If the user isn't choosed.
             if (Classes.User.CurrentUser == -1)
-                Toast.MakeText(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity, Resources.GetString(Resource.String.ErrorMessage_Unchoosed), ToastLength.Long).Show();
+                HelpclassDataValidation.MakingErrorToast(Resource.String.ErrorMessage_Unchoosed);
 
             //If the user is choosed, moving to adding products.
             else
@@ -132,7 +136,6 @@ namespace Healthy_Eating.ActivityS
                 StartActivity(intent);
             }
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Choosing data.
@@ -140,7 +143,7 @@ namespace Healthy_Eating.ActivityS
         {
             //If the user isn't choosed.
             if (Classes.User.CurrentUser == -1)
-                Toast.MakeText(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity, Resources.GetString(Resource.String.ErrorMessage_Unchoosed), ToastLength.Long).Show();
+                HelpclassDataValidation.MakingErrorToast(Resource.String.ErrorMessage_Unchoosed);
 
             //If the user is choosed, moving to adding products.
             else
@@ -163,6 +166,7 @@ namespace Healthy_Eating.ActivityS
                 }
                 ));
 
+                //Showing the form.
                 Object.Show();
             }
         }

@@ -42,7 +42,9 @@
     <string name="MessageUser_ChronicDeseases">Chronic diseases? </string>
     <string name="MessageUser_UserInfo">User info</string>
     <string name="MessageUser_Delete">Delete user</string>
-    <string name="suka">User choosed</string>
+    <string name="MessageUser_Choosed">User choosed</string>
+    <string name="MessageUser_Deleted">User deleted</string>
+    <string name="MessageUser_Added">User added</string>
   
     <string name="MessageParameters_BMIout">Your BMI is</string>
     <string name="MessageParameters_VerySeverelyUnderweight">. ATTENTION: you are very severely underweight!</string>

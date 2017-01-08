@@ -13,7 +13,6 @@ using MikePhil.Charting.Charts;
 using MikePhil.Charting.Components;
 using MikePhil.Charting.Data;
 using Android.Graphics;
-
 using Healthy_Eating.Classes;
 using Com.Syncfusion.Charts;
 using Com.Syncfusion.Charts.Enums;
@@ -26,7 +25,6 @@ namespace Healthy_Eating.ActivityS
         {
             base.OnCreate(savedInstanceState);
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -83,10 +81,7 @@ namespace Healthy_Eating.ActivityS
             }
 
             //If the user isn't choosed.
-            else
-            {
-                Toast.MakeText(Application.Context, Resource.String.ErrorMessage_Unchoosed, ToastLength.Long).Show();
-            }
+            else HelpclassDataValidation.MakingErrorToast(Resource.String.ErrorMessage_Unchoosed);
 
             return Graph;
         }

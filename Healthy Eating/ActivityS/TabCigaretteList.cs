@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -22,12 +21,14 @@ namespace Healthy_Eating.ActivityS
         List<TableRowCigarettes> ListForUserCigarettes;
 
         //Elements from the layout.
+        AlertDialog DialogForAdding;
+        EditText AmountOfNicotine;
+        NumberPicker NumberOfCigarettesPicker;
         TextView CurrentDateText;
         ListView CigarettesList;
         TextView IdentifierOfAUser;
         View List;
         View Footer;
-
         EditText ForSumQuantity;
         EditText ForSumNicotine;
 
@@ -35,6 +36,7 @@ namespace Healthy_Eating.ActivityS
         {
             base.OnCreate(savedInstanceState);
 
+            //Making the footer.
             LayoutInflater inflater_ = LayoutInflater.From(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity);
             Footer = inflater_.Inflate(Resource.Layout.helpform_CigarettesRowFooter, null);
         }
@@ -55,13 +57,11 @@ namespace Healthy_Eating.ActivityS
             ListForUserCigarettes = new List<TableRowCigarettes>();
 
             //Action on button clicks.
-
             SetCigarettesButton.Click += SetCigarettesButton_Click;
             ChooseDataButton.Click += ChooseDataButton_Click;
 
             return List;
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Updating the layout.
@@ -75,6 +75,7 @@ namespace Healthy_Eating.ActivityS
             //If the user is choosed.
             if (Classes.User.CurrentUser != -1)
             {
+                //Setting texts.
                 CurrentDateText.Text = Resources.GetString(Resource.String.other_Date) + " " + ProductLists.CurrentDate.ToShortDateString();
                 IdentifierOfAUser.Text = Resources.GetString(Resource.String.UserCharacteristic_MenuOfUser) + " " + DatabaseUser.GetUser(User.CurrentUser).Name;
 
@@ -97,12 +98,14 @@ namespace Healthy_Eating.ActivityS
                 HelpclassCigarettesAdapter AdapterForUserCigarettes = new HelpclassCigarettesAdapter(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity, ListForUserCigarettes);
                 CigarettesList.Adapter = AdapterForUserCigarettes;
 
+                //For sums.
                 ForSumQuantity = Footer.FindViewById<EditText>(Resource.Id.Col1);
                 ForSumNicotine = Footer.FindViewById<EditText>(Resource.Id.Col2);
 
                 ForSumQuantity.Text = SumOfQuantity.ToString();
                 ForSumNicotine.Text = SumOfNicotine.ToString();
 
+                //If there isn't a footer, adding one.
                 if (CigarettesList.FooterViewsCount == 0)
                     CigarettesList.AddFooterView(Footer);
             }
@@ -138,23 +141,23 @@ namespace Healthy_Eating.ActivityS
                 //Action on pressing positive button.
                 Object.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1)
                 {
-                    Toast.MakeText(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity, DateChooser.DateTime.ToShortDateString(), ToastLength.Long).Show();
                     ProductLists.CurrentDate = DateChooser.DateTime;
                     OnResume();
                 }
                 ));
 
+                //Showing the form.
                 Object.Show();
             }
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
-
+        
+        //Making a new cigarettes entry.
         private void SetCigarettesButton_Click(object sender, EventArgs e)
         {
             //If the user isn't choosed.
             if (Classes.User.CurrentUser == -1)
-                Toast.MakeText(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity, Resources.GetString(Resource.String.ErrorMessage_Unchoosed), ToastLength.Long).Show();
+                HelpclassDataValidation.MakingErrorToast(Resource.String.ErrorMessage_Unchoosed);
 
             //If the user is choosed, moving to adding products.
             else
@@ -166,33 +169,62 @@ namespace Healthy_Eating.ActivityS
                 View SetAlcoholForm = inflater_.Inflate(Resource.Layout.cigarettes_Add, layout_);
                 Object_.SetView(SetAlcoholForm);
 
-                NumberPicker NumberOfCigarettesPicker = SetAlcoholForm.FindViewById<NumberPicker>(Resource.Id.CigarettesPicker);
+                //Picker attributes.
+                NumberOfCigarettesPicker = SetAlcoholForm.FindViewById<NumberPicker>(Resource.Id.CigarettesPicker);
                 NumberOfCigarettesPicker.MinValue = 1;
                 NumberOfCigarettesPicker.MaxValue = 100;
 
-                EditText AmountOfNicotine = SetAlcoholForm.FindViewById<EditText>(Resource.Id.AmountOfNicotine);          
+                //Element from the layout.
+                AmountOfNicotine = SetAlcoholForm.FindViewById<EditText>(Resource.Id.AmountOfNicotine);
 
-                Object_.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1)
-                {
-                    String ForAmountOfNicotine = AmountOfNicotine.Text;
-                    ForAmountOfNicotine = ForAmountOfNicotine.Replace(".", ",");
+                //On pressing positive button.
+                Object_.SetPositiveButton(Resource.String.OK, (EventHandler<DialogClickEventArgs>)null);
+                Object_.SetNegativeButton(Resource.String.Cancel, (EventHandler<DialogClickEventArgs>)null);
 
-                    if ((!HelpclassDataValidation.CheckForLenth(ForAmountOfNicotine, 0, 4)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForAmountOfNicotine), 0, 2)))
-                    Toast.MakeText(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity, HelpclassDataValidation.RequestToCorrectEnter(Resources.GetString(Resource.String.other_Nicotine)), ToastLength.Long).Show();
+                //Saving dialog to variable
+                DialogForAdding = Object_.Create();
+                //Showing a form.
+                DialogForAdding.Show();
 
-                    else
-                    {
-                        User TempUser = DatabaseUser.GetUser(User.CurrentUser);
-                        TempUser.Cigarettes.Add(new Cigarette(DateTime.Now, NumberOfCigarettesPicker.Value, double.Parse(ForAmountOfNicotine)));
-                        DatabaseUser.SQConnection.UpdateWithChildren(TempUser);
-                        OnResume();
-                    }
-                }));
+                //Saving button to variable.
+                var positiveButton = DialogForAdding.GetButton((int)DialogButtonType.Positive);
+                positiveButton.Click += PositiveButton_Click;
 
-                Object_.SetNegativeButton(Resource.String.Cancel, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1) { }));
-
-                Object_.Show();
+                //Saving button to variable.
+                var negativeButton = DialogForAdding.GetButton((int)DialogButtonType.Negative);
+                negativeButton.Click += NegativeButton_Click;
             }
         }
-    }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
+
+        //On pressing positive button.
+        private void PositiveButton_Click(object sender, EventArgs e)
+        {
+            //Setting amount of nicotine.
+            String ForAmountOfNicotine = AmountOfNicotine.Text;
+            ForAmountOfNicotine = ForAmountOfNicotine.Replace(".", ",");
+
+            //If it was error while entering.
+            if ((!HelpclassDataValidation.CheckForLenth(ForAmountOfNicotine, 0, 4)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForAmountOfNicotine), 0, 2)))
+                HelpclassDataValidation.RequestCorrectEnter(Resource.String.other_Nicotine);
+
+            //If everything is OK.
+            else
+            {
+                //Making a new entry.
+                User TempUser = DatabaseUser.GetUser(User.CurrentUser);
+                TempUser.Cigarettes.Add(new Cigarette(DateTime.Now, NumberOfCigarettesPicker.Value, double.Parse(ForAmountOfNicotine)));
+                DatabaseUser.SQConnection.UpdateWithChildren(TempUser);
+                OnResume();
+                DialogForAdding.Dismiss();
+            }
+        }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
+
+        //On pressing negative button.
+        private void NegativeButton_Click(object sender, EventArgs e)
+        {
+            DialogForAdding.Dismiss();
+        }
+   }
 }

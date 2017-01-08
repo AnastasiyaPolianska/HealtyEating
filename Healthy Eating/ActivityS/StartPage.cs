@@ -34,7 +34,7 @@ namespace Healthy_Eating
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.StartPage);
-
+            
             //Initiation if File (if required), SQConnection and Tables (if required).
             DatabaseUser.Init(Android.OS.Environment.GetExternalStoragePublicDirectory("databasesofuser") + "UserFile.db");
 
@@ -446,6 +446,9 @@ namespace Healthy_Eating
             LayoutInflater inflater_ = LayoutInflater.From(this);
             LinearLayout layout_ = new LinearLayout(this);
 
+            //On pressing negative button.
+            Object_.SetNegativeButton(Resource.String.Cancel, (EventHandler<DialogClickEventArgs>)null);
+
             //Depends on the type that was choosed.
             switch (e.Position)
             {
@@ -481,9 +484,6 @@ namespace Healthy_Eating
                         //Saving button to variable.
                         var positiveButton = DialogForAdding.GetButton((int)DialogButtonType.Positive);
                         positiveButton.Click += PositiveButton_ClickProducts;
-
-                        //On pressing negative button.
-                        Object_.SetNegativeButton(Resource.String.Cancel, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1) { }));
                     }
                     break;
 
@@ -511,12 +511,14 @@ namespace Healthy_Eating
                         //Saving button to variable.
                         var positiveButton = DialogForAdding.GetButton((int)DialogButtonType.Positive);
                         positiveButton.Click += PositiveButton_ClickDrinks;
-
-                        //On pressing negative button.
-                        Object_.SetNegativeButton(Resource.String.Cancel, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1) { }));
                     }
                     break;
             }
+           
+            //Saving button to variable.
+            var negativeButton = DialogForAdding.GetButton((int)DialogButtonType.Negative);
+            negativeButton.Click += NegativeButton_Click;
+
         }
         //----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -647,6 +649,13 @@ namespace Healthy_Eating
                 //If there is such name in system.
                 else HelpclassDataValidation.MakingErrorToast(Resource.String.ErrorMessage_AlreadyInSystem);
             }
+        }
+        //----------------------------------------------------------------------------------------------------------------------------------------------------
+
+        //Action on negative button.
+        private void NegativeButton_Click(object sender, EventArgs e)
+        {
+            DialogForAdding.Dismiss();
         }
     }
 }

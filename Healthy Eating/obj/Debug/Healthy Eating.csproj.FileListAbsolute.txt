@@ -122,6 +122,8 @@ C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eat
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\message_info.xml
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\drawable\info_border.xml
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\drawable\info.png
-C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\drawable\pause_by_billlet_doux-daughbe.jpg
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\drawable\parameters_border.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\message_parameters.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\drawable\parameters.png
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\Healthy Eating.dll.mdb
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\Healthy Eating.dll.mdb

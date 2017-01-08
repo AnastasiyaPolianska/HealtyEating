@@ -31,7 +31,6 @@ namespace Healthy_Eating.ActivityS
             //Action on item click.
             TypesOfProductsList.ItemClick += TypesOfProductsList_ItemClick;
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Action on item click.

@@ -20,30 +20,36 @@ namespace Healthy_Eating.ActivityS
         {
             base.OnCreate(savedInstanceState);
         }
+        //----------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Elements from the layout.
         CalendarPickerView UserCalendar;
         List <DateTime> DatesUsingALcohol;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
+            //Calendar view.
             View Calendar = inflater.Inflate(Resource.Layout.tab_alcohol_Calendar, null);
             base.OnCreateView(inflater, container, savedInstanceState);
 
             UserCalendar = Calendar.FindViewById<CalendarPickerView>(Resource.Id.Calendar);
 
+            //Elements from the layout.
             TimeSpan ChangeMinus = TimeSpan.FromDays(365);
             TimeSpan ChangePlus = TimeSpan.FromDays(365);
             DateTime Beginning = DateTime.Now - ChangeMinus;
             DateTime Ending = DateTime.Now + ChangePlus;
 
+            //List with dates to be marked.
             DatesUsingALcohol = new List<DateTime>();
 
+            //Adding dates to the list.
             foreach (Alcohol TempAlcohol in DatabaseUser.GetUser(User.CurrentUser).Alcohols)
                 if (TempAlcohol.Date >= Beginning) DatesUsingALcohol.Add(TempAlcohol.Date);
 
+            //Selecting dates.
             UserCalendar.Init(Beginning, Ending).WithSelectedDates(DateTime.Now).WithHighlightedDates(DatesUsingALcohol);
             
-
             return Calendar;
         }
     }

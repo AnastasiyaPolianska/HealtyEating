@@ -21,11 +21,11 @@ namespace Healthy_Eating.ActivityS
         TextView IdentifierOfAUser;
         Button SetParametersButton;
         View Footer;
-
         EditText WeightText, WeightText1;
         EditText HeightText, HeightText1;
         EditText BMIText, BMIText1;
 
+        //Variables for max and min parameters.
         double maxWeight = 0, maxHeight = 0;
         double minWeight = -1, minHeight = -1;
 
@@ -39,7 +39,6 @@ namespace Healthy_Eating.ActivityS
             LayoutInflater inflater_ = LayoutInflater.From(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity);
             Footer = inflater_.Inflate(Resource.Layout.helpform_ParametersRowFooter, null);
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -62,6 +61,7 @@ namespace Healthy_Eating.ActivityS
             //If the user is choosed.
             if (Classes.User.CurrentUser != -1)
             {
+                //Setting the text.
                 IdentifierOfAUser.Text = Resources.GetString(Resource.String.UserCharacteristic_ParametersOfUser) + " " + DatabaseUser.GetUser(User.CurrentUser).Name;
 
                 //Getting parameters of currrent user from DB.
@@ -74,6 +74,7 @@ namespace Healthy_Eating.ActivityS
                     if (TempParametres.Height < minHeight || minHeight==-1) minHeight = TempParametres.Height;
                 }
 
+                //Setting max and min parameters
                 if (maxWeight > 0) WeightText.Text = maxWeight.ToString();
                 if (maxHeight > 0) HeightText.Text = maxHeight.ToString();
                 if (minWeight > 0) WeightText1.Text = minWeight.ToString();
@@ -85,22 +86,19 @@ namespace Healthy_Eating.ActivityS
                 HelpclassListAdapter AdapterForUserParameters = new HelpclassListAdapter(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity, ListForUserParameters);
                 ListForParameters.Adapter = AdapterForUserParameters;
 
+                //If there isn't a footer, setting one.
                 if (ListForParameters.FooterViewsCount == 0)
                     ListForParameters.AddFooterView(Footer);
             }
 
             //If the user isn't choosed.
-            else
-            {
-                IdentifierOfAUser.Text = Resources.GetString(Resource.String.ErrorMessage_Unchoosed);
-            }
+            else IdentifierOfAUser.Text = Resources.GetString(Resource.String.ErrorMessage_Unchoosed);
 
             //Actions on clicks.
             SetParametersButton.Click += SetParametersButton_Click;
 
             return List;
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Setting parametres for a user.
@@ -112,10 +110,12 @@ namespace Healthy_Eating.ActivityS
             LinearLayout layout = new LinearLayout(ListOfParameters.activity);
             View FormViewsSetParametres = inflater.Inflate(Resource.Layout.parametres_Set, layout);
             Object.SetView(FormViewsSetParametres);
-
+        
+            //Elements from the layout.
             NumberPicker HeightPicker = FormViewsSetParametres.FindViewById<NumberPicker>(Resource.Id.HeightPicker);
             NumberPicker WeightPicker = FormViewsSetParametres.FindViewById<NumberPicker>(Resource.Id.WeightPicker);
 
+            //Pickers parameters.
             HeightPicker.MinValue = 50;
             HeightPicker.MaxValue = 250;
 
@@ -145,13 +145,6 @@ namespace Healthy_Eating.ActivityS
                     //For showing results of changes.
                     string ForIndexResults = "";
                     string ForParametersResults = "";
-
-                        //Creating a new layout for showing user changes.
-                        AlertDialog.Builder Object_ = new AlertDialog.Builder(ListOfParameters.activity);
-                        LayoutInflater inflater_ = LayoutInflater.From(ListOfParameters.activity);
-                        LinearLayout layout_ = new LinearLayout(ListOfParameters.activity);
-                        View parameters_Changes = inflater.Inflate(Resource.Layout.parameters_Changes, layout_);
-                        Object_.SetView(parameters_Changes);
 
                         //Change of user's BMI.
                         if (!HelpclassDataValidation.ComparingValues(TempParametres.Index, 15.0))
@@ -194,13 +187,7 @@ namespace Healthy_Eating.ActivityS
                             ForIndexResults = Resources.GetString(Resource.String.MessageParameters_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.MessageParameters_VerySeverelyOverweight);
                         }
 
-                        //Actions on pressing positive button.
-                        Object_.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender_, DialogClickEventArgs e1_){}));
-
-                        //
-                        parameters_Changes.FindViewById<TextView>(Resource.Id.TextForIndex).Text = ForIndexResults;
-
-                    //Change of user's weight and height.
+                    /*Change of user's weight and height.*/
 
                     //If the list of parameters isn't empty.
                     if (DatabaseUser.GetUser(User.CurrentUser).Parameters.Count != 0)
@@ -222,13 +209,23 @@ namespace Healthy_Eating.ActivityS
                             ForParametersResults = ForParametersResults + " " + Resources.GetString(Resource.String.MessageGeneral_YouAre) + " " + Math.Abs(DatabaseUser.GetUser(User.CurrentUser).Parameters.Last().Height - TempParametres.Height) + " " + Resources.GetString(Resource.String.other_Centimetres);
                         }
                     }
-                        //Setting the text in the field.
-                        parameters_Changes.FindViewById<TextView>(Resource.Id.TextForParameters).Text = ForParametersResults;
 
-                        Object_.Show();
+                    //Showing info.
+                    View view = inflater.Inflate(Resource.Layout.message_Parameters, null);
+                    var txt1 = view.FindViewById<TextView>(Resource.Id.TextForResult);
+                    var txt2 = view.FindViewById<TextView>(Resource.Id.TextForComparing);
+                    txt1.Text = ForIndexResults;
+                    txt2.Text = ForParametersResults;
 
-                        //Updating user parameters.
-                        User TempUser = DatabaseUser.GetUser(User.CurrentUser);
+                    var toast = new Toast(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity)
+                    {
+                        Duration = ToastLength.Long,
+                        View = view
+                    };
+                    toast.Show();
+
+                    //Updating user parameters.
+                    User TempUser = DatabaseUser.GetUser(User.CurrentUser);
                         TempUser.Parameters.Add(TempParametres);
                         DatabaseUser.SQConnection.UpdateWithChildren(TempUser);
 
@@ -251,22 +248,19 @@ namespace Healthy_Eating.ActivityS
                         HelpclassListAdapter AdapterForUserParameters = new HelpclassListAdapter(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity, ListForUserParameters);
                         ListForParameters.Adapter = AdapterForUserParameters;
 
+                        //If there isn't a footer, adding one.
                         if (ListForParameters.FooterViewsCount == 0)
                             ListForParameters.AddFooterView(Footer);
                     }
 
                 //If the user is not choosed.
-                else
-                {
-                    Toast.MakeText(Application.Context, Resource.String.ErrorMessage_Unchoosed, ToastLength.Long).Show();
-                }
-
+                else HelpclassDataValidation.MakingErrorToast(Resource.String.ErrorMessage_Unchoosed);
             }));
 
             //Action on pressing negative button.
             Object.SetNegativeButton(Resource.String.Cancel, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1) {}));
 
-            //Showing the new form for entering the paatametres.
+            //Showing the new form for entering the parametres.
             Object.Show();
         }
         }
