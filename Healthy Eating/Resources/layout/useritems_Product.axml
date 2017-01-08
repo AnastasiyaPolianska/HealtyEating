@@ -11,7 +11,7 @@
         android:layout_height="35.5dp"
         android:id="@+id/linearLayout2">
         <TextView
-            android:text="@string/Message_AddProductName"
+            android:text="@string/MessageMenu_AddProductName"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/textView2"
             android:layout_width="170.0dp"
@@ -20,7 +20,7 @@
         <EditText
             android:inputType="text"
             android:id="@+id/ProductName"
-            android:hint="@string/Message_EnterProductName"
+            android:hint="@string/MessageMenu_EnterProductName"
             android:layout_width="210dp"
             android:layout_height="match_parent" />
     </LinearLayout>
@@ -32,7 +32,7 @@
         android:layout_height="35.5dp"
         android:id="@+id/linearLayout2">
         <TextView
-            android:text="@string/Message_AddProteins"
+            android:text="@string/MessageMenu_AddProteins"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/textView2"
             android:layout_width="170.0dp"
@@ -41,7 +41,7 @@
         <EditText
             android:inputType="numberDecimal"
             android:id="@+id/ProductProteins"
-            android:hint="@string/Message_EnterProteins"
+            android:hint="@string/MessageMenu_EnterProteins"
             android:layout_width="210dp"
             android:layout_height="match_parent" />
     </LinearLayout>
@@ -53,7 +53,7 @@
         android:layout_height="35.5dp"
         android:id="@+id/linearLayout2">
         <TextView
-            android:text="@string/Message_AddFats"
+            android:text="@string/MessageMenu_AddFats"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/textView2"
             android:layout_width="170.0dp"
@@ -62,7 +62,7 @@
         <EditText
             android:inputType="numberDecimal"
             android:id="@+id/ProductFats"
-            android:hint="@string/Message_EnterFats"
+            android:hint="@string/MessageMenu_EnterFats"
             android:layout_width="210dp"
             android:layout_height="match_parent" />
     </LinearLayout>
@@ -74,7 +74,7 @@
         android:layout_height="35.5dp"
         android:id="@+id/linearLayout2">
         <TextView
-            android:text="@string/Message_AddCarbs"
+            android:text="@string/MessageMenu_AddCarbs"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/textView2"
             android:layout_width="170.0dp"
@@ -83,7 +83,7 @@
         <EditText
             android:inputType="numberDecimal"
             android:id="@+id/ProductCarbs"
-            android:hint="@string/Message_EnterCarbs"
+            android:hint="@string/MessageMenu_EnterCarbs"
             android:layout_width="210dp"
             android:layout_height="match_parent" />
     </LinearLayout>
@@ -95,7 +95,7 @@
         android:layout_height="35.5dp"
         android:id="@+id/linearLayout2">
         <TextView
-            android:text="@string/Message_AddWater"
+            android:text="@string/MessageMenu_AddWater"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/textView2"
             android:layout_width="170.0dp"
@@ -104,7 +104,7 @@
         <EditText
             android:inputType="numberDecimal"
             android:id="@+id/ProductWater"
-            android:hint="@string/Message_EnterWater"
+            android:hint="@string/MessageMenu_EnterWater"
             android:layout_width="210dp"
             android:layout_height="match_parent" />
     </LinearLayout>
@@ -116,7 +116,7 @@
         android:layout_height="35.5dp"
         android:id="@+id/linearLayout2">
         <TextView
-            android:text="@string/Message_AddCcals"
+            android:text="@string/MessageMenu_AddCcals"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/textView2"
             android:layout_width="170.0dp"
@@ -125,7 +125,7 @@
         <EditText
             android:inputType="numberDecimal"
             android:id="@+id/ProductCcals"
-            android:hint="@string/Message_EnterCcals"
+            android:hint="@string/MessageMenu_EnterCcals"
             android:layout_width="210dp"
             android:layout_height="match_parent" />
     </LinearLayout>
@@ -137,7 +137,7 @@
         android:layout_height="70.5dp"
         android:id="@+id/linearLayout2">
         <TextView
-            android:text="@string/Message_ChooseType"
+            android:text="@string/MessageMenu_ChooseType"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/textView2"
             android:layout_width="170.0dp"
@@ -156,7 +156,7 @@
         android:layout_height="35.5dp"
         android:id="@+id/linearLayout2">
         <TextView
-            android:text="@string/Message_PrivareOrGeneral"
+            android:text="@string/MessageMenu_PrivateOrGeneral"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/textView2"
             android:layout_width="170.0dp"

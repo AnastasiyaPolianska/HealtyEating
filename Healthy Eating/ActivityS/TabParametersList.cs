@@ -156,42 +156,42 @@ namespace Healthy_Eating.ActivityS
                         //Change of user's BMI.
                         if (!HelpclassDataValidation.ComparingValues(TempParametres.Index, 15.0))
                         {
-                            ForIndexResults = Resources.GetString(Resource.String.Message_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.Message_VerySeverelyUnderweight);
+                            ForIndexResults = Resources.GetString(Resource.String.MessageParameters_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.MessageParameters_VerySeverelyUnderweight);
                         }
 
                         else if (!HelpclassDataValidation.ComparingValues(TempParametres.Index, 16.0))
                         {
-                            ForIndexResults = Resources.GetString(Resource.String.Message_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.Message_SeverelyUnderweight);
+                            ForIndexResults = Resources.GetString(Resource.String.MessageParameters_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.MessageParameters_SeverelyUnderweight);
                         }
 
                         else if (!HelpclassDataValidation.ComparingValues(TempParametres.Index, 18.5))
                         {
-                            ForIndexResults = Resources.GetString(Resource.String.Message_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.Message_Underweight);
+                            ForIndexResults = Resources.GetString(Resource.String.MessageParameters_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.MessageParameters_Underweight);
                         }
 
                         else if (!HelpclassDataValidation.ComparingValues(TempParametres.Index, 25.0))
                         {
-                            ForIndexResults = Resources.GetString(Resource.String.Message_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.Message_HealthyWeight);
+                            ForIndexResults = Resources.GetString(Resource.String.MessageParameters_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.MessageParameters_HealthyWeight);
                         }
 
                         else if (!HelpclassDataValidation.ComparingValues(TempParametres.Index, 30.0))
                         {
-                            ForIndexResults = Resources.GetString(Resource.String.Message_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.Message_Overweight);
+                            ForIndexResults = Resources.GetString(Resource.String.MessageParameters_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.MessageParameters_Overweight);
                         }
 
                         else if (!HelpclassDataValidation.ComparingValues(TempParametres.Index, 35.0))
                         {
-                            ForIndexResults = Resources.GetString(Resource.String.Message_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.Message_ModeratelyOverweight);
+                            ForIndexResults = Resources.GetString(Resource.String.MessageParameters_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.MessageParameters_ModeratelyOverweight);
                         }
 
                         else if (!HelpclassDataValidation.ComparingValues(TempParametres.Index, 40.0))
                         {
-                            ForIndexResults = Resources.GetString(Resource.String.Message_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.Message_SeverelyOverweight);
+                            ForIndexResults = Resources.GetString(Resource.String.MessageParameters_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.MessageParameters_SeverelyOverweight);
                         }
 
                         else
                         {
-                            ForIndexResults = Resources.GetString(Resource.String.Message_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.Message_VerySeverelyOverweight);
+                            ForIndexResults = Resources.GetString(Resource.String.MessageParameters_BMIout) + " " + TempParametres.Index + Resources.GetString(Resource.String.MessageParameters_VerySeverelyOverweight);
                         }
 
                         //Actions on pressing positive button.
@@ -208,18 +208,18 @@ namespace Healthy_Eating.ActivityS
                         //Ñhange of weight.
                         if (DatabaseUser.GetUser(User.CurrentUser).Parameters.Last().Weight > TempParametres.Weight)
                         {
-                            ForParametersResults = Resources.GetString(Resource.String.Message_Lost) + " " + Math.Abs(DatabaseUser.GetUser(User.CurrentUser).Parameters.Last().Weight - TempParametres.Weight) + " " + Resources.GetString(Resource.String.other_Kilograms);
+                            ForParametersResults = Resources.GetString(Resource.String.MessageParameters_Lost) + " " + Math.Abs(DatabaseUser.GetUser(User.CurrentUser).Parameters.Last().Weight - TempParametres.Weight) + " " + Resources.GetString(Resource.String.other_Kilograms);
                         }
 
                         else if (DatabaseUser.GetUser(User.CurrentUser).Parameters.Last().Weight < TempParametres.Weight)
                         {
-                            ForParametersResults = Resources.GetString(Resource.String.Message_Gained) + " " + Math.Abs(DatabaseUser.GetUser(User.CurrentUser).Parameters.Last().Weight - TempParametres.Weight) + " " + Resources.GetString(Resource.String.other_Kilograms);
+                            ForParametersResults = Resources.GetString(Resource.String.MessageParameters_Gained) + " " + Math.Abs(DatabaseUser.GetUser(User.CurrentUser).Parameters.Last().Weight - TempParametres.Weight) + " " + Resources.GetString(Resource.String.other_Kilograms);
                         }
 
                         //Ñhange of height.
                         if (DatabaseUser.GetUser(User.CurrentUser).Parameters.Last().Height < TempParametres.Height)
                         {
-                            ForParametersResults = ForParametersResults + " " + Resources.GetString(Resource.String.Message_YouAre) + " " + Math.Abs(DatabaseUser.GetUser(User.CurrentUser).Parameters.Last().Height - TempParametres.Height) + " " + Resources.GetString(Resource.String.other_Centimetres);
+                            ForParametersResults = ForParametersResults + " " + Resources.GetString(Resource.String.MessageGeneral_YouAre) + " " + Math.Abs(DatabaseUser.GetUser(User.CurrentUser).Parameters.Last().Height - TempParametres.Height) + " " + Resources.GetString(Resource.String.other_Centimetres);
                         }
                     }
                         //Setting the text in the field.

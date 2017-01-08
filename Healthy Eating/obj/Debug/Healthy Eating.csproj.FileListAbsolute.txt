@@ -85,7 +85,6 @@ C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eat
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\alcohol_add.xml
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\alcohol_quantity.xml
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\alcohol_info.xml
-C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\alcohol_warnings.xml
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\helpform_menurowfooter.xml
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\Syncfusion.SfCalendar.Android.dll
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\Syncfusion.SfCalendar.Android.xml
@@ -114,5 +113,15 @@ C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eat
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\user_minimenu.xml
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\user_info.xml
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\user_changecategory.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\message_error.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\drawable\zz.png
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\drawable\error_border.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\drawable\alcohol_border.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\drawable\alcohol.png
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\message_alcoholwarnings.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\message_info.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\drawable\info_border.xml
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\drawable\info.png
+C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\drawable\pause_by_billlet_doux-daughbe.jpg
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\Healthy Eating.dll.mdb
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\Healthy Eating.dll.mdb

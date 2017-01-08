@@ -9,12 +9,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1">
         <Button
-            android:text="@string/Message_UserInfo"
+            android:text="@string/MessageUser_UserInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/ShowingInfo" />
         <Button
-            android:text="@string/Message_Delete"
+            android:text="@string/MessageUser_Delete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/DeleteUser" />

@@ -10,7 +10,7 @@
         android:id="@+id/linearLayout1">
         <TextView
             android:id="@+id/textView1"
-            android:text="@string/Message_Height"
+            android:text="@string/MessageParameters_Height"
             android:textSize="18dp"
             android:textStyle="bold"
             android:layout_width="192.0dp"
@@ -18,7 +18,7 @@
             android:layout_marginLeft="2dp" />
         <TextView
             android:id="@+id/textView1"
-            android:text="@string/Message_Weight"
+            android:text="@string/MessageParameters_Weight"
             android:textSize="18dp"
             android:textStyle="bold"
             android:layout_width="192.0dp"

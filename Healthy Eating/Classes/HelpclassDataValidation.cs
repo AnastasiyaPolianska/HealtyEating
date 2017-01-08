@@ -40,12 +40,41 @@ namespace Healthy_Eating.Classes
             if (income > value) return true;
             return false;
         }
-        
-        /*Showing information*/
+
+        public static void RequestCorrectEnter(int id)
+        {
+            LayoutInflater inflater = LayoutInflater.From(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity);
+            View view = inflater.Inflate(Resource.Layout.message_Error, null);
+            var txt = view.FindViewById<TextView>(Resource.Id.ex);
+            txt.Text = String.Format(Application.Context.Resources.GetString(Resource.String.ErrorMessage_EnterCorrect) + " {0}", Application.Context.Resources.GetString(id));
+
+            var toast = new Toast(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity)
+            {
+                Duration = ToastLength.Short,
+                View = view
+            };
+            toast.Show();
+        }
+
         public static string RequestToCorrectEnter(string type)
         {
-            return String.Format(Application.Context.Resources.GetString(Resource.String.ErrorMessage_EnterCorrect)+ " {0}", type);
+           return String.Format(Application.Context.Resources.GetString(Resource.String.ErrorMessage_EnterCorrect) + " {0}", type);
         }
-       
+
+        /*Showing information*/
+        public static void MakingErrorToast(int id)
+        {
+            LayoutInflater inflater = LayoutInflater.From(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity);           
+            View view = inflater.Inflate(Resource.Layout.message_Error, null);
+            var txt = view.FindViewById<TextView>(Resource.Id.text);
+            txt.Text = Application.Context.Resources.GetString(id);
+
+            var toast = new Toast(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity)
+            {
+                Duration = ToastLength.Short,
+                View = view
+            };
+            toast.Show();
+        }
     }
 }

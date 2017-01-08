@@ -29,12 +29,12 @@ namespace Healthy_Eating.ActivityS
             ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
             ActionBar.Tab tab = ActionBar.NewTab();
 
-            //Tab for ProtsFatsCarbs.
+            //Tab for ñcals.
             tab.SetText(Resource.String.tab_ListAlcohol);
             tab.TabSelected += Tab_TabSelectedListAlcohol;
             ActionBar.AddTab(tab);
 
-            //Tab for WaterCcals.
+            //Tab for alcohol calendar.
             tab = ActionBar.NewTab();
             tab.SetText(Resource.String.tab_CalendarAlcohol);
             tab.TabSelected += Tab_TabSelectedCalendarAlcohol;
@@ -43,16 +43,18 @@ namespace Healthy_Eating.ActivityS
             //Going to selected tab.
             SetContentView(Resource.Layout.helpform_ParametersConnector);
         }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
 
-        //Tab for ProtsFatsCarbs.
+        //Tab for ccals.
         private void Tab_TabSelectedListAlcohol(object sender, ActionBar.TabEventArgs e)
         {
             var fragment = this.FragmentManager.FindFragmentById(Resource.Id.Connector);
             if (fragment != null) e.FragmentTransaction.Remove(fragment);
             e.FragmentTransaction.Add(Resource.Id.Connector, new TabAlcoholList());
         }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
 
-        //Tab for WaterCcals.
+        //Tab for alcohol calendar.
         private void Tab_TabSelectedCalendarAlcohol(object sender, ActionBar.TabEventArgs e)
         {
             var fragment = this.FragmentManager.FindFragmentById(Resource.Id.Connector);

@@ -18,20 +18,27 @@ namespace Healthy_Eating
     [Activity(Label = "Main Menu", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        //List of users, used for displaying users and deleting them.
-        System.Collections.Generic.List<string> TempList;
-        //List of users from layout, used for choosing a user and deleting them.
-        ListView ListOfUsers;
+        //Elements from the layout.
+        AlertDialog DialogForAdding;
+        EditText ProductName;
+        EditText ProductProteins;
+        EditText ProductFats;
+        EditText ProductCarbs;
+        EditText ProductWater;
+        EditText ProductCcals;
+        EditText ProductAlcohols;
+        Spinner TypeChooser;
+        CheckBox PrivateChooser;
 
         protected override async void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.StartPage);
 
-            //Initiation if File (if required), SQConnection and Tables (is required).
+            //Initiation if File (if required), SQConnection and Tables (if required).
             DatabaseUser.Init(Android.OS.Environment.GetExternalStoragePublicDirectory("databasesofuser") + "UserFile.db");
 
-            //If the list doesn't exist yet, we creae it and fill it with products.
+            //If the list doesn't exist yet, we create it and fill it with products.
             if (DatabaseProducts.Init(Android.OS.Environment.GetExternalStoragePublicDirectory("databases") + "ProductsData.db"))
             {
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Cheese), "Dairyproducts", "general", 40, 23.4, 30, 0, 371));
@@ -49,7 +56,7 @@ namespace Healthy_Eating
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Sourcream20), "Dairyproducts", "general", 72.7, 2.8, 20, 3.2, 206));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Whitecheese), "Dairyproducts", "general", 88.4, 2.8, 3.2, 4.1, 58));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Sourmilk), "Dairyproducts", "general", 52, 17.9, 20.1, 0, 260));
-                
+
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Butter), "Fatsmargarinebutter", "general", 15.8, 0.6, 82.5, 0.9, 748));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Margarine), "Fatsmargarinebutter", "general", 15.8, 0.5, 82, 1.2, 744));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Mayonnaise), "Fatsmargarinebutter", "general", 25, 3.1, 67, 2.6, 627));
@@ -75,7 +82,7 @@ namespace Healthy_Eating
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Oatflakes), "Cereals", "general", 12, 13.1, 6.2, 65.7, 355));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Corngrits), "Cereals", "general", 14, 8.3, 1.2, 75, 325));
 
-                DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Eggplant), "Vegetables", "general", 91,  0.6, 0.1, 5.5, 24));
+                DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Eggplant), "Vegetables", "general", 91, 0.6, 0.1, 5.5, 24));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Rutabaga), "Vegetables", "general", 87.5, 1.2, 0.1, 8.1, 37));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Greenpeas), "Vegetables", "general", 80, 5.0, 0.2, 13.3, 72));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Courgette), "Vegetables", "general", 93, 0.6, 0.3, 5.7, 27));
@@ -94,7 +101,7 @@ namespace Healthy_Eating
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Rhubarb), "Vegetables", "general", 94.5, 0.7, 0, 2.9, 16));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Radish), "Vegetables", "general", 88.6, 1.9, 0, 7, 34));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Turnip), "Vegetables", "general", 90.5, 1.5, 0, 5.9, 28));
-                DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Salad), "Vegetables", "general", 95,  1.5, 0, 2.2, 14));
+                DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Salad), "Vegetables", "general", 95, 1.5, 0, 2.2, 14));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Beet), "Vegetables", "general", 86.5, 1.7, 0, 10.8, 48));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Tomato), "Vegetables", "general", 93.5, 0.6, 0, 4.2, 19));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Greenbeans), "Vegetables", "general", 90, 4, 0, 4.3, 32));
@@ -103,7 +110,7 @@ namespace Healthy_Eating
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Garlic), "Vegetables", "general", 70, 6.5, 0, 21.2, 106));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Spinach), "Vegetables", "general", 91.2, 2.9, 0, 2.3, 21));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Kvass), "Vegetables", "general", 90, 1.5, 0, 5.3, 28));
-                 
+
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Apricot), "Fruitsandberries", "general", 86, 0.9, 0, 10.5, 46));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Quince), "Fruitsandberries", "general", 87.5, 0.6, 0, 8.9, 38));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Plum), "Fruitsandberries", "general", 89, 0.2, 0, 7.4, 34));
@@ -114,7 +121,7 @@ namespace Healthy_Eating
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Pear), "Fruitsandberries", "general", 87.5, 0.4, 0, 10.7, 42));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Fig), "Fruitsandberries", "general", 83, 0.7, 0, 13.9, 56));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Kyzyl), "Fruitsandberries", "general", 85, 1, 0, 9.7, 45));
-                DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Peach), "Fruitsandberries", "general", 86.5,  0.9, 0, 10.4, 44));
+                DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Peach), "Fruitsandberries", "general", 86.5, 0.9, 0, 10.4, 44));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_RowanGarden), "Fruitsandberries", "general", 81, 1.4, 0, 12.5, 58));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_RowanAronia), "Fruitsandberries", "general", 80.5, 1.5, 0, 12, 54));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_PlumGarden), "Fruitsandberries", "general", 87, 0.8, 0, 9.9, 43));
@@ -139,7 +146,7 @@ namespace Healthy_Eating
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_RedCurrant), "Fruitsandberries", "general", 85.4, 0.6, 0, 8, 38));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_BlackCurrant), "Fruitsandberries", "general", 85, 1.0, 0, 8.0, 40));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Rosehip), "Fruitsandberries", "general", 66, 1.6, 0, 24, 101));
-                
+
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_DriedApricots), "Driedfruits", "general", 20.2, 5.2, 0, 65.9, 272));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_DriedFigs), "Driedfruits", "general", 18, 5, 0, 67.5, 278));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_DriedRaisins), "Driedfruits", "general", 19, 1.8, 0, 70.9, 276));
@@ -197,7 +204,7 @@ namespace Healthy_Eating
 
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_StewedBeef), "Meatandcannedmeat", "general", 63, 16.8, 18.3, 0, 232));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_TouristBreakfastBeef), "Meatandcannedmeat", "general", 66.9, 20.5, 10.4, 0, 176));
-                DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_TouristBreakfastPork), "Meatandcannedmeat", "general", 65.6, 16.9, 15.4 , 0, 206));
+                DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_TouristBreakfastPork), "Meatandcannedmeat", "general", 65.6, 16.9, 15.4, 0, 206));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_SausageStuffing), "Meatandcannedmeat", "general", 63.2, 15.2, 15.7, 2.8, 213));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_StewedPork), "Meatandcannedmeat", "general", 51.1, 14.9, 32.2, 0, 349));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_SmokedBrisket), "Meatandcannedmeat", "general", 21, 7.6, 66.8, 0, 632));
@@ -245,7 +252,7 @@ namespace Healthy_Eating
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Hake), "Fishandseafood", "general", 79.9, 16.6, 2.2, 0, 86));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Pike), "Fishandseafood", "general", 70.4, 18.8, 0.7, 0, 82));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Elm), "Fishandseafood", "general", 80.1, 18.2, 0.3, 0, 117));
-                DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_ShrimpFarEast), "Fishandseafood", "general", 64.8, 28.7, 1.2, 0,134));
+                DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_ShrimpFarEast), "Fishandseafood", "general", 64.8, 28.7, 1.2, 0, 134));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Kalmar), "Fishandseafood", "general", 80.3, 18, 0.3, 0, 75));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Crab), "Fishandseafood", "general", 81.5, 16, 0.5, 0, 69));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Shrimp), "Fishandseafood", "general", 77.5, 18, 0.8, 0, 83));
@@ -271,7 +278,7 @@ namespace Healthy_Eating
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Caramel), "Sweets", "general", 4.4, 0, 0.1, 77.7, 296));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_CandyChocolatePoured), "Sweets", "general", 7.9, 2.9, 10.7, 76.6, 396));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Pastille), "Sweets", "general", 18, 0.5, 0, 80.4, 305));
-                DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Sugar), "Sweets", "general", 0.2, 0.3, 0, 99.5,  374));
+                DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Sugar), "Sweets", "general", 0.2, 0.3, 0, 99.5, 374));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_Halva), "Sweets", "general", 2.9, 11.6, 29.7, 54, 516));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_DarkChocolate), "Sweets", "general", 0.8, 5.4, 35.3, 52.6, 540));
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_MilkChocolate), "Sweets", "general", 0.9, 6.9, 35.7, 52.4, 547));
@@ -323,7 +330,7 @@ namespace Healthy_Eating
                 DatabaseProducts.InsertProduct(new Product(Resources.GetString(Resource.String.product_BlackcurrantСompote), "Drinks", "general", 100, 0.3, 0.1, 13.9, 58));
             }
 
-            //If the list doesn't exist yet, we creae it and fill it with products.
+            //If the list doesn't exist yet, we create it and fill it with products.
             if (DatabaseAlcohol.Init(Android.OS.Environment.GetExternalStoragePublicDirectory("databases") + "AlcoholData.db"))
             {
                 DatabaseAlcohol.InsertAlcohol(new Alcohol(Resources.GetString(Resource.String.alcohol_NonalcoholicBeer), "general", 0.5, 26));
@@ -363,17 +370,15 @@ namespace Healthy_Eating
             CigarettesButton.Click += CigarettesButton_Click;
             AddUserItems.Click += AddUserItems_Click;
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         /*Actions on clicks: description*/
 
-        //Choosing from existing users in the system.
+        //Working with users (choosing and adding new).
         private void ChooseFromExistButton_Click(object sender, EventArgs e)
         {
             StartActivity(typeof(PageUsers));
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Going to list of parametres of the user.
@@ -381,7 +386,6 @@ namespace Healthy_Eating
         {
             StartActivity(typeof(ListOfParameters));
         }
-
         //----------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Going to list of products of the user.
@@ -389,49 +393,52 @@ namespace Healthy_Eating
         {
             StartActivity(typeof(PageMyMenu));
         }
-
         //----------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Going to list of alcohols of the user.
         private void AlcoholButton_Click(object sender, EventArgs e)
         {
             StartActivity(typeof(PageAlcohol));
         }
-
         //----------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Going to list of cigarettes of the user.
         private void CigarettesButton_Click(object sender, EventArgs e)
         {
             StartActivity(typeof(PageCigarettes));
         }
-
         //----------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Adding new user items (products and drinks).
         private void AddUserItems_Click(object sender, EventArgs e)
         {
-                //Creating a new layout for choosing the type of items that are going to be added.
-                AlertDialog.Builder Object = new AlertDialog.Builder(this);
-                LayoutInflater inflater = LayoutInflater.From(this);
-                LinearLayout layout = new LinearLayout(this);
-                View FormViewUserItems = inflater.Inflate(Resource.Layout.useritems_Add, layout);
-                Object.SetView(FormViewUserItems);
+            //Creating a new layout for choosing the type of items that are going to be added.
+            AlertDialog.Builder Object = new AlertDialog.Builder(this);
+            LayoutInflater inflater = LayoutInflater.From(this);
+            LinearLayout layout = new LinearLayout(this);
+            View FormViewUserItems = inflater.Inflate(Resource.Layout.useritems_Add, layout);
+            Object.SetView(FormViewUserItems);
 
-                ListView ListForTypes = FormViewUserItems.FindViewById<ListView>(Resource.Id.ListForTypes);
-                List<string> ListForNamesOfTypes = new List<string>();
-                ListForNamesOfTypes.Add(Resources.GetString(Resource.String.Message_Products));
-                ListForNamesOfTypes.Add(Resources.GetString(Resource.String.Message_Alcohol));
+            //Making a list of types that can be added (products and alcohols).
+            ListView ListForTypes = FormViewUserItems.FindViewById<ListView>(Resource.Id.ListForTypes);
+            List<string> ListForNamesOfTypes = new List<string>();
+            ListForNamesOfTypes.Add(Resources.GetString(Resource.String.MessageMenu_Products));
+            ListForNamesOfTypes.Add(Resources.GetString(Resource.String.MessageAlcohol_Alcohol));
+            var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, ListForNamesOfTypes);
+            ListForTypes.Adapter = adapter;
 
-                var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, ListForNamesOfTypes);
-                ListForTypes.Adapter = adapter;
+            //Action on click.
+            ListForTypes.ItemClick += ListForTypes_ItemClick;
 
-                ListForTypes.ItemClick += ListForTypes_ItemClick;
+            //Action on pressing negative button.
+            Object.SetNegativeButton(Resource.String.Cancel, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1) { }));
 
-                //Action on pressing negative button.
-                Object.SetNegativeButton(Resource.String.Cancel, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1) { }));
-
-                //Showing the new form for choosing the type of items that are going to be added.
-                Object.Show();         
+            //Showing the new form for choosing the type of items that are going to be added.
+            Object.Show();
         }
+        //----------------------------------------------------------------------------------------------------------------------------------------------------
 
+        //Action on clicking on the type of item that is going to be added.
         private void ListForTypes_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             //Creating a new layout for adding new user products.
@@ -439,150 +446,207 @@ namespace Healthy_Eating
             LayoutInflater inflater_ = LayoutInflater.From(this);
             LinearLayout layout_ = new LinearLayout(this);
 
+            //Depends on the type that was choosed.
             switch (e.Position)
             {
+                //Case products.
                 case 0:
                     {
+                        //View for adding new products.
                         View FormViewUserItems = inflater_.Inflate(Resource.Layout.useritems_Product, layout_);
                         Object_.SetView(FormViewUserItems);
 
-                        EditText ProductName = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductName);
-                        EditText ProductProteins = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductProteins);
-                        EditText ProductFats = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductFats);
-                        EditText ProductCarbs = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductCarbs);
-                        EditText ProductWater = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductWater);
-                        EditText ProductCcals = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductCcals);
-                        Spinner TypeChooser = FormViewUserItems.FindViewById<Spinner>(Resource.Id.TypeChooser);
-                        CheckBox PrivateChooser = FormViewUserItems.FindViewById<CheckBox>(Resource.Id.PrivateChooser);
+                        //Everything for adding a new product.
+                        ProductName = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductName);
+                        ProductProteins = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductProteins);
+                        ProductFats = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductFats);
+                        ProductCarbs = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductCarbs);
+                        ProductWater = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductWater);
+                        ProductCcals = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductCcals);
+                        TypeChooser = FormViewUserItems.FindViewById<Spinner>(Resource.Id.TypeChooser);
+                        PrivateChooser = FormViewUserItems.FindViewById<CheckBox>(Resource.Id.PrivateChooser);
 
+                        //Displaying a list of product types.
                         var adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, ProductLists.GetMajorList());
                         TypeChooser.Adapter = adapter;
 
-                        Object_.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1)
-                        {
-                            String ForName = ProductName.Text;
-                            String ForProteins = ProductProteins.Text;
-                            String ForFats = ProductFats.Text;
-                            String ForCarbs = ProductCarbs.Text;
-                            String ForWater = ProductWater.Text;
-                            String ForCcals = ProductCcals.Text;
+                        //On pressing positive button.
+                        Object_.SetPositiveButton(Resource.String.OK, (EventHandler<DialogClickEventArgs>)null);
 
-                            ProductLists.SetChooser((int)TypeChooser.SelectedItemId);
+                        //Saving dialog to variable
+                        DialogForAdding = Object_.Create();
+                        //Showing a form.
+                        DialogForAdding.Show();
 
-                            ForProteins = ForProteins.Replace(".", ",");
-                            ForFats = ForFats.Replace(".", ",");
-                            ForCarbs = ForCarbs.Replace(".", ",");
-                            ForWater = ForWater.Replace(".", ",");
-                            ForCcals = ForCcals.Replace(".", ",");
+                        //Saving button to variable.
+                        var positiveButton = DialogForAdding.GetButton((int)DialogButtonType.Positive);
+                        positiveButton.Click += PositiveButton_ClickProducts;
 
-                            if (!HelpclassDataValidation.CheckForLenth(ForName, 0, 20))
-                                Toast.MakeText(this, HelpclassDataValidation.RequestToCorrectEnter(Resources.GetString(Resource.String.other_Name)), ToastLength.Long).Show();
-
-                            else
-                                 if ((!HelpclassDataValidation.CheckForLenth(ForProteins, 0, 7)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForProteins), 0, 100)) ||
-                            (!HelpclassDataValidation.CheckForLenth(ForFats, 0, 7)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForFats), 0, 100)) ||
-                            (!HelpclassDataValidation.CheckForLenth(ForCarbs, 0, 7)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForCarbs), 0, 100)) ||
-                            (!HelpclassDataValidation.CheckForLenth(ForWater, 0, 7)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForWater), 0, 100)) ||
-                            (!HelpclassDataValidation.CheckForLenth(ForCcals, 0, 7)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForCcals), 0, 1000)))
-                                Toast.MakeText(this, HelpclassDataValidation.RequestToCorrectEnter(Resources.GetString(Resource.String.other_Amount)), ToastLength.Long).Show();
-
-                            else
-                            {
-                                bool IsExisting = false;
-
-                                //Checking if there is already a product with such name in our list.
-                                foreach (Product TempProduct in DatabaseProducts.SQConnectionProduct.Table<Product>())
-                                    if (TempProduct.Name.ToUpper() == ForName.ToUpper()) IsExisting = true;
-
-                                if (!IsExisting)
-                                {
-                                    String temp = "general";
-                                    if (PrivateChooser.Checked) temp = DatabaseUser.GetUser(User.CurrentUser).Name;
-
-                                    if (User.CurrentUser == -1 && temp != "general")
-                                    {
-                                        Toast.MakeText(this, Resources.GetString(Resource.String.ErrorMessage_Unchoosed), ToastLength.Long).Show();
-                                    }
-
-                                    else
-                                    {
-                                        DatabaseProducts.InsertProduct(new Product(ForName, ProductLists.Chooser, temp, double.Parse(ForProteins), double.Parse(ForFats), double.Parse(ForCarbs), double.Parse(ForWater), double.Parse(ForCcals)));
-                                    }
-                                }
-
-                                else Toast.MakeText(this, Resources.GetString(Resource.String.ErrorMessage_AlreadyInSystem), ToastLength.Long).Show();
-                            }
-
-                        }));
-
+                        //On pressing negative button.
                         Object_.SetNegativeButton(Resource.String.Cancel, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1) { }));
                     }
                     break;
 
+                //Case alcohols.
                 case 1:
                     {
+                        //View for adding new alcohols.
                         View FormViewUserItems = inflater_.Inflate(Resource.Layout.useritems_Alcohol, layout_);
                         Object_.SetView(FormViewUserItems);
 
-                        EditText ProductName = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductName);
-                        EditText ProductAlcohols = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductAlcohols);
-                        EditText ProductCcals = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductCcals);
-                        CheckBox PrivateChooser = FormViewUserItems.FindViewById<CheckBox>(Resource.Id.PrivateChooser);
+                        //Everything for adding a new alcohol.
+                        ProductName = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductName);
+                        ProductAlcohols = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductAlcohols);
+                        ProductCcals = FormViewUserItems.FindViewById<EditText>(Resource.Id.ProductCcals);
+                        PrivateChooser = FormViewUserItems.FindViewById<CheckBox>(Resource.Id.PrivateChooser);
 
-                        Object_.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1)
-                        {
-                            String ForName = ProductName.Text;
-                            String ForAlcohols = ProductAlcohols.Text;
-                            String ForCcals = ProductCcals.Text;
+                        //On pressing positive button.
+                        Object_.SetPositiveButton(Resource.String.OK, (EventHandler<DialogClickEventArgs>)null);
 
-                            ForAlcohols = ForAlcohols.Replace(".", ",");
-                            ForCcals = ForCcals.Replace(".", ",");
+                        //Saving dialog to variable
+                        DialogForAdding = Object_.Create();
+                        //Showing a form.
+                        DialogForAdding.Show();
 
-                            if (!HelpclassDataValidation.CheckForLenth(ForName, 0, 20))
-                                Toast.MakeText(this, HelpclassDataValidation.RequestToCorrectEnter(Resources.GetString(Resource.String.other_Name)), ToastLength.Long).Show();
+                        //Saving button to variable.
+                        var positiveButton = DialogForAdding.GetButton((int)DialogButtonType.Positive);
+                        positiveButton.Click += PositiveButton_ClickDrinks;
 
-                            else
-                                 if ((!HelpclassDataValidation.CheckForLenth(ForAlcohols, 0, 7)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForAlcohols), 0, 100)) ||
-                            (!HelpclassDataValidation.CheckForLenth(ForCcals, 0, 7)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForCcals), 0, 1000)))
-                                Toast.MakeText(this, HelpclassDataValidation.RequestToCorrectEnter(Resources.GetString(Resource.String.other_Amount)), ToastLength.Long).Show();
-
-                            else
-                            {
-                                bool IsExisting = false;
-
-                                //Checking if there is already a product with such name in our list.
-                                foreach (Alcohol TempAlcohol in DatabaseAlcohol.SQConnectionAlcohol.Table<Alcohol>())
-                                    if (TempAlcohol.Name.ToUpper() == ForName.ToUpper()) IsExisting = true;
-
-                                if (!IsExisting)
-                                {
-                                    String temp = "general";
-                                    if (PrivateChooser.Checked) temp = DatabaseUser.GetUser(User.CurrentUser).Name;
-
-                                    if (User.CurrentUser == -1 && temp != "general")
-                                    {
-                                        Toast.MakeText(this, Resources.GetString(Resource.String.ErrorMessage_Unchoosed), ToastLength.Long).Show();
-                                    }
-
-                                    else
-                                    {
-                                        DatabaseAlcohol.InsertAlcohol(new Alcohol(ForName, temp, double.Parse(ForAlcohols), double.Parse(ForCcals)));
-                                    }
-                                }
-
-                                else Toast.MakeText(this, Resources.GetString(Resource.String.ErrorMessage_AlreadyInSystem), ToastLength.Long).Show();
-                            }
-
-                        }));
-
+                        //On pressing negative button.
                         Object_.SetNegativeButton(Resource.String.Cancel, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1) { }));
-
                     }
                     break;
-
             }
-
-            Object_.Show();
         }
+        //----------------------------------------------------------------------------------------------------------------------------------------------------
+
+        //Action on positive button of dialog for adding items (products).
+        private void PositiveButton_ClickProducts(object sender, EventArgs e)
+        {
+            //Getting all the values to strings.
+            String ForName = ProductName.Text;
+            String ForProteins = ProductProteins.Text;
+            String ForFats = ProductFats.Text;
+            String ForCarbs = ProductCarbs.Text;
+            String ForWater = ProductWater.Text;
+            String ForCcals = ProductCcals.Text;
+
+            //Getting the type of the product.
+            ProductLists.SetChooser((int)TypeChooser.SelectedItemId);
+
+            //Replacement in numbers.
+            ForProteins = ForProteins.Replace(".", ",");
+            ForFats = ForFats.Replace(".", ",");
+            ForCarbs = ForCarbs.Replace(".", ",");
+            ForWater = ForWater.Replace(".", ",");
+            ForCcals = ForCcals.Replace(".", ",");
+
+            //If the name is too long.
+            if (!HelpclassDataValidation.CheckForLenth(ForName, 0, 20))
+                HelpclassDataValidation.RequestCorrectEnter(Resource.String.other_Name);
+
+            //If the numbers are entered incorrectly.
+            else
+                 if ((!HelpclassDataValidation.CheckForLenth(ForProteins, 0, 7)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForProteins), 0, 100)) ||
+            (!HelpclassDataValidation.CheckForLenth(ForFats, 0, 7)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForFats), 0, 100)) ||
+            (!HelpclassDataValidation.CheckForLenth(ForCarbs, 0, 7)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForCarbs), 0, 100)) ||
+            (!HelpclassDataValidation.CheckForLenth(ForWater, 0, 7)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForWater), 0, 100)) ||
+            (!HelpclassDataValidation.CheckForLenth(ForCcals, 0, 7)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForCcals), 0, 1000)))
+                HelpclassDataValidation.RequestCorrectEnter(Resource.String.other_Amount);
+
+            //Checking if there is another one with such name.
+            else
+            {
+                //Variable for checking.
+                bool IsExisting = false;
+
+                //Checking if there is already a product with such name in our list.
+                foreach (Product TempProduct in DatabaseProducts.SQConnectionProduct.Table<Product>())
+                    if (TempProduct.Name.ToUpper() == ForName.ToUpper()) IsExisting = true;
+
+                //If there isn't such name in system.
+                if (!IsExisting)
+                {
+                    //Variable fot product type.
+                    String temp = "general";
+
+                    //If "private" is checked this variable considers user's name.
+                    if (PrivateChooser.Checked) temp = DatabaseUser.GetUser(User.CurrentUser).Name;
+
+                    //If the user is not choosed, but "private" is checked, showing error.
+                    if (User.CurrentUser == -1 && temp != "general")
+                        HelpclassDataValidation.MakingErrorToast(Resource.String.ErrorMessage_Unchoosed);
+
+                    //If everything is OK, adding product.
+                    else
+                    {
+                        DatabaseProducts.InsertProduct(new Product(ForName, ProductLists.Chooser, temp, double.Parse(ForProteins), double.Parse(ForFats), double.Parse(ForCarbs), double.Parse(ForWater), double.Parse(ForCcals)));
+                        DialogForAdding.Dismiss();
+                    }
+                    }
+
+                //If there is such name in system.
+                else HelpclassDataValidation.MakingErrorToast(Resource.String.ErrorMessage_AlreadyInSystem);
+            }
+        }
+        //----------------------------------------------------------------------------------------------------------------------------------------------------
+
+        //Action on positive button of dialog for adding items (drinks).
+        private void PositiveButton_ClickDrinks(object sender, EventArgs e)
+        {
+            //Getting all the values to strings.
+            String ForName = ProductName.Text;
+            String ForAlcohols = ProductAlcohols.Text;
+            String ForCcals = ProductCcals.Text;
+
+            //Replacement in numbers.
+            ForAlcohols = ForAlcohols.Replace(".", ",");
+            ForCcals = ForCcals.Replace(".", ",");
+
+            //If the name is too long.
+            if (!HelpclassDataValidation.CheckForLenth(ForName, 0, 20))
+                HelpclassDataValidation.RequestCorrectEnter(Resource.String.other_Name);
+
+            //If the numbers are entered incorrectly.
+            else
+                 if ((!HelpclassDataValidation.CheckForLenth(ForAlcohols, 0, 7)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForAlcohols), 0, 100)) ||
+            (!HelpclassDataValidation.CheckForLenth(ForCcals, 0, 7)) || (!HelpclassDataValidation.CheckForValue(double.Parse(ForCcals), 0, 1000)))
+                HelpclassDataValidation.RequestCorrectEnter(Resource.String.other_Amount);
+
+            //Checking if there is another one with such name.
+            else
+            {
+                //Variable for checking.
+                bool IsExisting = false;
+
+                //Checking if there is already a product with such name in our list.
+                foreach (Alcohol TempAlcohol in DatabaseAlcohol.SQConnectionAlcohol.Table<Alcohol>())
+                    if (TempAlcohol.Name.ToUpper() == ForName.ToUpper()) IsExisting = true;
+
+                //If there isn't such name in system.
+                if (!IsExisting)
+                {
+                    //Variable fot product type.                                   
+                    String temp = "general";
+
+                    //If "private" is checked this variable considers user's name. 
+                    if (PrivateChooser.Checked) temp = DatabaseUser.GetUser(User.CurrentUser).Name;
+
+                    //If the user is not choosed, but "private" is checked, showing error.
+                    if (User.CurrentUser == -1 && temp != "general")
+                        HelpclassDataValidation.MakingErrorToast(Resource.String.ErrorMessage_Unchoosed);
+
+                    //If everything is OK, adding product.
+                    else
+                    {
+                        DatabaseAlcohol.InsertAlcohol(new Alcohol(ForName, temp, double.Parse(ForAlcohols), double.Parse(ForCcals)));
+                        DialogForAdding.Dismiss();
+                    }
+                    }
+
+                //If there is such name in system.
+                else HelpclassDataValidation.MakingErrorToast(Resource.String.ErrorMessage_AlreadyInSystem);
+            }
         }
     }
+}

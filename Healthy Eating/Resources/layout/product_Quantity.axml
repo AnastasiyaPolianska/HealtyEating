@@ -7,7 +7,7 @@
     android:minHeight="25px">
     <TextView
         android:id="@+id/textView1"
-        android:text="@string/Message_AmountGrams"
+        android:text="@string/MessageMenu_AmountGrams"
         android:textSize="18dp"
         android:textStyle="bold"
         android:layout_width="match_parent"

@@ -31,10 +31,11 @@ namespace Healthy_Eating.ActivityS
             ListForAlcohols = new List<string>();
 
             //Setting products to the list.
-            foreach (Alcohol TemAlcohol in DatabaseAlcohol.SQConnectionAlcohol.Table<Alcohol>())
+            foreach (Alcohol TempAlcohol in DatabaseAlcohol.SQConnectionAlcohol.Table<Alcohol>())
             {
-                if(TemAlcohol.Visibility == "general" || TemAlcohol.Visibility == DatabaseUser.SQConnection.Table<User>().ElementAt(User.CurrentUser).Name)
-                ListForAlcohols.Add(TemAlcohol.Name);
+                //If the type matches, add item to the list.
+                if (TempAlcohol.Visibility == "general" || TempAlcohol.Visibility == DatabaseUser.SQConnection.Table<User>().ElementAt(User.CurrentUser).Name)
+                ListForAlcohols.Add(TempAlcohol.Name);
             }
 
             //Adapter for the main list.
@@ -45,7 +46,6 @@ namespace Healthy_Eating.ActivityS
             ListForChoosingAlcohols.ItemLongClick += ListForChoosingAlcohols_ItemLongClick;
             ListForChoosingAlcohols.ItemClick += ListForChoosingAlcohols_ItemClick;
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Showing product information.
@@ -74,9 +74,9 @@ namespace Healthy_Eating.ActivityS
             //Action on positive button.
             Object.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1) {}));
 
+            //Showing the form.
             Object.Show();
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Adding a new product.
@@ -94,6 +94,7 @@ namespace Healthy_Eating.ActivityS
             AlcoholAmount.MinValue = 1;
             AlcoholAmount.MaxValue = 1000;
 
+            //Setting a formatter to a number picker.
             AlcoholAmount.SetFormatter(new HelpclassNumberPickerFormatter());
 
             //Action on pressing positive button.
@@ -106,32 +107,25 @@ namespace Healthy_Eating.ActivityS
                     User TempUser = DatabaseUser.GetUser(User.CurrentUser);
                     TempUser.Alcohols.Add(TempAlcohol);
                     DatabaseUser.SQConnection.UpdateWithChildren(TempUser);
-
-                    //Showing information about the hew product added.
-                    Toast.MakeText(this, DatabaseUser.GetUser(User.CurrentUser).Alcohols.Last().ToString(), ToastLength.Long).Show();
-
-                    AlertDialog.Builder Object_ = new AlertDialog.Builder(this);
-                    LayoutInflater inflater_ = LayoutInflater.From(this);
-                    LinearLayout layout_ = new LinearLayout(this);
-                    View alcohol_Warnings = inflater.Inflate(Resource.Layout.alcohol_Warnings, layout_);
-                    Object_.SetView(alcohol_Warnings);
-
-                    TextView TextForLevel = alcohol_Warnings.FindViewById<TextView>(Resource.Id.TextForLevel);
-                    TextView TextForWarning = alcohol_Warnings.FindViewById<TextView>(Resource.Id.TextForWarning);
-
+               
+                    //Variables for counting alcohol parameters.
                     double amountOfAlcohol = 0;
                     String forAmountOfAlcohol = "";
                     String forWarning = "";
+                    
+                    //If there is no info about weight of the user.
+                    if (DatabaseUser.GetUser(User.CurrentUser).Parameters.Count == 0) forAmountOfAlcohol = Resources.GetString(Resource.String.MessageAlcohol_NoWeightInfo);
 
-                    if (DatabaseUser.GetUser(User.CurrentUser).Parameters.Count == 0) forAmountOfAlcohol = "No information about weight!";
-
+                    //If there is info, counting.
                     else
                     {
+                        //For each alcohol of the user.
                         foreach (Alcohol Temp in DatabaseUser.GetUser(User.CurrentUser).Alcohols)
                         {
                             //If the date matches the choosed date.
                             if ((DateTime.Now.DayOfYear - Temp.Date.DayOfYear) <= 1)
                             {
+                                //Counting the amount of alcohol in blood.
                                 double dodamountOfAlcohol = 0;
 
                                 double coef;
@@ -145,10 +139,13 @@ namespace Healthy_Eating.ActivityS
                                 if (dodamountOfAlcohol > 0) amountOfAlcohol += dodamountOfAlcohol;
                             }
 
-                            forAmountOfAlcohol = Resources.GetString(Resource.String.Message_YouHave) + " " + amountOfAlcohol + " " + Resources.GetString(Resource.String.Message_ppmOfAlcohol);
+                            //Setting the amount of alcohol to the string.
+                            forAmountOfAlcohol = Resources.GetString(Resource.String.MessageGeneral_YouHave) + " " + amountOfAlcohol + " " + Resources.GetString(Resource.String.MessageAlcohol_ppmOfAlcohol);
                         }
 
-                        if (DatabaseUser.GetUser(User.CurrentUser).Country==ENCountry.Ukraine && amountOfAlcohol > 0.2 ||
+                        //If it's bigger than can be according to the licence and the user has a licence.
+                        if (DatabaseUser.GetUser(User.CurrentUser).DrivingLicence==true && 
+                        (DatabaseUser.GetUser(User.CurrentUser).Country==ENCountry.Ukraine && amountOfAlcohol > 0.2 ||
                         DatabaseUser.GetUser(User.CurrentUser).Country == ENCountry.Russia && amountOfAlcohol > 0.35 ||
                         DatabaseUser.GetUser(User.CurrentUser).Country == ENCountry.Albania && amountOfAlcohol > 0.1 ||
                         DatabaseUser.GetUser(User.CurrentUser).Country == ENCountry.Andorra && amountOfAlcohol > 0.5 ||
@@ -193,25 +190,35 @@ namespace Healthy_Eating.ActivityS
                         DatabaseUser.GetUser(User.CurrentUser).Country == ENCountry.Sweden && amountOfAlcohol > 0.2 ||
                         DatabaseUser.GetUser(User.CurrentUser).Country == ENCountry.Switzerland && amountOfAlcohol > 0.5 ||
                         DatabaseUser.GetUser(User.CurrentUser).Country == ENCountry.Turkey && amountOfAlcohol > 0.5 ||
-                        DatabaseUser.GetUser(User.CurrentUser).Country == ENCountry.UK && amountOfAlcohol > 0.8)
+                        DatabaseUser.GetUser(User.CurrentUser).Country == ENCountry.UK && amountOfAlcohol > 0.8))
 
-                        forWarning = Resources.GetString(Resource.String.Message_WarningAlcohol) + " " + DatabaseUser.GetUser(User.CurrentUser).Country + ". " + Resources.GetString(Resource.String.Message_WarningAlcoholTime) + " " + Math.Ceiling(amountOfAlcohol / 1.15) + " " + Resources.GetString(Resource.String.other_Hours) + " ";
-                    if (amountOfAlcohol >= 3.5) forWarning += Resources.GetString(Resource.String.Message_WarningAlcoholDeath);
+                        forWarning = Resources.GetString(Resource.String.MessageAlcohol_WarningAlcohol) + " " + DatabaseUser.GetUser(User.CurrentUser).Country + ". " + Resources.GetString(Resource.String.MessageAlcohol_WarningAlcoholTime) + " " + Math.Ceiling(amountOfAlcohol / 1.15) + " " + Resources.GetString(Resource.String.other_Hours) + " ";
+                    
+                    //If the amount of alcohol is too big.    
+                    if (amountOfAlcohol >= 3.5) forWarning += Resources.GetString(Resource.String.MessageAlcohol_WarningAlcoholDeath);
                 }
+                
+                //Showing warnings.        
+                View view = inflater.Inflate(Resource.Layout.message_AlcoholWarnings, null);
+                var TextForLevel = view.FindViewById<TextView>(Resource.Id.TextForLevel);
+                var TextForWarning = view.FindViewById<TextView>(Resource.Id.TextForWarning);
+               
+                TextForLevel.Text = forAmountOfAlcohol;
+                TextForWarning.Text = forWarning;
 
-                    TextForLevel.Text = forAmountOfAlcohol;
-                    TextForWarning.Text = forWarning;
-
-                    //Action on pressing positive button.
-                    Object_.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender_, DialogClickEventArgs e1_) { }));
-
-                Object_.Show();
-
+                var toast = new Toast(Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity)
+                {
+                    Duration = ToastLength.Long,
+                    View = view
+                };
+                
+                toast.Show();               
                 }));
 
             //Action on pressing negative button.
             Object.SetNegativeButton(Resource.String.Cancel, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1){}));
 
+            //Showing the form.
             Object.Show();     
         }
     }

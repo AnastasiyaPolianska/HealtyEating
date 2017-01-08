@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -33,6 +32,7 @@ namespace Healthy_Eating.ActivityS
         List<ENChildDiseases> TempChildDiseases;
         List <ENChronicDiseases> TempChronicDiseases;
 
+        //Choosed user.
         int UserChoosed = -1;
 
         //On creating the form.
@@ -58,12 +58,14 @@ namespace Healthy_Eating.ActivityS
             ListOfUsers.ItemLongClick += ListOfUsers_ItemLongClick;
             AddNewUserButton.Click += AddNewUserButton_Click;
         }
+        //----------------------------------------------------------------------------------------------------------------------------------------------------
 
         //On renewingthe view.
         protected override void OnResume()
         {
             base.OnResume();
 
+            //Clearing temp list of users.
             TempList.Clear();
 
             /*Displaying users on the layout.*/
@@ -73,7 +75,6 @@ namespace Healthy_Eating.ActivityS
             var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, TempList);
             ListOfUsers.Adapter = adapter;
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         /*Actions on clicks*/
@@ -81,13 +82,9 @@ namespace Healthy_Eating.ActivityS
         //Action on short click on the item in choosing the user list.
         private void ListOfUsers_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            //Setting the current user and displaying info about him/her.
+            //Setting the current user.
             User.CurrentUser = e.Position;
-
-            //Information about the user.
-            Toast.MakeText(this, DatabaseUser.GetUser(User.CurrentUser).ToString(), ToastLength.Long).Show();
-        }
-
+       }
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Action on long click on the item in choosing the user list.
@@ -127,7 +124,7 @@ namespace Healthy_Eating.ActivityS
             Object1.SetView(FormViewDelete);
 
             //Text for displaying the message.
-            FormViewDelete.FindViewById<TextView>(Resource.Id.DeleteUserText).Text = Resources.GetString(Resource.String.Message_DeleteUser) + DatabaseUser.GetUser(UserChoosed).Name + " ?";
+            FormViewDelete.FindViewById<TextView>(Resource.Id.DeleteUserText).Text = Resources.GetString(Resource.String.MessageUser_DeleteUser) + DatabaseUser.GetUser(UserChoosed).Name + " ?";
 
             //Action on pressing negative button.
             Object1.SetPositiveButton(Resource.String.OK, new EventHandler<DialogClickEventArgs>(delegate (object Sender, DialogClickEventArgs e1)
@@ -1059,7 +1056,7 @@ namespace Healthy_Eating.ActivityS
 
                 //Text for showing the message.
                 TextView ForText = ChooseCtegoryForm.FindViewById<TextView>(Resource.Id.TextForMessage);
-                ForText.Text = Resources.GetString(Resource.String.Message_DrivingLicence);
+                ForText.Text = Resources.GetString(Resource.String.MessageUser_DrivingLicence);
 
                 //List for holding items for CountryChooser.
                 List<string> ListForCategories = new List<string>();
@@ -1150,7 +1147,7 @@ namespace Healthy_Eating.ActivityS
 
                 //Text for showing the message.
                 TextView ForText = ChooseCtegoryForm.FindViewById<TextView>(Resource.Id.TextForMessage);
-                ForText.Text = Resources.GetString(Resource.String.Message_ChildDeseases);
+                ForText.Text = Resources.GetString(Resource.String.MessageUser_ChildDeseases);
 
                 //List for holding items for CountryChooser.
                 List<string> ListForCategories = new List<string>();
@@ -1225,7 +1222,7 @@ namespace Healthy_Eating.ActivityS
 
                 //Text for showing the message.
                 TextView ForText = ChooseCtegoryForm.FindViewById<TextView>(Resource.Id.TextForMessage);
-                ForText.Text = Resources.GetString(Resource.String.Message_ChronicDeseases);
+                ForText.Text = Resources.GetString(Resource.String.MessageUser_ChronicDeseases);
 
                 //List for holding items for CountryChooser.
                 List<string> ListForCategories = new List<string>();

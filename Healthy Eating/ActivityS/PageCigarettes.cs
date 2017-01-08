@@ -35,7 +35,7 @@ namespace Healthy_Eating
             tab.TabSelected += Tab_TabSelectedList;
             ActionBar.AddTab(tab);
 
-            //Tab for weight plot.
+            //Tab for cigarettes calendar.
             tab = ActionBar.NewTab();
             tab.SetText(Resource.String.tab_CalendarCigarettes);
             tab.TabSelected += Tab_TabSelectedCalendar;
@@ -44,34 +44,29 @@ namespace Healthy_Eating
             //Going to selected tab.
             SetContentView(Resource.Layout.helpform_CigarettesConnector);         
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         protected override void OnStop()
         {
             base.OnStop();
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
-        //Tab for list of parameters.
+        //Tab for list of cigarettes.
         private void Tab_TabSelectedList(object sender, ActionBar.TabEventArgs e)
         {
             var fragment = this.FragmentManager.FindFragmentById(Resource.Id.Connector);
             if (fragment != null) e.FragmentTransaction.Remove(fragment);
             e.FragmentTransaction.Add(Resource.Id.Connector,new TabCigaretteList());
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
-        //Tab for weight plot.
+        //Tab for cigarettes calendar.
         private void Tab_TabSelectedCalendar(object sender, ActionBar.TabEventArgs e)
         {
             var fragment = this.FragmentManager.FindFragmentById(Resource.Id.Connector);
             if (fragment != null) e.FragmentTransaction.Remove(fragment);
             e.FragmentTransaction.Add(Resource.Id.Connector, new TabCigaretteCalendar());
         }
-
-        //---------------------------------------------------------------------------------------------------------------------------------------------------
     }
 }

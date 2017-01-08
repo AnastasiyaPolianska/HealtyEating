@@ -43,6 +43,7 @@ namespace Healthy_Eating.ActivityS
             //Going to selected tab.
             SetContentView(Resource.Layout.helpform_ParametersConnector);
         }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Tab for ProtsFatsCarbs.
         private void Tab_TabSelectedProtsFatsCarbs(object sender, ActionBar.TabEventArgs e)
@@ -51,6 +52,7 @@ namespace Healthy_Eating.ActivityS
             if (fragment != null) e.FragmentTransaction.Remove(fragment);
             e.FragmentTransaction.Add(Resource.Id.Connector, new TabMenuProtsFatsCarbs());
         }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Tab for WaterCcals.
         private void Tab_TabSelectedWaterCcals(object sender, ActionBar.TabEventArgs e)

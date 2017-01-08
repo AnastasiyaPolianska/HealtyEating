@@ -50,14 +50,12 @@ namespace Healthy_Eating
             //Going to selected tab.
             SetContentView(Resource.Layout.helpform_ParametersConnector);         
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         protected override void OnStop()
         {
             base.OnStop();
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Tab for list of parameters.
@@ -67,7 +65,6 @@ namespace Healthy_Eating
             if (fragment != null) e.FragmentTransaction.Remove(fragment);
             e.FragmentTransaction.Add(Resource.Id.Connector,new TabParametersList());
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Tab for weight plot.
@@ -77,7 +74,6 @@ namespace Healthy_Eating
             if (fragment != null) e.FragmentTransaction.Remove(fragment);
             e.FragmentTransaction.Add(Resource.Id.Connector, new TabParametersGraphWeight());
         }
-
         //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         //Tab for height plot.

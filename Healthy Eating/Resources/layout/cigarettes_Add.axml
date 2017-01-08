@@ -14,14 +14,14 @@
             android:layout_width="180.0dp"
             android:layout_height="match_parent"
             android:id="@+id/textView1"
-            android:text="@string/Message_NumberOfCigarettes"
+            android:text="@string/MessageCigarettes_NumberOfCigarettes"
             android:textSize="18dp"
             android:textStyle="bold" />
         <TextView
             android:layout_width="200.0dp"
             android:layout_height="match_parent"
             android:id="@+id/textView1"
-            android:text="@string/Message_NicotineAmount"
+            android:text="@string/MessageCigarettes_NicotineAmount"
             android:textSize="18dp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -38,7 +38,7 @@
         <EditText
             android:inputType="numberDecimal"
             android:id="@+id/AmountOfNicotine"
-            android:hint="@string/Message_EnterNicotineAmount"
+            android:hint="@string/MessageCigarettes_EnterNicotineAmount"
             android:layout_width="200.0dp"
             android:layout_height="match_parent" />
     </LinearLayout>
