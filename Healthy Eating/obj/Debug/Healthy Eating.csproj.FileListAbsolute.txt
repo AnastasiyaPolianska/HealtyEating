@@ -126,4 +126,132 @@ C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eat
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\layout\message_parameters.xml
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\res\drawable\parameters.png
 C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\obj\Debug\Healthy Eating.dll.mdb
-C:\Users\Nastya\Documents\Visual Studio 2015\Projects\Healthy Eating\Healthy Eating\bin\Debug\Healthy Eating.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Healthy Eating.dll.config
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Healthy Eating.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Healthy Eating.pdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Healthy_Eating.Healthy_Eating.apk
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Healthy_Eating.Healthy_Eating-Signed.apk
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\AChartEngine.Bindings.XamarinAndroid.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\MPAndroidChart.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Newtonsoft.Json.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Plugin.CurrentActivity.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Refractored.FloatingActionButton.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\SQLite-net.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\SQLite.Net.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\SQLite.Net.Platform.XamarinAndroid.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\SQLiteNetExtensions.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\SQLitePCL.raw.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Square.AndroidTimesSquare.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Syncfusion.SfCalendar.Android.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Syncfusion.SfChart.Android.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Xamarin.Android.Support.v4.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\MPAndroidChart.pdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\MPAndroidChart.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Newtonsoft.Json.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Plugin.CurrentActivity.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Refractored.FloatingActionButton.pdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Refractored.FloatingActionButton.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Refractored.FloatingActionButton.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\SQLite-net.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\SQLiteNetExtensions.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Syncfusion.SfCalendar.Android.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Syncfusion.SfChart.Android.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\Healthy Eating.csprojResolveAssemblyReference.cache
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\Healthy Eating.dll
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\Healthy Eating.pdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\bin\Healthy_Eating.Healthy_Eating.apk
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\tab_parameters_list.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\user_add.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\user_choose.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\user_delete.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\parametres_set.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\parameters_changes.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\tab_menu_protsfatscarbs.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\product_add.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\product_types.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\product_quantity.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\helpform_menurow.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\product_choosedate.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\helpform_menurowccals.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\helpform_parametersconnector.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\product_info.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\tab_parameters_graphweight.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\tab_parameters_graphheight.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\tab_menu_waterccals.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\helpform_menuconnector.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\helpform_alcoholconnector.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\tab_alcohol_list.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\helpform_alcoholrow.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\alcohol_add.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\alcohol_quantity.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\alcohol_info.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\message_alcoholwarnings.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\helpform_menurowfooter.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\tab_alcohol_calendar.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\helpform_alcoholrowfooter.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\helpform_parametersrowfooter.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\helpform_parametersrow.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\helpform_cigarettesconnector.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\tab_cigarette_list.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\tab_cigarette_calendar.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\helpform_cigarettesrow.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\helpform_cigarettesrowfooter.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\cigarettes_add.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\useritems_add.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\useritems_alcohol.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\useritems_product.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\user_choosecategory.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\user_minimenu.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\user_info.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\user_changecategory.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\message_error.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\drawable\error_border.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\drawable\alcohol_border.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\message_info.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\drawable\info_border.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\drawable\parameters_border.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\message_parameters.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\layout\startpage.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\values\strings.xml
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\drawable\icon.png
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\drawable\zz.png
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\drawable\alcohol.png
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\drawable\info.png
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\res\drawable\parameters.png
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\R.cs.flag
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\uploadflags.txt
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Healthy Eating.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Healthy Eating.dllHealthy Eating.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Java.Interop.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Mono.Android.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\mscorlib.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\System.ComponentModel.Composition.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\System.ComponentModel.DataAnnotations.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\System.Core.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\System.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\System.Net.Http.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\System.Numerics.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\System.Runtime.Serialization.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\System.ServiceModel.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\System.ServiceModel.Internals.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\System.Xml.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\System.Xml.Linq.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\Healthy Eating.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\Java.Interop.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\Mono.Android.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\MPAndroidChart.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\mscorlib.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\Refractored.FloatingActionButton.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\SQLite-net.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\SQLiteNetExtensions.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\System.Core.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\System.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\System.Net.Http.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\System.Xml.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\obj\Debug\Healthy Eating.dll.mdb
+G:\Універ, 2 курс\1 семестр\HealtyEating\Healthy Eating\bin\Debug\Healthy Eating.dll.mdb
